@@ -1,0 +1,119 @@
+% !TEX root=../document.tex
+
+\section{Stakeholder Descriptions}
+
+ReVision is being developed in co-operation with Revolve NTNU
+ \cite{kranebae:fordypning}, and the specifications and requirements for the
+system are partially given by the frames set by the Formula Student (FS) 
+competition-rules \cite{FS:challenge,FSG:disciplines,fsae:2014rules}.
+The competition rules dictate that there exists a business plan for the
+developed car, targeting the car towards `the nonprofessional weekend autocross racer'
+ \cite{FSG:disciplines}. 
+
+Considering a working business model would allow the product to
+be sold to consumers or enterprises that provides racing experiences to
+consumers these should also be considered as stakeholders. This should result
+in more realistic requirements.
+
+\subsection{Stakeholder (Non-User) Summary}
+
+Two obvious stakeholders are Revolve NTNU and the judges in the FS
+competitions. Also any enterprise owning vehicles with such systems are
+non-user stakeholders. Common for all of these stakeholders is that the
+attractiveness of the system is important. For Revolve NTNU the system could
+help attain higher scores in the competition, both in the static and dynamic
+events \cite{FSG:disciplines}. For the judges, who in the competitions
+pretend to be investors, the system's ability to differentiate itself from the
+competition in a positive way is important, but also the possibility that such a system could
+attract customers is something that should result in a higher score.
+
+Another stakeholder are enterprises purchasing the system for integration into existing vehicles,
+or purchasing vehicles with the system integrated. In this case the ability to
+differentiate itself from other providers of similar services is important, so
+is the ability to customize the product and experience to suit customer needs
+and demand.
+
+\subsection{User Summary}
+The users of the system consists of two primary groups; professionals and
+non-professionals. Common for both of them is that they will use to system for
+training purposes. Professionals will also utilize the system in race contexts,
+and the non-professionals might do so.
+
+\subsection{Key High-Level Goals and Problems of the Stakeholders}
+
+
+% TODO Make smaller margins around the 
+%nasty way of wrapping table acroos multiple pageslists in the table.
+\clearpage
+\begin{table}\small
+\begin{tabularx}{\textwidth}{|X|l|X|X|}
+	\hline
+	\rowcolor{gray!50}
+	High-Level Goal & Priority & Problems and Concerns & Current Solutions \\
+	\hline
+	Real-time processing and visualization of acquired data 
+		& High 
+			& More time needed for processing as amount of data grows. \newline \newline More time needed for processing as graphical transformations. 
+				
+				& Existing systems avoids these problems by being simple and handle less
+				complex information. \\
+	\hline
+	Flexible architecture allowing portability and adaptability
+		& High
+			& Too tailored architecture to one design will make it difficult to
+				reuse the system, or create a new implementation for another design. \newline \newline Lack of configuration flexibility will increase testing time and leave
+				little room for further innovation.
+				& Existing systems do not address these issues. \\
+	\hline
+	Ability to accumulate data and/or display certain data at triggered points,
+	and the ability to define these triggers.
+		& Medium
+			& Certain events, timed occurrences can trigger the need to show data (lap time for instance). \newline \newline Giving more information can be disturbing to the driver under certain circumstances.
+				& Existing systems output information when it is received/registered and
+				therefore do not address this issue.\\
+	\hline
+	Robust and reliable data processing
+		& High
+			& Data loss or corruption can mislead or distract driver if not handled correctly. \newline \newline Wireless communication increases chances of data loss and failures.
+				& Existing systems doesn't indicate anything when no information is
+				received. Robustness is given through wired connections. \\
+	\hline
+\end{tabularx}
+\end{table}
+%nasty way of wrapping table acroos multiple pages
+\begin{table}\small
+\begin{tabularx}{\textwidth}{|X|l|X|X|}
+        \hline
+	General support for networking standards
+		& Low
+			& Hard-coded support for networking makes it difficult to move the system
+			over to a design utilizing another network standard
+				& Existing systems are usually hard-coded to the network used in the
+				design. \\
+	\hline
+\end{tabularx}
+\end{table}
+\clearpage
+
+\subsection{User-Level Goals}
+The users need a system to fullfill these goals:
+\begin{itemize}
+	\item Developer: Configure message formats, Configure sensors, Configure
+	display, Upload configuration
+	\item System implementer: Configure message formats, Configure sensors, Configure
+	display, Upload configuration
+	\item System owner: Configure sensors, Configure
+	display, Upload configuration, Display real-time information, Receive and display messages
+	\item Revolve NTNU: Configure message formats, Configure sensors, Configure
+	display, Upload configuration, Display real-time information, Receive and display messages
+	\item Driver: Configure
+	display, Upload configuration, Display real-time information, Receive and display messages
+\end{itemize}
+
+\subsection{User Environment}
+The user environment is in the driver seat of a race car. For Revolve NTNU
+this is an one-seater open formula student class race car, but theoretically it
+could be any kind of vehicle construction. The system is designed to be mounted
+or worn on the inside of the helmet, with minimal or no interaction from the
+driver during use/race conditions. Interaction with the system is mainly done
+from a secondary control system.

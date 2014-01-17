@@ -1,0 +1,81 @@
+\section{Mathematical Model}
+	\label{sec:model}
+
+Citing in latex: The mathematical foundation for this case is available in the project thesis by Øgård. \cite{project} 
+
+\noindent Here are some equations for example.
+
+\subsection{Pressure force contribution}
+By continuing the work started there, and using the expression for the pressure gradient, an expression for the pressure can be found.
+
+	\begin{multline}
+		P(\phi,t) - P(-\frac{\pi}{2}) = \int_{-\frac{\pi}{2}}^{\phi} \frac{\partial p}{\partial \phi} d\phi = \\
+- \mu u_y(t) \int_{-\frac{\pi}{2}}^{\phi} \left( \frac{r_1}{r_2 - r_i(\phi,t)} + K_{\beta}(\phi,t)\right)\frac{cos(\phi)}{K_{\alpha}(\phi,t)}d\phi
+	\label{eq:pressure_distribution}
+	\end{multline}\\
+
+\noindent The pressure difference is of interest and for that reason the reference pressure $P(-\frac{\pi}{2})$ is set to zero for all values of t. The pressure distribution along the clearance can be used to find the active force counteracting the movement of the inner cylinder. 
+
+For symmetrical reasons the only component of the pressure that counteracts the inner cylinder movement is the y-component. The pressure force per length unit is then given by:
+
+	\begin{equation}
+		\frac{F_{p,y}(t)}{L} = -2 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}P(\phi,t)r_1 \; sin(\phi) d\phi = -\mu u_y(t) C_p(t)
+	\label{eq:pressure_force}
+	\end{equation}\\
+
+\noindent Where the constant $C_p$ is defined as:
+
+	\begin{equation}
+		C_p(t) = 2 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\left[ \int_{-\frac{\pi}{2}}^{\phi} \left( \frac{\frac{r_1}{r_i}}{(\gamma-1)} + K_{\beta} \right)\frac{-r_1}{K_{\alpha}} cos(\phi) d\phi \right] sin(\phi) d\phi
+	\label{eq:pressure_force_const}
+	\end{equation}\\
+
+\noindent This result need to be compared with the simulated values for different geometries. \Vref{eq:pressure_force} may be solved numerically in order to get a time-dependent solution for a given case.
+
+\subsection{Viscous force contribution}
+
+In order to find the viscous force contribution on the inner cylinder the expression for the viscous stress in cylindrical coordinates needs to be used.
+
+	\begin{equation}
+		\tau_{r \phi} = -\mu r \frac{\partial}{\partial r} \left(\frac{u_{\theta}}{r} \right) \bigg|_{r=r_i} = 2 \mu \frac{B}{R_i^2}-\frac{1}{2}\frac{\partial p}{\partial \phi}
+	\label{eq:Viscous_distribution}
+	\end{equation}\\
+
+\noindent The same symmetry argument as for the pressure force applies for the viscous force. The y-component of the viscous force per length unit is:
+
+	\begin{equation}
+		\frac{F_{s,y}(t)}{L} = -2 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}r_i \tau(\phi,t) \; cos(\phi) d\phi = -\mu u_y(t) C_s(t)
+	\label{eq:viscous_force}
+	\end{equation}\\
+
+\noindent Where the constant $C_s$ is defined in the following way:
+
+	\begin{equation}
+		C_s(t) = 2 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\left[ -\frac{r_1}{\alpha} \left( \frac{\frac{r_1}{r_i}}{(\gamma-1)} + K_{\beta} \right) \right]
+	\label{eq:viscous_force_const}
+	\end{equation}\\
+
+\noindent The structure of the viscous force is of similar structure as the pressure force and the only variation is in the variables $C_s \& C_p$. The values for $K_{\beta}, K_{\alpha}, \gamma \& r_i$ is defined in the following way.
+
+\begin{equation}
+r_i = \sqrt{r_1^2 + \Delta y^2(t) + 2r_1 \Delta y(t) sin(\theta)}
+\label{eq:const_ri}
+\end{equation}\\
+
+\begin{equation}
+\gamma = \frac{r_2}{r_i}
+\label{eq:const_gamma}
+\end{equation}\\
+
+\begin{multline}
+K_{\alpha} = \frac{1}{4(r_2 - r_i)} \left[ \frac{2r_i^2 r_2^2}{r_2^2 - r_i^2}ln^2(\frac{r_2}{r_i}) - \frac{r_2^2 - r_i^2}{2}\right] = \\
+ \frac{r_2}{4(\gamma - 1)} \left[ \frac{2 \gamma ln^2(\gamma)}{\gamma^2 -1} -\frac{\gamma^2 -1}{2 \gamma}\right]
+\label{eq:K_alpha}
+\end{multline}\\
+
+\begin{equation}
+K_{\beta} = \frac{r_i}{2(r_2 - r_i)} \left[ \frac{2r_2^2 }{r_2^2 - r_i^2}ln(\frac{r_2}{r_i}) - 1 \right] = \frac{1}{2(\gamma - 1)} \left[ \frac{2 \gamma^2 ln(\gamma)}{\gamma^2 -1} -1 \right]
+\label{eq:K_beta}
+\end{equation}\\
+
+\noindent The force expressions for the viscous and pressure force will be compared with the results from the force calculations done during the simulations.

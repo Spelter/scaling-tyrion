@@ -1,0 +1,94 @@
+% !TEX root=../thesis.tex
+\chapter{Method}
+\label{chapter:method}
+
+In working with this project the group has undertaken a considerable study of
+literature around both software architecture, software metrics and assessment, electronics, display technology,
+and studies about driver environments and performance. The literature has
+served as a platform to support our project goals of creating an enabling
+software architecture. The group has also conducted an interview with a driver
+from last years Revolve-team. In collaboration with Revolve we have elicited
+requirements and use-case scenarios which in turn has resulted in our proposed
+architecture design (including design artifacts) and assessment guidelines.
+
+The biggest weakness of the architecture described herein is the lack of
+verification. First, during the project period we didn't have access to any hardware
+similar to the one the system will be running on. Second, there are still some
+uncertainties with regards to the amount of data that is to be handled by the
+system due to the fact that sensor update rates and CAN-bus package format is
+still an unknown factor. We have however developed a proof-of-concept desktop
+application to simulate a configuration environment for the proposed system.
+We will be discussing this application further in \vref{chapter:results}. 
+
+\section{Literature Study}
+To acquire a broad picture of the problem area and domain the group has studied
+a varied set of literature ranging from research articles to books on various topics. Some of the most useful literature we have read includes the following:
+\begin{itemize}
+	\item ``An Introduction to Object-Oriented Analysis and Design and Iterative Development'' by Craig Larman \cite{Larman:UML}
+	\item ``Software Architecture in Practice'' by Bass, L. and Clements, P. and Kazman, R.
+	 \cite{bass2012software}
+	\item ``Designing embedded hardware [Kindle Edition]'' by John Catsoulis
+	\item ``A software architecture evaluation model'' by Dueñas, Juan C and de Oliveira, William L and Juan, A.
+	\cite{duenas1998software}
+\end{itemize} 
+For an exhaustive list of all literature used we refer to the
+bibliography\vpageref{bibliography}.
+
+\section{Architecture Design Method}
+In the process of designing this architecture we have opted to use design
+artifacts and methods described by Craig Larman \cite{Larman:UML}. We started
+out at the beginning with performing an interview with one of last years 
+drivers (\vref{interview:bakkom}) to get a picture of how the cockpit 
+experience is for the driver during
+an event. We also got some interesting ideas to build on. Building on this
+information we arranged an informal requirements workshop together with a few 
+members of this years Revolve-team; eliciting both quality requirements and
+functional requirements (and lots of ambitious ideas). One important benefit of
+bringing experienced members in on the workshop was that we could easily
+discover external requirements originating in the FS competition rules \cite{fsae:2014rules}.
+Both Larman and Bass et al. suggests that a systems
+architecture should be based mostly on non-functional and quality requirements,
+especially those that strongly influence the architecture.
+\cite[p.20]{bass2012software}\cite[pp. 541-554]{Larman:UML}
+
+After the workshop we started working on refining and defining the results,
+writing up use-cases in a terse format. Larman suggests \cite[pp. 95-95]{Larman:UML}
+that during early phases of development most use cases (except the ones that 
+might be architecturally significant or with high risk) should be kept terse 
+and rather be expanded upon and refined when development is underway. Since no
+architectural development was performed during this project we decided to spend
+more time trying to clarify them and use the results to help with identifying
+the architectural requirements.
+
+In the further process we listed the discovered requirements in an
+architectural factors table \cite[pp. 56-59, 545-547]{Larman:UML}. The goal of
+this activity was to define measures that can be used to measure the
+architecture's ability to meet the goals and requirements, and to give an
+easily accessible ranking of importance for these requirements.
+
+The last artifact to be developed was the system architecture document \cite[p. 550]{Larman:UML} where we
+recorded and detailed the suggested solutions, and their reasoning, to resolve the architectural
+factors.
+
+In working with the architecture design we have tried to work in an iterative
+fashion, but due to the compact nature of the project some processes bear the
+look and feel of a ``waterfall'' process. We do not intend that the
+architectural design suggestion presented in this project to be the final one, 
+but rather its intended to be a good
+starting point for development and refinement. We also suggest metrics that can
+be used to measure if the architecture meets the goals set, and believe it is important
+that the control process starts early in the development to see if the
+architecture meets the requirements or needs further work 
+\cite[pp. 556-557]{Larman:UML}.
+
+In describing our architecture we have opted to use UML, or modeling close to
+UML where we felt that it increased readability, or where we were pressed for time and
+UML compliance wasn't deemed the most important, planning to revise this when
+further development is being undertaken. We chose to not use any ADLs to describe the
+system, in part because that would be worthy a project of its own, and in part because we 
+are not interested in traces of the system 
+\cite[p. 42-43]{Roscoe:2005:TPC:550448},
+but in the systems ability to meet its critical requirements. 
+
+
+

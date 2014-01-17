@@ -1,0 +1,91 @@
+% !TEX root=../thesis.tex
+
+\chapter{Introduction}
+
+In this report we aim to design a software architecture for a driver information
+system\footnote{Also known as In Vehicle Information System, IVIS}
+that is to be prototyped and installed in a formula student race car. We will
+also discuss the state of the art, technological alternatives and introduce
+background information pertaining to the domain and use-cases.
+
+To design this architecture we have undertaken a significant literature study
+of both architectural design patterns and driver/operator information systems.
+We have looked at what a typical driver information system does, how it does
+it, and what the state of the art is. Other fields employing information 
+systems to provide vehicle operators with real-time information have also been
+studied.
+
+This research effort is made to serve as a foundation to build a prototype
+driver information system in collaboration with Revolve NTNU (Revolve), a 
+student organization  created by students at the Norwegian University of 
+Science and Technology.
+The the collaboration with Revolve will serve as a testing ground for our 
+design and allow us to test its feasibility in the
+context of motorsport.
+
+For the last three years Revolve has been hard at work building formula style race
+cars to participate in events of the international motor sport competition series
+``Formula Student'' (FS). The competitions are arranged by the Institution of Mechanical Engineers. In the competitions teams of students compete against each other
+with small formula-style cars they have designed and built from scratch. There are
+disciplines that involves racing the cars as well as disciplines in business,
+design, and cost. The combined score from these events decide the official
+results, but there are also prices awarded for excellence in different fields
+
+Motorsport has for many years been a testbed for car manufacturers and a lot of
+technology that we today take for granted has come to fruition through motorsport. However
+ordinary cars have seen larger leaps in technology with regards to information
+consumption than cars built for motor racing. For some years some high-end cars
+have even been equipped with heads-up displays (HUD) that allows the driver to 
+keep focus on the road instead of looking down at the instruments \cite{wiki:hud},
+and it is becoming more and more common.
+
+Despite great developments in automobile technology over the past 50 years little
+has changed in the way that motorsport drivers receives information during an
+event. There are displays, gauges, and other visual indicators\footnotemark[1]
+, in addition to radio-communication \cite{wiki:formula_radio} if that is allowed in the competition. The technology under the hood
+has become much more advanced, but the amount of information you can
+convey to the driver still seems to be very limited; the pace is just too high
+to be able to keep moving focus from the road (see appendix \vref{interview:bakkom}).
+
+Driver information systems in the context of motorsport is a field neglected by
+science (see \vref{background:rel_reasearch}). There has been done some
+research around driver information systems in commercial vehicles and normal 
+passenger cars, most of which involve studies of heads-up display technology or
+use.
+
+This is therefore a field where we are threading into new territory. 
+Requirements are hard to elicit up front, and we don't know
+from the start what is a good design for such a system. It is quite possible
+that requirement changes can come from opportunities enabled by 
+creating a new system that can potentially deliver more information to the
+driver with faster response times (from the driver) and less distractions. 
+This means that any system developed must be flexible enough to allow for easy 
+experimenting with configuration
+alternatives and have a high-level support for requirements evolution.
+
+The question we want to address in this report is as follows; How can we
+enable the development of a state of the art computerized driver information system
+by creating a software architecture that is flexible enough to allow easy
+experimenting and customization?
+
+The rest of this document is divided into several parts. In the background chapter we will
+discuss the collaboration with Revolve NTNU and present the Formula Student
+competition. We also present relevant electronic principles and knowledge and discuss the current
+state of research with a focus on automotive information systems. Chapter \vref{chapter:method}
+introduces the methods we've applied in our work, while
+the following chapter (\vref{chapter:results}) shows the findings of our research.
+Then we discuss our findings and try to put them in perspective in chapter \vref{chapter:discussion}, before we move
+onto the conclusion and discussing recommendations and possibilities for
+further work in chapter \vref{chapter:conclusion}.
+The appendices contain development artifacts created during the design process
+and details the results and the information they build upon, as well as an interview with a driver from last years Revolve-team. 
+
+
+\footnotetext{
+	Although extensive research has been performed scientific, 
+	findings are rare. Cottle et al.. \cite{wirelessDashboard} discusses implementing a 
+	wireless ``dashboard'' (controls and instruments on a steering wheel). 
+	Although lacking scientific base the statement should hold; this 
+	assumption is made stronger by analyzing motorsport on TV and for 
+	pictures of race cars' interiors.
+}
