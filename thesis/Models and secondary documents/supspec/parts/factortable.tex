@@ -1,0 +1,168 @@
+% !TEX root=../document.tex
+
+\section{Architectural Factors}
+
+This section contains descriptions of the identified architecturally significant requirements and
+suggested quality measures. We also give the current and expected variability
+on these factors and prioritize and give an assumed risk/difficulty factor.
+
+\begin{table}
+\small
+\begin{tabularx}{\textwidth}{|X|X|X|X|l|l|}
+	\hline
+	\rowcolor{gray!50}
+	Factor & Measures and quality scenarios 
+		& Variability (current flexibility and future evolution)
+			& Impact of factor (and its variability) on stakeholders, 
+			architecture and other factors
+				& \parbox[t]{1cm}{Prior-\newline
+				ity for\newline
+				Suc-\newline
+				cess}
+					& \parbox[t]{1cm}{Diffi-\newline
+					culty\newline
+					or\newline
+					Risk} \\
+	\hline
+	\multicolumn{6}{|l|}{\textbf{Maintainability -- Modifiability}} \\
+	\hline
+	Rapid reconfiguration of display layout 
+		& A reconfiguration of display layout should take less than 10 minutes,
+		including system reconfiguration.
+			& Current flexibility - We do not know which layouts will be advantageous and being able to rapidly move things around and display concept to drivers should prove positive. \newline
+			\newline
+			evolution - Requirements may change over time and usage scenario.
+				& High impact on the large scale design.\newline
+				\newline
+				Important to be able to rapidly test various layouts during
+				development.\newline
+				\newline
+				Important for potential owners of system to have an easy way of configuring
+				the system.
+					& H & M \\
+	\hline
+	Configuration of sensor calibration without compilation of code.
+		& Calibrating an average sensor should take less than 10 minutes.
+			& Current flexibility - Calibration of sensors might change during project. \newline
+			\newline
+			evolution - Next years vehicle will most likely be utilizing other sensors.
+				& Positive impact on modularity.\newline
+				\newline
+				Selling point.
+					& M & H \\
+	\hline
+\end{tabularx}
+\end{table}
+\clearpage
+
+\begin{table}
+\small
+\begin{tabularx}{\textwidth}{|X|X|X|X|l|l|}
+	\hline
+	\rowcolor{gray!50}
+	Factor & Measures and quality scenarios 
+		& Variability (current flexibility and future evolution)
+			& Impact of factor (and its variability) on stakeholders, 
+			architecture and other factors
+				& \parbox[t]{1cm}{Prior-\newline
+				ity for\newline
+				Suc-\newline
+				cess}
+					& \parbox[t]{1cm}{Diffi-\newline
+					culty\newline
+					or\newline
+					Risk} \\
+	\hline
+	\multicolumn{6}{|l|}{\textbf{Maintainability -- Testability and Modularity}} \\
+	\hline
+	Automated unit testing of software components
+		& Software components should have a way of testing their
+		interface functionalities through automated unit testing that reports errors.
+			& Current flexibility - Some software components are difficult to test outside of their runtime environment due to different architectures. \newline
+			\newline
+			evolution - none
+				& Positive impact on modularity.\newline
+				\newline
+				Provides implicit documentation of features and makes further development
+				easier.
+					& M & L \\
+	\hline
+	\multicolumn{6}{|l|}{\textbf{Portability -- Adaptability}} \\
+	\hline
+	Only low-level components should require re-programming or replacing for
+	use with different network protocols or other hardware environments.
+		& No reprogramming of high-level systems should be required for changing
+		hardware or connectivity. 
+			& Current flexibility - Not an issue during prototype development and
+			testing\newline
+			\newline
+			evolution - Other vehicles might have different low-level hardware and
+			software requirements.
+				& Positive impact on modularity.\newline
+				\newline
+				Nice selling point for potential system integrators to be able to swap out technology without having to
+				replace bulks of software componentes, and to be able to support different
+				sensor networks or voltage requirements.
+					& L & M \\
+	\hline
+
+\end{tabularx}
+\end{table}
+\clearpage
+
+\begin{table}
+\small
+\begin{tabularx}{\textwidth}{|X|X|X|X|l|l|}
+	\hline
+	\rowcolor{gray!50}
+	Factor & Measures and quality scenarios 
+		& Variability (current flexibility and future evolution)
+			& Impact of factor (and its variability) on stakeholders, 
+			architecture and other factors
+				& \parbox[t]{1cm}{Prior-\newline
+				ity for\newline
+				Suc-\newline
+				cess}
+					& \parbox[t]{1cm}{Diffi-\newline
+					culty\newline
+					or\newline
+					Risk} \\
+	\hline
+	\multicolumn{6}{|l|}{\textbf{Maintainability -- Reusability}} \\
+	\hline
+	Rapid reconfiguration of sensor profiles
+		& Creating a sensor configuration should take less than 2 hours for a
+		complete setup.
+			& Current flexibility - Sensors on the test-vehicle won't change much during project, and for the project this only needs to be configured once, then updated in case of any changes. \newline
+			\newline
+			evolution - If the system is to be installed to other vehicles this should
+			be a process that doesn't require reprogramming of high-level components.
+				& Impact on the large scale design.\newline
+				\newline
+				Provide value for next years Revolve team and provide a good platform for
+				further development.\newline
+				\newline
+				Nice selling point for potential system integrators to have an easy way of configuring
+				the system and assuring them that swapping out technology doesn't disable
+				the system.
+					& M & H \\
+	\hline
+	\multicolumn{6}{|l|}{\textbf{Performance -- Time behaviour}} \\
+	\hline
+	Processing and displaying data with minimal latency
+		& The system shall be able to display acquired data with less than 200ms
+		delays in at least 90\% of the time.
+			& Current flexibility - none\newline
+			\newline
+			evolution - future hardware might allow longer pipelines due to increased
+			computing performance.
+				& High impact on the system design.\newline
+				\newline
+				System needs to meet performance requirements. Stale data is not
+				interesting.
+					& H & H \\
+	\hline
+
+
+\end{tabularx}
+\end{table}
