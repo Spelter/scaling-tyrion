@@ -13,7 +13,7 @@ Conceptualize and develop prototype of map based visualizations of real time sig
 
 ==================
 
-Subfolder with lAtEx build for the thesis.
+Subfolder with LaTeX build for the thesis.
 
 ==================
 
