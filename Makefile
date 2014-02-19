@@ -7,6 +7,7 @@ all: sub master
 
 #Generates pdf for master and cleans all other output
 pdf: master clean
+	xdg-open output/${FIL}.pdf
 
 #Generates pdf for master and moves said pdf to output folder
 master:
