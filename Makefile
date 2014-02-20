@@ -20,7 +20,7 @@ master:
 
 #Generates secondary pdf's and moves them to output folder
 sub:
-	make -C Models\ and\ secondary\ documents/
+	make -C Models_and_secondary_documents/
 
 clean:
 	rm -rf *.aux */*.aux
