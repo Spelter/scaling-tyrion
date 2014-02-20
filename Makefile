@@ -20,6 +20,7 @@ master:
 
 #Generates secondary pdf's and moves them to output folder
 sub:
+	rm grafikk/*
 	make -C Models_and_secondary_documents/
 
 clean:
