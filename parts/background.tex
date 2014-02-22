@@ -27,11 +27,16 @@ network administrator and a good visualization tool to present it.
 \section{Examples}
 \label{section:backgroundExamples}
 
-(see \vref{fig:zugmonitor})
-Here they have plotted each train on it's course between each station on it's
-route, with a colored circle around the train which varies depending on if the
-train is on schedule or delayed. It is also possible to play through the
-selected day or drag through time manually.
+\subsection{Zugmonitor}
+\label{subsection:zugmonitor}
+
+In the Zugmonitor (\vref{fig:zugmonitor}) example each long-distance trains in
+the German railway network has been plotted as a arrow on a German map. To
+illustrate the punctuality of each train, a colored circle has been added to
+each arrow if the train is delayed with varying color depending on how big the
+delay is. It has also been implemented a time line functionality to see how the
+trains are on each step of the routes. This time line functionality has both a
+play forward function and manually drag along the time line.
 
 \begin{figure}[!htbp]
 	\includegraphics[width=\textwidth,center]{zugmonitor.png}
@@ -40,11 +45,16 @@ selected day or drag through time manually.
 \end{figure}
 \pagebreak
 
-In the next example (\vref{fig:ukLiveMap}) a live map for the train 
-routes in the United Kingdom have been developed, where it plots the relative 
-location of trains in the UK based on live departure data fetched from the 
-National Rail website. This example does not however, display whether or not 
-the trains are delayed. The routes are only drawn as straight lines between each station.
+\subsection{Vaguely live map of trains in the United Kingdom}
+\label{subsection:ukLiveMap}
+
+This is a map which plots the relative location of each train in the United
+Kingdom (\vref{fig:ukLiveMap}). The plot fetches the departure time from the 
+National Rail website and calculates the relative location. The plot does not
+indicate whether or not the trains are on schedule or delayed, this must be
+done either manually or for instance checking a time table\cite{ukLiveMap}.
+Both the map and time table is developed on hobby basis by the same person as
+indicated on the site. 
 
 \begin{figure}[!htbp]
 	\includegraphics[width=\textwidth,center]{live-train-map-for-Birminingham-new-street.png}
@@ -53,10 +63,16 @@ the trains are delayed. The routes are only drawn as straight lines between each
 \end{figure}
 \pagebreak
 
-The third example (\vref{fig:muniLightRail}) displays a XY-chart based on the 
-N-Judah line on the Muni Metro light rail line in San Francisco, with stations 
-on the Y-line and time on the X-line. This chart plots the schedule of the each
-train and the actual time each train uses.
+\subsection{MUNI Light Rail}
+\label{subsection:muniLightRail}
+
+This a XY-chart based on the N-Judah line on the Muni Metro light rail line in 
+San Francisco, with stations on the Y-line and time on the X-line \vref{fig:muniLightRail}. 
+This chart plots the schedule of the each train and the actual time each train 
+uses. The chart auto updates each 10 seconds, and combined with the being able 
+to spot the difference between the schedule and the actual time, makes it easy 
+spot the delay of each train. As with \vref{subsection:ukLiveMap} it has been 
+developed on a hobby basis.
 
 \begin{figure}[!htbp]
 	\includegraphics[width=\textwidth,center]{visualizing-transit-delays.png}
@@ -65,7 +81,10 @@ train and the actual time each train uses.
 \end{figure}
 \pagebreak
 
-The next example (\vref{fig:miserymap}) shows how much different airports and 
+\subsection{MiseryMap}
+\label{subsection:zugmonitor}
+
+The MiseryMap (\vref{fig:miserymap}) shows how much different airports and 
 the routes between them are delayed. It also have a playback function to see
 how the delays are throughout the day. This plot also shows some weather so it
 may be possible to spot if the delays to be blamed on uncontrollable
