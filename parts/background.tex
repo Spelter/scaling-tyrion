@@ -3,9 +3,6 @@
 \chapter{Background}
 \label{chapter:background}
 
-
-%Piloting map service for navigating in punctuality analysis for trains
-
 A train network is a complex system. Almost every running train have the 
 possibility to affect almost every other train running in the system.  When you look at a busy area, such as a major city and it's closest
 area, a great deal of material can be on the move at any given time on a
@@ -14,14 +11,20 @@ train and every problem can lead to major problems.
 
 Even though one train may be experiencing delay, this delay may be part of a
 sequence of problems that can be tracked back to a seemingly unrelated part of
-the the network and a perhaps a bad decision there\cite{cule2011mining}. 
+the the network and a perhaps a bad decision there\cite{cule2011mining}. \\
 
-To minimize delays it may be necessary to improve both infrastructure and/or
-time table on railway routes or parts of routes. However, to understand what
-needs to be improved and optionally where, you need to be able to mine data
-from the network for analysis and a good visualization tool to present it. 
+As Landex\cite{landex2009gis} says, there exist few GIS-approaches concerning
+visualization of railroad capacity. Both the visualizations shown by Landex and
+in \vref{section:backgroundExamples} only seems to take into consideration if
+the trains are delayed, and the amount of delay. 
+
+However, to minimize the delays allover the rail network, it may be necessary
+to not only see that certain routes are delayed but also why it is delayed. To
+be able to understand this, you need to be able to mine data from the rail
+network administrator and a good visualization tool to present it. 
 
 \section{Examples}
+\label{section:backgroundExamples}
 
 (see \vref{fig:zugmonitor})
 Here they have plotted each train on it's course between each station on it's
