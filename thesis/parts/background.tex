@@ -3,18 +3,34 @@
 \chapter{Background}
 \label{chapter:background}
 
-
-%Piloting map service for navigating in punctuality analysis for trains
-
 A train network is a complex system. Almost every running train have the 
-possibility to affect almost every other train running in the system.  When you look at a busy area, such as a major city and it's closest
+possibility to affect almost every other train running in the system.  When 
+you look at a busy area, such as a major city and it's closest
 area, a great deal of material can be on the move at any given time on a
 rail network with limited capacity. This leads to limited time slots for each 
 train and every problem can lead to major delays.
 
+
 Even though one train may be experiencing delay, this delay may be part of a
 sequence of problems that can be tracked back to a seemingly unrelated part of
 the the network and a perhaps a bad decision there\cite{cule2011mining}. \\
+
+In the Norwegian railroad a train is on schedule if it arrives the final
+destination within a margin on 3 minutes and 59 seconds, if it is a long
+distance train the margin are 5 minutes and 59 seconds. 
+Jernbaneverket (see\vref{subsection:jernbaneverket}) defines regularity as the number of trains that gets run as 
+planed in the time schedule. 
+Uptime in regards to punctuality is defined by Jernbaneverket from the hours of delay\footnote{Hours of delay due to infrastructure excluded traffic	management and external conditions} caused by infrastructure relative to sum of planed train hours\footnote{Planed train hours (passenger and freight trains)} per year.
+\cite{jernbaneverketPunklighetsTall}
+\begin{equation} Uptime =
+		\frac
+				{
+					\text{Train hours - Hours of delay}
+				}
+				{
+					\text{Train hours}
+				}\times 100 
+\end{equation}\\
 
 As Landex\cite{landex2009gis} says, there exist few GIS-approaches concerning
 visualization of railroad capacity. Both the visualizations shown by Landex and
@@ -98,5 +114,88 @@ conditions.
 	\caption[MiseryMap]{MiseryMap \cite{flightAware:MiseryMap}}
 	\label{fig:miserymap}
 \end{figure}
-\pagebreak
+%\pagebreak
  
+\subsection{Jernbaneverket}
+\label{subsection:jernbaneverket}
+
+Jernbaneverket is the Norwegian governments agency for railway services \cite{jernbaneverketAbout}.
+This means that they are responsible for all the railway network in Norway.
+Because of this, they also collect in data from points that each train passes. 
+Based on this, they are in the process of releasing a map (see \vref{fig:jernbaneverket-punklighet}) over the punctuality on each stretch. This is a 
+interactive map which shows a pop-up box containing the punctuality of the 
+stretch clicked on, and this pop-up also shows which routes are using this 
+stretch. The map, does not however, show more information if the user zooms 
+inn, which is possible within the map itself, and has a static view of Norway 
+and the railway.
+
+\begin{figure}[!htbp]
+	\includegraphics[height=\textheight,center]{jernbaneverket-punklighet.png}
+	\caption[Punctuality map for Norwegian railway]{Punctuality map for Norwegian railway
+	\cite{jernbaneverketPunklighetKart}}
+	\label{fig:jernbaneverket-punklighet}
+\end{figure}
+\pagebreak
+
+%\begin{figure}[!htbp]
+%	\includegraphics[width=\textwidth,center]{folgetid.png}
+%	\caption[folgetid]{folgetid \cite{sintefPresis}}
+%	\label{fig:folgetid}
+%\end{figure}
+%\pagebreak
+
+\begin{figure}[!htbp]
+	\includegraphics[width=\textwidth,center]{kjoretidstes-strekning.png}
+	\caption[Density plot based on driving time]{Density plot based on driving time \cite{sintefPresis}}
+	\label{fig:kjoretidstes-strekning}
+\end{figure}
+\pagebreak
+
+\begin{figure}[!htbp]
+	\includegraphics[width=\textwidth,center]{krysningsinteraksjon.png}
+	\caption[Train interaction plot]{Train interaction plot \cite{sintefPresis}}
+	\label{fig:krysningsinteraksjon}
+\end{figure}
+\pagebreak
+
+\begin{figure}[!htbp]
+	\includegraphics[height=\textheight,center]{live-punklighet.png}
+	\caption[Punctuality for routes]{Punctuality for routes \cite{sintefPresis}}
+	\label{fig:live-punklighet}
+\end{figure}
+\pagebreak
+
+\begin{figure}[!htbp]
+	\includegraphics[width=\textwidth,center]{plot-spc-for-strekning.png}
+	\caption[Time over distance plot (SPC)]{Time over distance plot (SPC) \cite{sintefPresis}}
+	\label{fig:plot-spc-for-strekning}
+\end{figure}
+\pagebreak
+
+\begin{figure}[!htbp]
+	\includegraphics[width=\textwidth,center]{bidragsplot-strekning.png}
+	\caption[Time over distance plot (Bidrag)]{Time over distance plot (Bidrag) \cite{sintefPresis}}
+	\label{fig:bidragsplot-strekning}
+\end{figure}
+\pagebreak
+
+\begin{figure}[!htbp]
+	\includegraphics[width=\textwidth,center]{plot-spc-stasjonsopphold.png}
+	\caption[Time at station (SPC)]{Time at station (SPC) \cite{flightAware:MiseryMap}}
+	\label{fig:plot-spc-for-stasjonsopphold}
+\end{figure}
+\pagebreak
+
+\begin{figure}[!htbp]
+	\includegraphics[width=\textwidth,center]{stasjonsoppholdplott.png}
+	\caption[Time at station (Bidrag)]{Time at station (Bidrag) \cite{sintefPresis}}
+	\label{fig:stasjonsoppholdplott}
+\end{figure}
+\pagebreak
+
+\begin{figure}[!htbp]
+	\includegraphics[width=\textwidth,center]{ukespunklighet.png}
+	\caption[Weekly punctuality between stations]{Weekly punctuality between stations \cite{sintefPresis}}
+	\label{fig:ukespunklighet}
+\end{figure}
+\pagebreak
