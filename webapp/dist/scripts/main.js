@@ -26,13 +26,41 @@ $(document).ready(function() {
         weight: 1,
         opacity: 1,
     };
+    //var railStations = new L.LayerGroup();
+    var railStations = L.geoJson(rail2, {
+        onEachFeature: visPopup,
+        /*pointToLayer: function (feature, latlng) {
+            var popupOptions = {maxWidth: 20};
+            var popupContent = feature.properties.tags.name;
+            if (popupContent != undefined)
+         	 return L.marker(latlng).bindPopup(popupContent);
+         	else
+         	 return L.circleMarker(latlng);
+        }
+        pointToLayer: function(feature, latlng) {
+            return L.circleMarker(latlng, geojsonMarkerOptions);
+        }*/
+        pointToLayer: function (feature, latlng) {
+            var popupOptions = {maxWidth: 20};
+            var popupContent = feature.properties.tags.name;
+            if (popupContent != undefined)
+             return L.marker(latlng);
+            else
+             return L.circleMarker(latlng,geojsonMarkerOptions);
+        }
+    }); //.addTo(railStations)
 
     //start clustermotoren
     var markers = new L.MarkerClusterGroup({animateAddingMarkers: true});
 
+    //legg til stasjons-laget til clustermotoren og legg til kartet
+    markers.addLayer(railStations);
+    //legg også til som eget lag i layer control
+    //map.LayerControl.addOverlay(markers, "Datalag (cluster)");
+
     var map = L.map('map', {
-        center: new L.LatLng(64.4367, 16.39882),
-        zoom: 5,
+        center: new L.LatLng(59.9102, 10.75656),
+        zoom: 12,
         layers: [rail, markers]
     });
 
@@ -41,9 +69,10 @@ $(document).ready(function() {
         "Rail and road": railAndRoad
     };
     var overlayMaps = {
+        "Rail stations" : railStations,
         "Datalag (cluster)" : markers
     }
-    map.layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);  
+    L.control.layers(baseMaps, overlayMaps).addTo(map);  
 
     /*
     L.marker([63.40909, 10.40641]).addTo(map)
@@ -71,28 +100,5 @@ $(document).ready(function() {
     }
 
     map.on('click', onMapClick);*/
-
-    $.getJSON("/lib/latlon-pretty.geojson")
-    	.done(function(data) {
-        //Start "geoJson"-motoren til Leaflet. Den tar inn et JSON-objekt i en variabel. Denne har vi definert i JSON-filen i index.html
-        var railStations = L.geoJson(data, {
-            onEachFeature: visPopup,//vi refererer til funksjonen vi skal kalle. Husk at funksjonen også er et objekt
-
-		    pointToLayer: function (feature, latlng) {
-		        var popupOptions = {maxWidth: 20};
-		        var popupContent = feature.properties.tags.name;
-		        if (popupContent != undefined)
-		         return L.marker(latlng);
-		        else
-		         return L.circleMarker(latlng,geojsonMarkerOptions);
-		    }
-        });
-
-    	
-
-        //legg til punktene til "layer control"
-        markers.addLayer(railStations);
-        map.layerControl.addOverlay(railStations, "Datalag (geojson)");
-    });
 
 });
