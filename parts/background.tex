@@ -18,7 +18,7 @@ the the network and a perhaps a bad decision there\cite{cule2011mining}. \\
 In the Norwegian railroad a train is on schedule if it arrives the final
 destination within a margin on 3 minutes and 59 seconds, if it is a long
 distance train the margin is 5 minutes and 59 seconds. 
-Jernbaneverket (see\vref{subsection:jernbaneverket}) defines regularity as the number of trains that gets run as 
+Jernbaneverket (see\vref{sub:subsection_jernbaneverket}) defines regularity as the number of trains that gets run as 
 planed in the time schedule. 
 Uptime in regards to punctuality is defined by Jernbaneverket from the hours of delay\footnote{Hours of delay due to infrastructure excluded traffic	management and external conditions} caused by infrastructure relative to sum of planed train hours\footnote{Planed train hours (passenger and freight trains)} per year.
 \cite{jernbaneverketPunklighetsTall}
@@ -34,7 +34,7 @@ Uptime in regards to punctuality is defined by Jernbaneverket from the hours of 
 
 As Landex\cite{landex2009gis} says, there exist few GIS-approaches concerning
 visualization of railroad capacity. Both the visualizations shown by Landex and
-in Section \vref{section:backgroundExamples} only seems to take into consideration if
+in section \vref{sect:backgroundExamples} only seems to take into consideration if
 the trains are delayed, and the amount of delay. 
 
 However, to minimize the delays all over the railway network, it may be necessary
@@ -44,10 +44,10 @@ network administrator and have a good visualization tool to present it.
 
 \pagebreak
 \section{Examples}
-\label{section:backgroundExamples}
+\label{sect:backgroundExamples}
 
 \subsection{Zugmonitor}
-\label{subsection:zugmonitor}
+\label{sub:subsection_zugmonitor}
 
 In the Zugmonitor (see \vref{fig:zugmonitor}) example each long-distance 
 trains in the German railway network has been plotted as a arrow on a German 
@@ -66,7 +66,7 @@ time line.
 \pagebreak
 
 \subsection{Vaguely live map of trains in the United Kingdom}
-\label{subsection:ukLiveMap}
+\label{sub:subsection_ukLiveMap}
 
 This is a map which plots the relative location of each train in the United
 Kingdom (see \vref{fig:ukLiveMap}). The plot fetches the departure time from the 
@@ -83,13 +83,13 @@ Both the map and time table is developed on hobby basis by the same person.
 \pagebreak
 
 \subsection{MUNI Light Rail}
-\label{subsection:muniLightRail}
+\label{sub:subsection_muniLightRail}
 
 This a train graph based on the N-Judah line on the Muni Metro light railway line in San Francisco (see \vref{fig:muniLightRail}). 
 This chart plots the schedule of the each train and the actual time each train 
 uses. The chart auto updates each 10 seconds, and combined with being able 
 to spot the difference between the schedule and the actual time, makes it easy 
-spot the delay of each train. As with \vref{subsection:ukLiveMap} it has been 
+spot the delay of each train. As with \vref{sub:subsection_ukLiveMap} it has been 
 developed on a hobby basis.
 
 \begin{figure}[!htbp]
@@ -101,7 +101,7 @@ developed on a hobby basis.
 
 
 \subsection{MiseryMap}
-\label{subsection:zugmonitor}
+\label{sub:subsection_zugmonitor}
 
 The MiseryMap (see \vref{fig:miserymap}) shows how much different airports and 
 the routes between them are delayed. It also have a playback function to see
@@ -117,17 +117,24 @@ conditions.
 %\pagebreak
  
 \subsection{Jernbaneverket}
-\label{subsection:jernbaneverket}
+\label{sub:subsection_jernbaneverket}
 
 Jernbaneverket is the Norwegian governments agency for railway services \cite{jernbaneverketAbout}.
 This means that they are responsible for all the railway network in Norway.
 Because of this, they also collect in data from points that each train passes. 
-Based on this, they are in the process of releasing a map (see \vref{fig:jernbaneverket-punklighet}) over the punctuality on each stretch. This is a 
+Based on this, they have recently released a map (see \vref{fig:jernbaneverket-punklighet}) over the punctuality on each stretch. This is a 
 interactive map which shows a pop-up box containing the punctuality of the 
 stretch clicked on, and this pop-up also shows which routes are using this 
 stretch. The map, does not however, show more information if the user zooms 
 inn, which is possible within the map itself, and has a static view of Norway 
-and the railway.
+and the railway. This map only shows the punctuality for passenger trains, and
+not freight trains and/or both. 
+
+To analyze each stretch, on a detail level of between each station,
+Jernbaneverket has a internal system called TIOS (see \vref{fig:jernbaneverket-tios}).
+This is a train graph which plots all trains that passes between all stations,
+in this example between Oslo S and Drammen, where the red lines means delays
+and the red circle indicates a reason code. XXX
 
 \begin{figure}[!htbp]
 	\includegraphics[height=\textheight,center]{jernbaneverket-punklighet.png}
@@ -137,11 +144,16 @@ and the railway.
 \end{figure}
 \pagebreak
 
+\begin{figure}[!htbp]
+	\includegraphics[width=\textwidth,center]{tios.png}
+	\caption[TIOS]{TIOS\cite{jernbaneverketPunklighetKart}}
+	\label{fig:jernbaneverket-tios}
+\end{figure}
+\pagebreak
+
 
 \subsection{Tåg.info}
-\label{subsection:taag.info}
-
-
+\label{sub:subsection_taag.info}
 
 \begin{figure}[!htbp]
 	\includegraphics[width=\textwidth,center]{taag-info-kart.png}
@@ -161,11 +173,11 @@ and the railway.
 
 
 \subsection{SINTEF Presis}
-\label{subsection:sintefPresis}
+\label{sub:subsection_sintefPresis}
 
 The PRESIS\cite{sintefPresis} project is a project between SINTEF\cite{sintef},
 Transportøkonomisk Institutt\cite{transportOkonomiskInstitutt},
-NTNU\cite{ntnu}, Jernbaneverket(section \vref{subsection:jernbaneverket}) and the train operators. It is meant to
+NTNU\cite{ntnu}, Jernbaneverket(section \vref{sub:subsection_jernbaneverket}) and the train operators. It is meant to
 systematicly improve the precision level in the railway system by developing
 methods, tools, and processes. In this project it has been developed several
 prototypes for analyzing train delays. 
@@ -242,3 +254,32 @@ both trains are delayed from -1 to 20 minutes.
 	\label{fig:ukespunklighet}
 \end{figure}
 \pagebreak
+
+\clearpage
+\subsection{Cargonet} % (fold)
+\label{sub:subsection_cargonet}
+
+% subsection subsection_name (end)
+Cargonet is a Norwegian which provides intermodal transport on rails. To 
+provide a effective tracking service for the customers, Cargonet provides a 
+internal service for the users which tracks all trains belonging to Cargonet.
+As can be seen on \vref{fig:cargonet}, it only shows a picture of the current
+status of each train, it lacks the possibility to analyze both each stretch 
+individually  and analyze trains and stretches in time.
+
+\begin{figure}[!htbp]
+	\includegraphics[width=\textwidth,center]{cargonet.png}
+	\caption[Cargonet]{Cargonet \cite{cargonet}}
+	\label{fig:cargonet}
+\end{figure}
+
+\begin{itemize}
+	\item Red arrow:\hspace{4ex} Delayed.
+	\item White arrow:\hspace{4ex} On time.
+	\item Red box:\hspace{4ex} Locomotive driven 2km without carriages.
+	\item Black box:\hspace{4ex} Locomotive without carriages.
+	\item Yellow box:\hspace{4ex} Locomotive on time without schedule, or known position.
+\end{itemize}
+
+\pagebreak
+% subsection subsection_cargonet (end)
