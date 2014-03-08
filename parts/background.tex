@@ -65,6 +65,7 @@ time line.
 \end{figure}
 \pagebreak
 
+\clearpage
 \subsection{Vaguely live map of trains in the United Kingdom}
 \label{sub:subsection_ukLiveMap}
 
@@ -82,6 +83,7 @@ Both the map and time table is developed on hobby basis by the same person.
 \end{figure}
 \pagebreak
 
+\clearpage
 \subsection{MUNI Light Rail}
 \label{sub:subsection_muniLightRail}
 
@@ -100,6 +102,7 @@ developed on a hobby basis.
 \pagebreak
 
 
+\clearpage
 \subsection{MiseryMap}
 \label{sub:subsection_zugmonitor}
 
@@ -129,7 +132,7 @@ stretch clicked on, and this pop-up also shows which routes are using this
 stretch. The map, does not however, show more information if the user zooms 
 inn, which is possible within the map itself, and has a static view of Norway 
 and the railway. This map only shows the punctuality for passenger trains, and
-not freight trains and/or both. 
+not freight trains and/or both.\\ 
 
 To analyze each stretch, on a detail level of between each station,
 Jernbaneverket has a internal system called TIOS (see \vref{fig:jernbaneverket-tios}).
@@ -153,8 +156,20 @@ and the red circle indicates a reason code. XXX
 \pagebreak
 
 
+\clearpage
 \subsection{Tåg.info}
 \label{sub:subsection_taag.info}
+
+Tåg.info\cite{taagInfo} is a Swedish system that tracks SJ\cite{svenskaJernban} trains. The
+service gathers and processes data from Trafikverket\cite{trafikverket}. As
+with Cargonet (section \vref{sub:subsection_cargonet}), it provides a method (\vref{fig:taag-info-kart}) of
+tracking live trains and visually see whether the trains are on schedule or
+delayed. 
+
+Tåg.info also provides a method of analyzing national delays by presenting
+graphs, \vref{fig:taag-info-historik}. The service presents both a bar-chart
+which presents the minutes of delays and the accumulated delays per day, and a
+pie chart of the current status.
 
 \begin{figure}[!htbp]
 	\includegraphics[width=\textwidth,center]{taag-info-kart.png}
@@ -168,11 +183,12 @@ and the red circle indicates a reason code. XXX
 	\includegraphics[width=\textwidth,center]{taag-info-historik.png}
 	\caption[Tåg.info history]{Tåg.info history
 	\cite{taagInfo}}
-	\label{fig:taag-info-kart}
+	\label{fig:taag-info-historik}
 \end{figure}
 \pagebreak
 
 
+\clearpage
 \subsection{SINTEF Presis}
 \label{sub:subsection_sintefPresis}
 
@@ -275,6 +291,7 @@ individually  and analyze trains and stretches in time.
 \end{figure}
 
 \begin{itemize}
+	\item [] \textbf{How to read \ref{fig:cargonet}}
 	\item Red arrow:\hspace{4ex} Delayed.
 	\item White arrow:\hspace{4ex} On time.
 	\item Red box:\hspace{4ex} Locomotive driven 2km without carriages.
