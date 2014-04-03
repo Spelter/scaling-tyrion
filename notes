@@ -42,3 +42,105 @@ cargonet bilde:
 
 tios:
 	Internt jernbaneverket
+
+
+Workshop 2014-04-04:
+Banesjef fra signal til signal, ligger i tios et sted.
+3 sett med briller:
+	infrastruktur: banesjef o.l.
+	trafikkdivisjon/pasasjerer/togselskaper
+	forsinkelsesårsaker: forsinkelsesdemografi
+		årsakelser til registrerte forsinkelser
+kontekst som påvirker:
+	vår, årstid, trafikk
+
+hva er de interresert i?
+	oppetid, punklighet
+	avvik:
+		hva
+		hvor
+		når
+	forsinkelstia blir henta ut fra årsaksregisteret i TIOS
+
+Variasjon
+
+Endringer
+
+Misery-map	infrastruktur
+
+vær, antall reisende, kapasitetsutnyttelse, dyrepåkjøringer, godsvolum.
+	(NINA - økt risiko for påkjøringer)
+hvis ikke får antall passasjer, notis om at det kan gjøres for det også
+årsrapporten til jernbaneverket, står det godsvolum
+skip volum.
+
+Togene får materiell problemer, tilsvarende på infrastruktur. tekniske prolemer.
+
+Vanskelig å finne data, presentere tankegangen, videre arbeid, kun tanker om implementasjon.
+
+
+Forklaring som videre arbeid.
+
+TIOS:
+	Tidsregistrering på sek,
+		avviksreg
+		baserer oppetid på avviksreg
+
+		tror avviksreg blir mer fokus på videre i JBV, kan være godt mottatt å visualisere på det.
+	bruke tidsreg, bedre data.
+
+kan ikke dokumentere variasjon og endringer basert på 5 min filteret til avviksreg.
+
+banesjefene blir målt på avviksreg.
+
+fleste utviklet i sintef:
+over strekning, over tid, inkluderer forklaringsfaktorer
+master:
+	mulige visualiseringer, utforske mulighetsrommet.
+
+ene front end andre bak end, visualisering og statistikk
+	hvilke data har vi til visuallisering, hva kan vi gjøre med den?
+	krav spec?
+	first front end, noen alternativer (5-6 stk)?
+
+hvilken kvalitet må dataen ha for å vise til forskjellige perspektiver? 
+
+start med aggregert nivå og beskriv hva som skal til lengre ned?
+
+Nivåer:
+	- Hva vises i hvert nivå
+	- Krever rollebeskrivelsen & def av områder
+	- Hva er mest relevant på hvert nivå?
+
+forskjellige roller kan ha forskjellig behov for visning av dataen, kake for direktøren, andre ting for banesjef.
+
+samme innfallsvinkel gjennom zoom nivåene, valgbart visninger basert på roller.
+
+samme data kan vise suksess eller fail basert på når det sammenlignes med.
+ting kan variere fra år til år, påsken er ikke samme uke hvert år.
+
+avkrysningsboks på variasjon og endringer.
+	men når har vi en variasjon og endring.
+
+hvordan aggregere ved zoom ut, variasjon drukner i "bra" ved større geografisk område.
+
+To problemer, Stor-oslo mot resten av landet.
+
+hvordan identifisere og visualisere forbedringsområder?
+
+Dashbord per rolle, dukker opp per zoom nivå, visualisere saktekjøring ved hjelp av data fra Rimmert.
+resten av problemene kan nevnes som videre arbeid.
+
+forberede innlegging av data fra JBV, saktekjøring, tios, osv.
+bruk gammel data for prototype.
+
+ikke bare visualisere saktekjøring, men effekten. Hvem er verst osv.
+
+visualiserer hendelsen eller effekten?
+
+liste i dashboard over innhold, info ved klikk og zoom
+	- Norge
+		-distrikt
+			-bane
+
+torsdag kl. 10-11
