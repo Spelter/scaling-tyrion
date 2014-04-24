@@ -1,4 +1,142 @@
+% !TEX root=../thesis.tex
+
 \chapter{Research questions and method} % (fold)
 \label{cha:research_questions_and_method}
 
+\section{Workshops} % (fold)
+\label{sec:workshops}
+In order to determine what is relevant content for this thesis, workshops were
+held. These workshops were meant to bring some context and direction for the
+thesis. 
+
+\subsection{Workshop 2014-04-04} % (fold)
+\label{sub:workshop_2014_04_04}
+The first workshop was meant to bring some clarity to what kind of users this
+system will expect to be used by; their responsibility, and their needs.
+It was also meant to how the system will relate to these users and their needs.
+Attending this workshop was Andreas Amdal Seim (SINTEF), Andreas Dypvik 
+Landmark (SINTEF), Rimmert van der Kooij (SINTEF), Nils Olsson (NTNU), Per 
+Magnus Hegglund (Jernbaneverket), Magnus Bae (NTNU), and Magnus Krane (NTNU).
+
+% subsection workshop_2014_04_04 (end)
+
+\subsection{Workshop 2014-04-24} % (fold)
+\label{sub:workshop_2014_04_24}
+The second workshop was meant to determine what kind of statistical data was 
+to be implemented in the dashboard mentioned in \ref{sub:workshop_2014_04_04}.
+Attending this workshop was Andreas Amdal Seim (SINTEF), Andreas Dypvik 
+Landmark (SINTEF), Rimmert van der Kooij (SINTEF), and Magnus Krane (NTNU).\\
+
+The workshop started with a brainstorming for different things to implement in
+the map. The ideas were then ranged on how practical it is from 1-3 where 1 is
+unpractical and 3 is very practical; and ranged on how desirable it is from 1-3
+where 1 is undesirable and 3 is very desirable. The result ended up as \ref{table:dashboard_functionality_wants_vs_needs}.
+
+\begin{table}[!h]\small
+	\begin{tabularx}{\textwidth}{|X|l|l|}
+		\hline
+		Functionality & Practicability & Desirable \\
+		\hline
+		Cause & 3 & 2\\
+		\hline
+		Suspensions & 3 & 1\\
+		\hline
+		Traffic density & 3 & 3\\
+		\hline
+	 	Worst stretch/station/train number & 3 & 2\\
+		\hline
+		Slow driving & 3 & 3\\
+		\hline
+		Delays & 3 & 3\\
+		\hline
+		Variation & 1 & 3\\
+		\hline
+		Outstanding errors & 1 & 1\\
+		\hline
+		Season effects & 3 & 1\\
+		\hline
+		Crossings & 3 & 3\\
+		\hline
+		Follow delays & 1 & 3\\
+		\hline
+		Speed limits & 3 & 1\\
+		\hline
+	\end{tabularx}
+\caption{Dashboard functionality brainstorming ideas}
+\label{table:dashboard_functionality_wants_vs_needs}
+\end{table}
+
+Based on this, it was selected to implement only the options which was ranged
+as a 3 both on practicability and desirability:
+
+\begin{itemize}
+  \item Delays
+  \item Slow driving
+  \item Crossings
+  \item Traffic density
+\end{itemize}
+
+The second goal of the workshop was to determine how the selected ideas was to
+be implemented in both the map. It was desirable to both display some data in
+the dashboard besides each marker, and display some top 5 lists for worsts
+incidents.
+
+\clearpage
+\subsubsection{Traffic density} % (fold)
+\label{ssub:traffic_density}
+The first idea chosen to display was traffic density. The issue to be displayed
+is the effect the volume of trains driven throughout the day has on delays and
+slow driving, and vice versa.
+
+Several options to display traffic density was discussed, the problem was how
+to correctly show the number of trains based on what data is available. Should
+you display each train based on the train numbers and calculate for the entire
+line both way? Should you display train numbers divided by the segment
+directors? 
+
+In the workshop it was decided to show number of trains that passes each block
+segment, which is what we have data on. This will aggregate upwards when
+selecting different levels to display. For instance, when on stretch level, it
+will display each block between stations; on line level, it will display an
+average of the stretches belonging to that line.
+
+% subsubsection traffic_density (end)
+
+\subsubsection{Crossings} % (fold)
+\label{ssub:crossings}
+The second idea was crossings between trains, how could delays and slow 
+driving affect crossings. 
+
+One of the problems discussed here was should you into account the difference
+between actual crossings and planed crossings or not? Since this is hard to
+calculate because of the difference does not take into account whether or not
+one of the trains involved in the crossing has been canceled and other hard to
+document occurrences such as that, it was decided to only show a number for
+both actual crossings and planned crossings. These numbers will aggregate when
+changing level upwards in similar manners as the traffic density. 
+% subsubsection crossings (end)
+
+\subsubsection{Delays} % (fold)
+\label{ssub:delays}
+Since delays can cover a large area depending on how you define it, this had to
+be properly discussed and defined. Should you follow the Norwegian standard
+\cite{jernbaneverketPunklighetsTall} of only say that a train is delayed at the
+final destination or use data from the signal post on the stretches compared to
+the schedule? Should you take the variation into account?
+
+It was decided to display the sum seconds of delays, and sum of trains
+arriving to early. These sums would then be displayed in the dashboard and be
+aggregated accordingly to level.
+
+% subsubsection delays (end)
+
+\subsubsection{Slow driving} % (fold)
+\label{ssub:slow_driving}
+
+% subsubsection slow_driving (end)
+
+% subsection workshop_2014_04_245 (end)
+
+% section workshops (end
 % chapter research_questions_and_method (end)
+

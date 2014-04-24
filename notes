@@ -143,4 +143,80 @@ liste i dashboard over innhold, info ved klikk og zoom
 		-distrikt
 			-bane
 
-torsdag kl. 10-11
+
+
+2014-04-24		Dashboard workshop:
+
+Top 5 liste for saktekjøringer per nivå
+Ikke nødvendigvis baner som påvirker, f.eks. ofotbanen til område nord.
+effekt på trafikksystemet på top 5?
+
+Forsinkelser:
+	Top 5 liste:
+		Verste tognr
+Mest presis/nærmest planen
+
+Variasjon
+
+
+Hva som kan være med, ikke nødvendigvis bør:
+	gjennomførbarhet / Ønskelig (3-1, hvor 3 er lett å gjennføre/høyst ønskelig)
+		3/2 Årsak (for innstillinger/forsinkelser osv.)
+		3/1 Innstillinger
+		3/3 Traffiktetthet
+			- Pers
+			- Gods
+		3/2 Verste strekning, stasjon, og tognr
+		3/3 Saktekjøring
+		3/3 Forsinkelser (pie chart?)
+		1/3 Variasjon
+		1/1 Utestående feil X
+		3/1 Årstidseffekt (påvirker) >
+		3/3 Kryssninger (tetthet)
+		1/3 Følgeforsinkelser X
+		3/1 Fartsgrenser X
+	Ønskelig at gjennomføres:
+		- Forsinkelser
+		- Saktekjøring
+		- Krysninger
+		- Trafikktetthet
+
+Traffiktetthet:
+	Antall tog
+		- Person
+		- Gods
+
+	Antall tog på på blokk, snitt ved zoom opp.
+		Strekning får per stasjon.
+		Banesjef får snitt per strekning osv.
+
+Saktekjøring:
+	Fra og til i tid og sted
+	Liten boks som marker hendelsen
+
+	Dashboard: Top 5 upper og lower bound
+
+Forsinkelser:
+	Underveis forsinkelser
+	(Endestasjon)
+	(Variasjon)
+
+	Sum Fors. sek
+	Sum For tidlig
+	i dashboard
+
+Krysninger:
+	Antall 	
+		- faktisk
+		- plan
+		- (forskjellig faktisk og plan)
+			further work
+
+	I kart
+		- Viser på stasjoner der krysningen skjer
+		- Viser i dashboard (tall over)
+
+Top 5 lister:
+	- Saktekjøring
+	- Forsinkelser (kommer etterhvert)
+Ligger på kart, ikke over markører.
