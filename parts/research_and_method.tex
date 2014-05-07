@@ -1,6 +1,7 @@
 % !TEX root=../thesis.tex
 
-\chapter{Research questions and method} % (fold)
+\chapter{Method} % (fold)
+% Research questions and method
 \label{cha:research_questions_and_method}
 
 \section{Workshops} % (fold)
@@ -16,7 +17,61 @@ system will expect to be used by; their responsibility, and their needs.
 It was also meant to how the system will relate to these users and their needs.
 Attending this workshop was Andreas Amdal Seim (SINTEF), Andreas Dypvik 
 Landmark (SINTEF), Rimmert van der Kooij (SINTEF), Nils Olsson (NTNU), Per 
-Magnus Hegglund (Jernbaneverket), Magnus Bae (NTNU), and Magnus Krane (NTNU).
+Magnus Hegglund (Jernbaneverket), Magnus Bae (NTNU), and Magnus Krane (NTNU).\\
+
+At first it was discussed that it is 3 sets of "glasses" you can put on when
+viewing the system.
+\begin{itemize}
+	\item Infrastructur: Segment director, etc.
+	\item Traffic division / passenger / train companies.
+	\item Delay causes: delay demographic.
+\end{itemize}
+
+Based on this, it was discussed what the users might be interested in when
+using the system.
+\begin{itemize}
+	\item Uptime, punctuality.
+	\item Deviation.
+	\begin{itemize}
+		\item What?
+		\item Where?
+		\item When?
+	\end{itemize}
+	\item Delay time.
+	\item Variation.
+	\item Changes.
+\end{itemize}
+
+Causes that might affect the punctuality was also listed: weather, number of
+passengers, capacity utilization, animal accidents, cargo volume.
+It was decided that these causes is difficult to prove and get data on, and
+therefore was not to be included at this project.\\
+
+The internal project in Jernbaneverket (section
+\ref{sub:subsection_jernbaneverket}), which is being used to analyse each
+stretch on a detail level, gets it's data from a deviation registry; also the
+uptime uses this registry for it's calculations. The problem here is that the deviation registry has a five minute filter
+in which the trains are being calculated to be on time. (XXX)
+
+It was then agreed that it was two problems that had to be addressed, back end
+and front end of the system. What kind of data is available and what is
+possible to do with this data? It was also pointed on that same data set can 
+show both successful and failure results based on when it compared to, for 
+instance the easter is not on the same week each year. This ended up being 
+addressed in workshop two (section \ref{sub:workshop_2014_04_24}). 
+
+In the front end it was discussed different levels and what should be shown in
+each level, that different users might have different needs in each level then
+the other users. It was suggested to have the same perspective through the
+levels, but too have selectable views based on roles. \\
+
+In the end it was decided to have a Dashboard along each marker with some data
+relevant to that marker, and some kind of selectable list which enables the
+user to select the level to be displayed, all of Norway, each area, a segment,
+or a stretch with each station. 
+
+It was also concluded on having a second workshop where the content of the
+dashboard should be decided. This resulted in section \ref{sub:workshop_2014_04_24}.
 
 % subsection workshop_2014_04_04 (end)
 
@@ -78,10 +133,9 @@ as a 3 both on practicability and desirability:
 
 The second goal of the workshop was to determine how the selected ideas was to
 be implemented in both the map. It was desirable to both display some data in
-the dashboard besides each marker, and display some top 5 lists for worsts
-incidents.
+the dashboard besides each marker, and display top 5 lists. These lists was
+decided to display for delays and slow drivings. 
 
-\clearpage
 \subsubsection{Traffic density} % (fold)
 \label{ssub:traffic_density}
 The first idea chosen to display was traffic density. The issue to be displayed
@@ -132,6 +186,12 @@ aggregated accordingly to level.
 
 \subsubsection{Slow driving} % (fold)
 \label{ssub:slow_driving}
+Visualization of slow driving has been a goal along the way since the beginning
+and was natural to include from here on as well.
+
+In the dashboard it was decided to show the top 5 upper and lower bounds.
+It was also decided to include a little marker on the map to indicate the
+location of the incident.
 
 % subsubsection slow_driving (end)
 
