@@ -1,19 +1,18 @@
 % !TEX root=../../thesis.tex
-\section{Examples}
+\clearpage
+\section{Case study of similiar systems}
 \label{sect:backgroundExamples}
-This section will present some relevant examples and try to explain what these
-examples tries to present.
+This section will present some similar systems and we will explain what the
+systems try to present.
 \subsection{Zugmonitor}
 \label{sub:subsection_zugmonitor}
 
-In the Zugmonitor (see \vref{fig:zugmonitor}) example each long-distance 
+In the Zugmonitor (see \vref{fig:zugmonitor}) each long-distance 
 trains in the German railway network has been plotted as a arrow on a German 
 map. To illustrate the punctuality of each train, a colored circle has been 
 added to each arrow if the train is delayed with varying color depending on 
-how big the delay is. It has also been implemented a time line functionality 
-to see how the trains are on each step of the routes. This time line 
-functionality has both a play forward function and manually drag along the 
-time line.
+how big the delay is. A time line is also displayed to see how the trains run 
+on each step of the routes. 
 
 \begin{figure}[!htbp]
 	\includegraphics[width=\textwidth,center]{zugmonitor.png}
@@ -29,8 +28,8 @@ time line.
 This is a map which plots the relative location of each train in the United
 Kingdom (see \vref{fig:ukLiveMap}). The plot fetches the departure time from the 
 National Rail website and calculates the relative location. The plot does not
-indicate whether or not the trains are on schedule or delayed, this must be
-done either manually or for instance checking a time table\cite{trainTimesUK}.
+indicate whether the trains are on schedule or delayed, this must be
+done either manually, or for instance by checking a time table\cite{trainTimesUK}.
 Both the map and time table is developed on hobby basis by the same person. 
 
 \begin{figure}[!htbp]
@@ -46,10 +45,10 @@ Both the map and time table is developed on hobby basis by the same person.
 
 This a train graph based on the N-Judah line on the Muni Metro light railway line in San Francisco (see \vref{fig:muniLightRail}). 
 This chart plots the schedule of the each train and the actual time each train 
-uses. The chart auto updates each 10 seconds, and combined with being able 
+uses. The chart auto updates every 10 seconds, and combined with being able 
 to spot the difference between the schedule and the actual time, makes it easy 
-spot the delay of each train. As with \vref{sub:subsection_ukLiveMap} it has been 
-developed on a hobby basis.
+to spot the delay of each train. As with \vref{sub:subsection_ukLiveMap} it 
+has been developed on a hobby basis.
 
 \begin{figure}[!htbp]
 	\includegraphics[width=\textwidth,center]{visualizing-transit-delays.png}
@@ -64,9 +63,9 @@ developed on a hobby basis.
 \label{sub:subsection_zugmonitor}
 
 The MiseryMap (see \vref{fig:miserymap}) shows how much different airports and 
-the routes between them are delayed. It also have a playback function to see
-how the delays are throughout the day. This plot also shows some weather so it
-may be possible to spot if the delays to be blamed on uncontrollable
+the routes between them are delayed. It also have a playback function to see 
+the delays throughout the day. This plot also shows the weather sometimes so it
+may be possible to spot if the delays is to be blamed on uncontrollable
 conditions. 
 
 \begin{figure}[!htbp]
@@ -85,17 +84,17 @@ This means that they are responsible for all the railway network in Norway.
 Because of this, they also collect in data from points that each train passes, see \vref{fig:jernbaneverket-trafikkdata}. 
 Based on this, they have recently released a map (see \vref{fig:jernbaneverket-punklighet}) over the punctuality on each stretch. This is a 
 interactive map which shows a pop-up box containing the punctuality of the 
-stretch clicked on, and this pop-up also shows which routes are using this 
-stretch. The map, does not however, show more information if the user zooms 
-inn, which is possible within the map itself, and has a static view of Norway 
-and the railway. This map only shows the punctuality for passenger trains, and
-not freight trains and/or both.\\ 
+stretch clicked on, and this pop-up also shows which train routes that
+operates this stretch. The map, does not however, show more information if 
+the user zooms inn, which is possible within the map itself, and has a static 
+view of Norway and the railway. This map only shows the punctuality for 
+passenger trains, and not freight trains and/or both.\\ 
 
-To analyze each stretch, on a detail level of between each station,
-Jernbaneverket has a internal system called TIOS (see \vref{fig:jernbaneverket-tios}).
+To analyze each stretch, on a detailed level between each station,
+Jernbaneverket has a internal system called TIOS (see \ref{fig:jernbaneverket-tios}).
 This is a train graph which plots all trains that passes between all stations,
 in this example between Oslo S and Drammen, where the red lines means planned
-time, black lines is actual time and the red circle indicates a reason code. 
+time, black lines is actual time and the red circle indicates a a code for the cause of the delay. 
 
 \begin{figure}[!htbp]
 	\includegraphics[width=\textwidth,center]{trafikkdata.png}
@@ -157,14 +156,14 @@ pie chart of the current status.
 
 The PRESIS\cite{sintefPresis} project is a project between SINTEF\cite{sintef},
 Transportøkonomisk Institutt\cite{transportOkonomiskInstitutt},
-NTNU\cite{ntnu}, Jernbaneverket(section \vref{sub:subsection_jernbaneverket}) and the train operators. It is meant to
-systematicly improve the precision level in the railway system by developing
-methods, tools, and processes. In this project it has been developed several
-prototypes for analyzing train delays. 
+NTNU\cite{ntnu}, Jernbaneverket(section \vref{sub:subsection_jernbaneverket}) 
+and the train operators. The aim is to systematicly improve the precision 
+level in the railway system by developing methods, tools, and processes. During
+this project several prototypes for analyzing train delays have been developed.
 
 A interaction plot, see \vref{fig:krysningsinteraksjon}, plots the interaction
 between two selected trains at a selected station. This makes it easy to see 
-if one train in delayed, how it might affect another train. Since it only
+if a train is delayed, and how it might affect another train. Since it only
 plots between two trains, it makes it tedious to track large delays back 
 throughout all interaction a train may have to find the source of the delay.
 This makes it useful for individual trains, but makes it difficult to use if
@@ -250,8 +249,8 @@ process.  %Bidragsplot, ikke tatt med.
 Cargonet is a Norwegian which provides intermodal transport on rails. To 
 provide a effective tracking service for the customers, Cargonet provides a 
 internal service for the users which tracks all trains belonging to Cargonet.
-As can be seen on \vref{fig:cargonet}, it only shows a picture of the current
-status of each train, it lacks the possibility to analyze both each stretch 
+As can be seen in \vref{fig:cargonet}, it only shows a picture of the current
+status of each train, it lacks the possibility to analyze every stretch 
 individually  and analyze trains and stretches in time.
 
 \begin{figure}[!htbp]

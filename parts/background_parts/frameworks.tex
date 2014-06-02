@@ -3,52 +3,15 @@
 \section{Defining frameworks} % (fold)
 \label{sec:defining_frameworks}
 This section will first define the users in the railway network, and then
-define framework(s) based on the need of the users and what the examples
-presented in section \vref{sect:backgroundExamples} tries to present.
-
-\subsection{User roles in the Norwegian railway network} % (fold)
-\label{sub:user_roles_in_the_norwegian_railway_network}
-
-Combined in all the companies with a certain interest in the Norwegian railway 
-network there are several types of users which have different perspective of
-the railway. 
-\begin{table}[!h]\small
-	\begin{tabularx}{\textwidth}{|l|l|X|}
-		\hline
-		Company & User type & Responsibility \\
-		\hline
-		Jernbaneverket & Traffic director & Responsibility to facilitate that the railway traffic in Norway is safe and reliable\\
-		\hline
-		Jernbaneverket & Area director & Responsibility to facilitate that the railway traffic in Norway is safe and reliable\\
-		\hline
-		Jernbaneverket & Segment director & Responsibility to facilitate that the railway traffic in Norway is safe and reliable\\
-		\hline
-		NSB & Nation responsible & 1 per line (Dovre, Bergen, etc.)\\
-		\hline
-		NSB & East responsible & 1 per defined area in the east of Norway (Vestfold county, Oslo - Hamar,
-		etc.)\\
-		\hline
-		None & Average Joe & General user interested in train punctuality\\
-		\hline
-	\end{tabularx}
-\caption{User roles in the Norwegian railway network}
-\label{table:user_roles}
-\end{table}
-
-Based on the perspective of these users, different information is useful and
-not all examples in section \ref{sect:backgroundExamples} may be useful. They
-may have just a basic interest whether trains are delayed or not, for instance
-traveling with trains on holiday; or have a more detailed need to understand
-all train delays in the whole network, for instance to make new schedules. 
-
-% subsection user_roles_in_the_norwegian_railway_network (end)
+define framework(s) based on the need of the users and what the systems
+presented in section \ref{sect:backgroundExamples} tries to present.
 
 \clearpage
 % subsection information_plotted_vs_information_needed (end)
 \subsection{Functionality description} % (fold)
 \label{sub:functionality_description}
-This section tries to present some functionalities and in a tabular tries to
-present which examples cover which functionality. 
+This section tries to present some functionalities and in a tabular display 
+tries to present which systems cover which functionality. 
 \begin{description}
 	\item [National]	Whether or not it gives a national overview.
 	\item [Route]		Whether or not it is possible to study a whole route.
@@ -80,7 +43,7 @@ present which examples cover which functionality.
 		\Ref{fig:taag-info-kart} \nameref{fig:taag-info-kart} & X & - & - & X & -\\
 		\hline
 		\Ref{fig:taag-info-historik} \nameref{fig:taag-info-historik} & X & X & X & X
-		& -\\
+		& X\\
 		\hline
 		\Ref{fig:krysningsinteraksjon} \nameref{fig:krysningsinteraksjon} & - & - & X &
 		- & X \\
@@ -103,15 +66,64 @@ present which examples cover which functionality.
 \end{table}
 
 % subsection functionality_description (end)
+\clearpage
+\subsection{Type of information presented} % (fold)
+\label{sub:information_presented}
+This section summaries what kind of information the different systems presents. 
 
+\begin{table}[!h]\small
+	\begin{tabularx}{\textwidth}{|l|X|}
+		\hline
+		System & Type of information\\
+		\hline
+		\Ref{fig:zugmonitor} \nameref{fig:zugmonitor} & Delays \\
+		\hline
+		\Ref{fig:ukLiveMap} \nameref{fig:ukLiveMap} & Delays \\
+		\hline
+		\Ref{fig:muniLightRail} \nameref{fig:muniLightRail} & Delays and schedule \\
+		\hline
+		\Ref{fig:miserymap} \nameref{fig:miserymap} & Delays \\
+		\hline
+		\Ref{fig:jernbaneverket-punklighet} \nameref{fig:jernbaneverket-punklighet} & Punctuality \\
+		\hline
+		\Ref{fig:jernbaneverket-tios} \nameref{fig:jernbaneverket-tios} & Delays and schedule \\
+		\hline
+		\Ref{fig:taag-info-kart} \nameref{fig:taag-info-kart} & Delays  \\
+		\hline
+		\Ref{fig:taag-info-historik} \nameref{fig:taag-info-historik} & Delays \\
+		\hline
+		\Ref{fig:krysningsinteraksjon} \nameref{fig:krysningsinteraksjon} & Delays and crossings \\
+		\hline
+		\Ref{fig:live-punklighet} \nameref{fig:live-punklighet} & Delays \\
+		\hline
+		\Ref{fig:plot-spc-for-strekning} \nameref{fig:plot-spc-for-strekning} & Time used vs others \\
+		\hline
+		\Ref{fig:plot-spc-for-stasjonsopphold} \nameref{fig:plot-spc-for-stasjonsopphold} & Time used vs others \\
+		\hline
+		\Ref{fig:ukespunklighet} \nameref{fig:ukespunklighet} & Punctuality \\
+		\hline
+		\Ref{fig:cargonet} \nameref{fig:cargonet} & Delays \\
+		\hline
+	\end{tabularx}
+\caption{Information presented}
+\label{table:information_presented}
+\end{table}
+
+As seen in \ref{table:information_presented}, almost all of the system found 
+presents either delays or punctuality in some way. This shows that there are 
+gaps in what kind of information that is being displayed and as was 
+mentioned in \vref{sub:workshop_2014_04_04}, it might be desirable to show 
+some kind of argumentation to as why the trains are delayed. 
+
+% subsection information_presented (end)
 
 \clearpage
-\subsection{Information presented vs information needed} % (fold)
+\subsection{User needs vs system information} % (fold)
 \label{sub:information_presented_vs_information_needed}
 
 Since each project presented in section \vref{sect:backgroundExamples} is
-based different type of user accessing it, they present different amount of
-information. Since some the projects presented contains different types of
+based on different types of users accessing it, they present different amount 
+of information. Since some the projects presented contains different types of
 information presentations and they may cover different needs, the following 
 definition will be based on the presented figures. 
 
@@ -183,7 +195,7 @@ definition will be based on the presented figures.
 				\end{tabular} \\
 		\hline
 	\end{tabularx}
-\caption{Information presented vs information needed}
+\caption{User needs vs system information}
 \label{table:information_presented_vs_information_needed}
 \end{table}
 

@@ -107,30 +107,30 @@
 %\include{preface}
 %\include{summary}
 %\include{summary_nor}
+\chapter*{Definitions \& abbreviations}
+\input{abbriv}
 
+\renewcommand\contentsname{Table of Contents}
+\tableofcontents
+\clearpage
 \renewcommand\listfigurename{List of Figures}
 \listoffigures
 \clearpage
 \renewcommand\listtablename{List of Tables}
 \listoftables
-\clearpage
-\renewcommand\contentsname{Table of Contents}
-\tableofcontents
 
 \setcounter{page}{0}
 \pagenumbering{arabic}
 
 
 \include{parts/introduction}
-\chapter{Definitions \& abbreviations}
-\input{abbriv}
+\include{parts/research_and_method}
 \include{parts/background} % and state of the art
 %\include{parts/concept}
-%\include{parts/implementation}
-\include{parts/research_and_method}
-%\include{parts/results}
-%\include{parts/discussion}
-%\include{parts/conclusion}
+\include{parts/implementation}
+\include{parts/results}
+\include{parts/discussion}
+\include{parts/conclusion}
 
 \label{bibliography}
 \bibliography{bibliography}
@@ -140,49 +140,6 @@
 %Use ieeetr to get correct numbering of references according to the IEEE
 % standard. Numbering follows order of introduction.
 \bibliographystyle{ieeetr}
-
-
-% Header for appendices
-%\chapter{Appendices}
-%    \begin{center}
-%    \topskip0pt
-%    \vspace*{\fill}
-%     This page intentionally left blank     %   Nice and centered :D
-%    \vspace*{\fill}
-%    \end{center}
-
-%\appendix
-%\setcounter{page}{0}
-%\pagenumbering{roman}
-
-%\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
-
-%\include{appendices/driver_interview}
-%\include{appendices/formula}
-%\include{appendices/systemRequirements}
-
-
-%\chapter{Vision Document}
-%\label{appendix:vision}
-%\includepdf[link,pages={-}]{output/vision.pdf}
-%
-%
-%\chapter{System Requirements Document}
-%\label{appendix:requirements}
-%\includepdf[link,pages={-}]{output/requirements.pdf}
-%
-%
-%\chapter{Supplementary Specification Document}
-%\label{appendix:supspec}
-%\includepdf[link,pages={-}]{output/supspec.pdf}
-%
-%\chapter{System Architecture Document}
-%\label{appendix:sad}
-%\includepdf[link,pages={-}]{output/architecture.pdf}
-
-%\include{acronyms}
-%\include{attachments}
-%\includepdf[pages={-}]{} Legge til pdf
 
 
 \end{document}
