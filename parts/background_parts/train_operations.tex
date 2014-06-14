@@ -1,0 +1,50 @@
+% !TEX root=../../thesis.tex
+
+\section{Railway operations} % (fold)
+\label{sec:railway_operations}
+Major train networks are complex systems with many dynamic effects. The 
+Norwegian railroad consists of 4320 km of lines \cite[p. 4]{jernbaneverketStatistikk}, transporting 60 million passenger journeys and 27 
+million tons of cargo in 2012\cite[p. 9]{jernbaneverketStatistikk}. For a rail 
+undertaking, there is a constant balance to be struck between capacity, demand 
+and safe and punctual operations. Safety has the highest priority between 
+these concerns, and as such this thesis will focus more on capacity and 
+punctual operations.\\
+
+Punctuality is usually divided into two central metrics, punctuality and 
+regularity. In the Norwegian railroad, a train is considered punctual or on 
+schedule if it operates at planned points in the infrastructure within a 
+margin of 3 minutes and 59 seconds, for long distance and cargo trains the 
+margin is 5 minutes and 59 seconds. Punctuality (in \%) is the proportion of 
+trains that arrives at their final destination within this margin.
+
+Jernbaneverket (see \Vref{sub:subsection_jernbaneverket}) defines regularity (in \%) as the proportion of trains operated over the number planned in the schedule. 
+
+Other derived metrics include uptime, in regards to punctuality, is defined by 
+Jernbaneverket from 
+the hours of delay\footnote{Hours of delay due to infrastructure excluded 
+traffic	management and external conditions} caused by infrastructure relative 
+to sum of planned train hours\footnote{Planned train hours (passenger and freight
+trains)} per year.\cite{jernbaneverketPunklighetsTall}
+\begin{equation} Uptime =
+		\frac
+				{
+					\text{Train hours - Hours of delay}
+				}
+				{
+					\text{Train hours}
+				}\times 100 
+\end{equation}\\
+
+The operations of the railway system are divided into infrastructure owner and rail undertakings that provide transport on the infrastructure. In Norway the infrastructure is constructed, operated and maintained by the state owned agency Jernbaneverket. The major undertakings operating in Norway  include Norges Statsbaner (NSB), NSB Anbud, CargoNet, CargoLink, and Flytoget \cite{ wiki:NorwegianRailway}. The undertakings provide exclusively either passenger or freight traffic.\\
+
+Since most of the railway structure in Norway is single line, most crossings
+have to be executed at places where sidetracks have been built, mostly this is
+at stations. This means that even though one train may be experiencing delay, this delay may be part of a sequence of problems that can be tracked back to a seemingly unrelated part of the the network and a perhaps a bad decision there\cite{cule2011mining}.
+
+As Landex\cite{landex2009gis} says, there exist few GIS-approaches concerning
+visualization of railroad capacity. Both the visualizations shown by Landex and
+in \Ref{sect:backgroundExamples} \nameref{sect:backgroundExamples}, 
+only seems to take into consideration whether
+the trains are delayed, and the amount of delay. 
+
+% section railway_operations (end)

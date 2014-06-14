@@ -3,11 +3,12 @@
 \documentclass[english,10pt, oneside, a4paper]{scrreprt}
 %\usepackage[b5paper, layout=b5paper, textwidth=12cm, twoside,bindingoffset=1cm,outer=2cm,inner=2cm,includefoot,bmargin=3cm]{geometry}
 \usepackage[a4paper, layout=a4paper, textwidth=12cm, bindingoffset=1cm,outer=2cm,inner=2cm,includefoot,bmargin=3cm]{geometry}
+\RequirePackage[l2tabu, orthodox]{nag}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{float}
-\usepackage{subfig}
+\usepackage{subcaption}
 \usepackage{multirow}
 \usepackage{tabularx}
 \usepackage{perpage} % For å få fotnotenummerering til å starte på nytt for hver side
@@ -32,6 +33,7 @@
 
 \usepackage{dialogue}
 \usepackage[section]{placeins}
+\usepackage{microtype}
 
 \linespread{1.5}
 
@@ -66,7 +68,11 @@
 \MakePerPage{footnote} % For å få fotnotenummerering til å starte på nytt for hver side
 \labelformat{equation}{equation~(#1)}
 \labelformat{figure}{figure~{#1}}
+\labelformat{subfigure}{figure~\thefigure #1}
 \labelformat{table}{table~{#1}}
+\labelformat{section}{section~{#1}}
+\labelformat{subsection}{section~{#1}}
+\labelformat{chapter}{chapter~{#1}}
 
 
 % ########################################## 

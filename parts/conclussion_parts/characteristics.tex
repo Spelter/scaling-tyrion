@@ -1,0 +1,102 @@
+% !TEX root=../../thesis.tex
+
+\section{Characteristics} % (fold)
+\label{sec:characteristics}
+This will mainly be melted inn conclusion and results. Was meant for typing out
+list in \Ref{sec:list_learned_to_be_removed}.
+
+\textbf{Research question}
+\begin{itemize}
+	\item What are important characteristics for a stakeholder aware method to 
+	aggregate over a rich set of data?
+\end{itemize}
+
+When one needs a method that are aware of stakeholders for aggregating, it is
+important to have a clearly defined hierarchy of the stakeholders and their 
+responsibility area. When implementing the stakeholder hierarchy in the
+developed prototype, it was implemented as a selectable list in the upper right
+corner, see \Ref{fig:stakeholder_selection_list}. This means that when 
+one wants to move in the hierarchy, one simply clicks their way through the list to the wanted area.
+
+
+Since by navigating through the stakeholder hierarchy by selecting different
+levels in the selectable list means that the aggregation logic in the 
+background determines what is displayed, it provides a good example of
+displaying information based on what fits the needs of the current stakeholder.
+When the display receives the return data, it fits the view of the map to
+data. When sending queries the map also sends along time data, from user 
+inputs. This time data, is taking into consideration with the stakeholder when 
+determining what kind of data should be returned and displayed.\\
+
+Since the data is stored in sets, it is possible to do a intersect on the data
+based on the requirements of the stakeholder and the selectable time data.
+By combining these two, one is able to navigate through the  data both in time 
+and space and it is possible to limit the information displayed at any given
+time based on the needs of the stakeholder.\\
+
+%XXX visualiser med Venn-diagram\\
+
+Since the methods that shall aggregate over the data sets have to to consider
+both the stakeholder and the data type, the methods should be dynamic so that
+they can be reused throughout every stakeholder and every type of data. To 
+achieve this dynamic, one should have loosely linked data with stakeholders
+such as that the data sets are easily editable in terms of adding or removing
+data, or adding new type of data sets.
+
+Since most of the statistical data used in this thesis, are sorted on one 
+identifier and that identifier is connected to the stakeholders, there are 
+quite easy to expand the data sets. This means that the aggregation is actually
+a three step process.
+
+\begin{description}
+	\item [1. Identify stakeholders needs] By searching the set of data that 
+	have the connection to the stakeholders based on a given stakeholder, one 
+	is able to generate a list of all the identifiers relevant to this 
+	stakeholder.
+	\item [2. Retrieve relevant data] By using the the list of relevant
+	identifiers generated based on the stakeholder, one is able to find all 
+	wanted data.
+	\item [3. Aggregate through the found data] When one have acquired the 
+	wanted data, one aggregates through the data according to the 
+	specification of that set of data.
+\end{description}
+
+As described by Bass, Clements, and Kazman
+\cite[pp. 117-124]{Bass:2012:SAP:2392670}, most changes to a system happens 
+after initial release. This means that by storing the data sets in 
+independently structures, one can have loose coupling between the structures. 
+This also means that when the data sets are designed with built-in 
+flexibility, then exercising this flexibility is usually cheaper than to hand-
+code a specific change in hindsight. By having these loosely linked data sets,
+one have achieved a modifiable data storage. This thesis demonstrated this
+principal by having the stations stored in a hierarchy data set based one the 
+stakeholder hierarchy, and the other data sets connected to the stations.\\
+
+By having a loosely linked storage of the different data sets, an important
+thing to take into consideration is optimization of Step 2 listed above. Since
+one is able to navigate through time as described, the system is able to limit
+the amount of data it has to process at each execution. By adding clauses which
+will limit the result, the query time will drop and the performance time of the
+aggregation will improve, both in terms of waiting for returning data from
+queries on the data sets and with processing said data.\\
+
+By having the user selecting the wanted stakeholder and what type of
+information the system shall present, it enables the system dynamically
+determine which data set it shall look in and aggregate through. This is
+demonstrated in \Ref{fig:stakeholder_selection_list} which is the
+selection of stakeholders and in \Ref{fig:implementation_type_selection} is the selection of data
+sets.
+
+Since the aggregation methods by this point have received wanted stakeholders,
+the wanted type of information to be display according to the stakeholders
+needs, and time interval for limiting the data set, the aggregation should now
+be able to generate the correct data according to the stakeholders
+requirements. The methods should then, according to step 2 retrieve the data
+and loop through it according to the requirements. As was demonstrated in this 
+prototype, most data was a simple count of occurrences. This meant then when
+aggregation through the responsible areas of each stakeholder it was a mostly
+done by averaging all occurrences beneath that area and generating a dummy
+marker for each sub-area with the aggregated data of that area.
+
+
+% section characteristics (end)

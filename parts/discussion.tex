@@ -1,3 +1,96 @@
 % !TEX root=../thesis.tex
 \chapter{Discussion}
 \label{chapter:discussion}
+
+\section{Stakeholders and aggregation} % (fold)
+\label{sec:discussion_stakeholders_and_aggregation}
+
+When one is supposed to have a system which is aware of the needs and
+requirements of the stakeholder, we found it important to have clearly 
+defined the requirements and needs of the stakeholders. By defining these
+requirements and needs with the help of workshops(see \Ref{sec:workshops}), we 
+started to build a prototype around them. As part of these requirements, a 
+hierarchy of the stakeholders was defined, which were used to implement the 
+prototype.  
+
+By having a system which is so dependent on the hierarchy, it means that on 
+one side one has a strong connection to the requirements and therefor is 
+able to be aware of the stakeholder. On the other side it means that the 
+system is not very flexible in terms of redefining the requirements. As the
+workshops also defined that the stakeholders have the need for the ability to 
+view different kind of information, the system must take these needs into
+consideration also. Since the system now has more information to process, one
+could argue that this affects how the system is aware of the requirements 
+since this increases the complexity of the system. However, since this was 
+defined along side the requirements, by having internal variables for this in 
+the same manner as the stakeholders; the system is to use these needs for the
+benefit of the stakeholder. \\
+
+Since the requirements states the stakeholders are defined in a hierarchy with
+larger and larger responsibility area upwards in the hierarchy, we implemented
+aggregation as a way to processes the data according to the stakeholders. When
+aggregation, there are several different ways to group together the different
+values according to a given criteria. Between the different aggregation method,
+such as average, minimum and maximum, median, and count, it is possible to
+argue which fits the stakeholders the best. When deciding for the aggregation
+method, not only does one have to consider how each information type is
+structured, but also how this structure fits against the stakeholder hierarchy.
+Since the data is connected to the stakeholders by the responsibility areas, 
+it was concluded in the workshops that the aggregation method that fitted best
+with the requirements was to aggregate through the data.
+
+As important as the data processing is, one must not forget the presentation of
+the data. By using the hierarchy based list of areas of responsibility for the
+stakeholders, one has the opportunity to fit the visual display to the current
+stakeholder. In one way, this can prove useful since it only displays
+information relevant for the current stakeholder, in another way it can be more
+useful to present more overall information. By having the opportunity to jump
+back and forth within the hierarchy of stakeholders, we decided to fit the visual
+presentation of data to the current stakeholder. Since the display was adapted to the user, it enabled the user to receive more information on the current
+stakeholder.
+
+
+
+Keywords:
+\begin{itemize}
+	\item Stakeholder
+	\begin{itemize}
+		\item How does the system utilizes the hierarchy of stakeholders for awareness?
+		\item How does the system fit the requirements and needs?
+	\end{itemize}
+	\item Aggregating
+	\begin{itemize}
+		\item How to aggregate according to the given hierarchy
+		\item How does the aggregation and hierarchy affect the visual presentation.
+	\end{itemize}
+\end{itemize}
+
+% section stakeholders_and_aggregation (end)
+
+\section{Data storage and data queries} % (fold)
+\label{sec:discussion_data_storage_and_data_queries}
+Keywords:
+\begin{itemize}
+	\item Data set structure in prototype
+	\begin{itemize}
+		\item Stakeholder responsibility consideration
+		\item One or more sets
+		\item Scalability and modifiability
+	\end{itemize}
+	\item Data queries
+	\begin{itemize}
+		\item Limit queries for data processing
+		\item Front end vs back end data processing
+		\item Data traffic
+	\end{itemize}
+\end{itemize}
+% section data_storage_and_queries (end)
+
+\section{Review of own work} % (fold)
+\label{sec:review_of_own_work}
+%Keywords:
+%\begin{itemize}
+%	\item Appropriate method?
+%	\item 
+%\end{itemize}
+% section review_of_own_work (end)
