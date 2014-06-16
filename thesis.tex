@@ -1,8 +1,12 @@
 %\documentclass[a4paper, english,10pt]{article}
 %\documentclass[english,10pt, oneside, draft, a4paper]{report}
-\documentclass[english,10pt, oneside, a4paper]{scrreprt}
+%\documentclass[english,10pt, oneside, a4paper]{scrreprt}
 %\usepackage[b5paper, layout=b5paper, textwidth=12cm, twoside,bindingoffset=1cm,outer=2cm,inner=2cm,includefoot,bmargin=3cm]{geometry}
-\usepackage[a4paper, layout=a4paper, textwidth=12cm, bindingoffset=1cm,outer=2cm,inner=2cm,includefoot,bmargin=3cm]{geometry}
+%\usepackage[a4paper, layout=a4paper, textwidth=12cm, bindingoffset=1cm,outer=2cm,inner=2cm,includefoot,bmargin=3cm]{geometry}
+\documentclass[pdftex,10pt,b5paper,twoside]{book}
+\usepackage[lmargin=20mm,rmargin=20mm,tmargin=25mm,bmargin=25mm,bindingoffset=1cm,includefoot]{geometry}
+
+
 \RequirePackage[l2tabu, orthodox]{nag}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
@@ -16,7 +20,7 @@
 \graphicspath{{grafikk/}}
 \usepackage[export]{adjustbox} %In including a figure, add "center" as a flag
 
-\usepackage{slashbox}
+\usepackage{makecell}
 \usepackage{epstopdf}
 \usepackage{varioref}
 \usepackage{listings} % For å vise frem kode på en bra måte
@@ -75,22 +79,18 @@
 \labelformat{chapter}{chapter~{#1}}
 
 
+%NTNU master mal
+%\input{docsetup}
+
+
 % ########################################## 
 %			Beginning of document
 % ########################################## 
 
 \begin{document}
 
-% \title{Designing a software architecture for a motorsport driver information system}
-% \author{Magnus Bae and Magnus Krane\\ NTNU}
-% \date{December 2013}
-% \maketitle
-%\include{front_page}
-
 \setcounter{tocdepth}{5}
 \setcounter{secnumdepth}{5}
-
-%\includepdf[pages={-}]{signert_masterbeskrivelse.pdf} Eksempel på hvordan du legger inn pdf
 
 \setcounter{page}{0}
 \pagenumbering{roman}
@@ -108,7 +108,7 @@
 
 % #### Other stuff from the template
 
-\include{front_page}
+%\include{front_page}
 
 %\include{preface}
 %\include{summary}
@@ -146,6 +146,5 @@
 %Use ieeetr to get correct numbering of references according to the IEEE
 % standard. Numbering follows order of introduction.
 \bibliographystyle{ieeetr}
-
 
 \end{document}

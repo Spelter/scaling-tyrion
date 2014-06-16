@@ -5,7 +5,7 @@
 \label{sec:back_stakeholders}
 When looking at the Norwegian railway, there exists several type of users which
 may be taken into consideration. On the Norwegian railway operates several
-companies, who all have several positions in its organization hierarchy. Each
+companies, who all have several positions in their organization hierarchy. Each
 of these positions have different responsibilities and therefor different
 interests in the system. A example of such a hierarchy is presented in
 \Ref{table:user_roles}.
@@ -31,9 +31,10 @@ interests in the system. A example of such a hierarchy is presented in
 \label{table:user_roles}
 \end{table}
 
-This lists only relevant users from Jernbaneverket (see Section
+The hierarchy presents only relevant users from Jernbaneverket (see Section
 \Vref{sub:subsection_jernbaneverket}), where the organization map is presented
-online\cite{jernbaneverketOrganisasjon}\cite{jernbaneverketInfrastruktdivisjon}.
+online\cite{jernbaneverketOrganisasjon}\cite{jernbaneverketInfrastruktdivisjon}
+and in \ref{sec:railway_operations}.
 Many of the other companies which operates on the Norwegian railway system,
 have a similar structure. 
 
@@ -69,9 +70,8 @@ Jernbaneverket stores different types of information independently, it can
 quickly become much data to take care of.\\
 
 As Hegglund\cite[pp. 10-11]{hegglundPunklighetsdataIJernbanetraffik} describes,
-Jernbaneverket measures punctuality data in two different ways and stores it 
-in a punctuality database called TIOS, \Ref{fig:jernbaneverket-trafikkdata} 
-shows a extract from this. They either have automatic measurements of when a 
+Jernbaneverket measures punctuality data in two different ways and stores the
+data in a punctuality database called TIOS, \Ref{fig:jernbaneverket-trafikkdata} shows a extract from the TIOS database. They either have automatic measurements of when a 
 trains passes a measure point on the eastern part of Norway, or manual 
 registration the rest of the country of each passing. In 2012, there 
 passed 884 passenger trains through Oslo central station alone per day\cite[p. 12]{jernbaneverketStatistikk}.
@@ -85,18 +85,19 @@ of data gets accumulated over time.
 \end{figure}
 \pagebreak
 
-Since this set of data stores every train that passes every measurement point,
-and the corresponding time point , is is possible
+Since the set of data stored in TIOS, stores every train that passes every 
+measurement point, and the corresponding time point , is is possible
 to use the same set to calculate where every crossing between different trains
-happens. This is is possible since one can compare the time stamps of the
-passing of each station to another train.\\
+happens. The usage of the same set is possible since one can compare the time 
+stamps of the passing of each station to another train.\\
 
-When the speed restrictions is registered, they are stored in its own set of
-data which is based on different forms. These data sets covers restrictions 
-both due to scheduled work, such as improvement on the infrastructure, and due 
-to unscheduled work, such as risk of destroyed tracks due to flooding and they 
-are based on forms being filled out. This means that these sets can be quite 
-large and become complex to interpret.\\
+When the speed restrictions is registered, they are stored in their own set of
+data which is based on the users filling out different forms. These data sets 
+covers restrictions  both due to scheduled work, such as improvement on the 
+infrastructure, and due  to unscheduled work, such as risk of destroyed tracks 
+due to flooding and they are based on forms being filled out. By covering the 
+restrictions and since they are based on forms, these sets can be quite large 
+and become complex to interpret.\\
 
 Developing a stakeholder aware method, can require different ways of analyzing
 large different sets of data, and which might originate from different sources.
@@ -114,7 +115,7 @@ good way to limit the amount of data presented is to aggregate over the sets of
 data based on hierarchy.
 
 If one look at the example hierarchy presented in Section
-\Ref{sec:back_stakeholders}, an example of such an aggregation could be as
+\Ref{sec:back_stakeholders}, an example of such an aggregation is as
 follows. The segment director wants information of every station along the
 segment. The Stretch wants summarized information from each segment, which is
 aggregated from the stations. The area director wants information of every

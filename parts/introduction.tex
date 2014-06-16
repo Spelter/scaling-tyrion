@@ -5,72 +5,88 @@
 \label{chapter:introduction}
 
 This thesis discusses the  analysis of train delays and the visualization of 
-these delays. It involves making a prototype map visualization of delays 
-based on train routes in Norway. This prototype involves features such as 
-the ability to scroll through a certain time period (which will be selectable), 
-both backwards and forwards. This prototype also make it possible to study each train 
-delay to make it possible to track the delays through the Norwegian rail 
-network, and make it possible to spot why a train is delayed.
+these delays. The project involves developing a prototype map visualization of 
+delays based on train routes in Norway. Such features as the ability to scroll 
+through a certain time period (which will be selectable), both backwards and 
+forwards will be implemented. The prototype will studying information
+aggregated through several levels of stakeholders, and also enables studying
+different types of information.
 
-We discuss this in Chapter \Vref{chapter:background}, some plotting 
-examples exists already, however none of them covers what this thesis will 
-research.
+%TODO write better.
+As we discuss in \Vref{chapter:background}, there exists some systems which 
+enables the user to plot train information, however none of them covers what 
+this thesis will research.
 
 \section{Research Question and Goals} % (fold)
 \label{sec:intro_research_question}
+In this section we will introduce the research question and goals used in this
+thesis.\\
+
+
+
+A system which allows the user to select between different type of information
+to be presented, and at the same time the is aware of the stakeholders that are
+relevant to the system, can seem complex. By answering the research question
+below, we aimed to produce characteristics which will help defining such a
+system.
+
 \begin{itemize}
-	\item \textbf{What are important characteristics for a stakeholder aware method to 
-	aggregate over a rich set of data?}
+	\item \textbf{What are important characteristics for a stakeholder aware 
+	method to aggregate over a rich set of data?}
 \end{itemize}
 
-Goals:
+As part of answering the research question, we developed a prototype. Using the
+research method we produced goals for the prototype.
 
 \begin{itemize}
 	\item Develop a map based prototype for train analysis.
-\end{itemize}
-
-Sub goals:
-
-\begin{itemize}
-	\item Display dashboard with relevant information accordingly to current zoom level.
-	\item Aggregate through statistical data according to current level.
-	\item Limit the data visualization within selectable time scales.
-	\item Select different type of statistical data to display.
+	\item Sub goals:
 	\begin{itemize}
-		\item Display information for traffic density.
-		\item Display information for Speed restrictions.
-		\item Display information for train crossings.
+		\item Display dashboard with relevant information accordingly to current zoom level.
+		\item Aggregate through statistical data according to current level.
+		\item Limit the data visualization within selectable time scales.
+		\item Select different type of statistical data to display.
+		\begin{itemize}
+			\item Display information for traffic density.
+			\item Display information for Speed restrictions.
+			\item Display information for train crossings.
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 % section research_question (end)
 
-\clearpage
 \section{Stakeholders} % (fold)  
 \label{sec:intro_stakeholders}  
-For any given project, there exists
-several stakeholders. Stakeholders are individuals and/or organizations who have a interest or are involved directly in the
-project, whether it be involvement in the execution of the project, or have interest which overlap
-with the results of the project. Because each stakeholder either represents different end user 
-types or people with a general interest in the project, in the end there will be many needs to 
-take into consideration. Since this will eventually turn into a stakeholder aware system, with 
-focus on stakeholders representing end users, there will end up presenting a lot of data. 
+For any given project, there exists several stakeholders. Stakeholders are 
+individuals and/or organizations who have an interest or are involved directly 
+in the project, whether the interest is involvement in the execution of the 
+project, or the interest overlaps with the results of the project. 
+For the thesis, stakeholders are either end users, people with a general
+interest in the project, or users which represents the domain the prototype is
+developed for. Having a number of stakeholders to be aware of, means that there
+are many needs to consider. Since the thesis will be aware of the stakeholders,
+the prototype will focus on the stakeholders which represent the domain.
 % section stakeholders (end)
 
 \section{Aggregation} % (fold)
 \label{sec:intro_aggregation}
-When taking into consideration that many different stakeholders demands different levels of
-information presented, the presentation quickly have the possibility to become very messy and
-difficult to understand. One solution to this, is to aggregate the data according to some kind of
-sorting of the stakeholders. When one aggregates data, groups of observations are replaces with
-summary statistics based on those observations\cite{ wiki:Aggregation}.
+When taking into consideration that many different stakeholders demands 
+different levels of information presented, the presentation quickly have the 
+possibility to become very messy and difficult to understand. One solution to 
+avoid too much information being displayed, is to aggregate the data according 
+to some kind of sorting of the stakeholders. When one aggregates data, groups 
+of observations are replaces with summary statistics based on those 
+observations\cite{ wiki:Aggregation}.
 % section aggregation (end)
 
 \section{Data Sets} % (fold)
 \label{sec:intro_data_sets}
-One of the problems with a task such as this, is that the data sets can grow quite large. Depending
-on what one might need, these large data sets can be quite problematic to access in a quick and
-reliable way. This problem grows in complexity quickly when one is supposed to take into
-consideration several sets of data containing different type of information. 
+By having many stakeholders to be aware of, along with several types of data,
+one of the problems that arises is that the data sets can grow 
+quite large. Depending on what one might need, these large data sets can be 
+quite problematic to access in a quick and reliable way. This problem grows in 
+complexity quickly when one is supposed to take into consideration several 
+sets of data containing different type of information. 
 % section data_sets (end)
 
 % chapter Introduction (end)
