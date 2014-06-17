@@ -59,9 +59,10 @@ Keywords:
 \begin{itemize}
 	\item Stakeholder
 	\begin{itemize}
-		\item The importance of defining requirements early
-		\item How should stakeholders and their requirements be defined so 
-		a system can use it?
+		\item The importance of defining requirements early because of the 
+		system dependency.
+		\item How to define the stakeholders and requirements for use with a 
+		system?	e.g. the hierarchy used in this thesis from JBV.
 		\item How can a system use the requirements to process the data? (
 		flowing point to aggregation below)
 	\end{itemize}
@@ -72,9 +73,9 @@ Keywords:
 			\item What are good ways to aggregate through the data?
 			\item How to determine what fits the requirements?
 		\end{itemize}
-		\item Based on the aggregated data, how can one present it to the
-		stakeholders based on the requirements?
-		\item Time zooming
+		\item How to present the data to the users based on the requirements? 
+		(detail level per stakeholder in the hierarchy)
+		\item Time navigation for zooming through the data.
 	\end{itemize}
 \end{itemize}
 
@@ -86,9 +87,11 @@ Keywords:
 By having several types of information which have different structure and
 originating from different sources, raises the question of how the data storage
 shall be structured. One way to structure the data storage, is to merge all the
-data sets into one large set and store that. When having one large, merged 
-data set, one experiences little maintainability, which is the degree where a
+data sets into one large database. When having one large, merged 
+database, one experiences little maintainability, which is the degree where a
 product or system can be modified by the intended maintainers\cite[p. 195]{Bass:2012:SAP:2392670}.
+By storing the data sets in one large database, one avoids duplicating data in
+the databases.
 
 Another way to structure the data storage is to store the data sets in
 independent storages with a loose coupling between the structures. Since most 
@@ -101,14 +104,12 @@ one have achieved a modifiable data storage. This thesis demonstrated this
 principal by having the stations stored in a hierarchy data set based one the 
 stakeholder hierarchy, and the other data sets connected to the stations.\\
 
-
-
 Keywords:
 \begin{itemize}
 	\item Data set structure in prototype
 	\begin{itemize}
-		\item Based on the needs (what information) of the stakeholders, how 
-		should the data sets be structured?
+		\item How should the data sets be structured when the sets are based on the needs of the stakeholders? (needs = what information, crossings, speed 
+		restrictions, etc) 
 		\item Advantages and disadvantages with one or several sets in storage.
 		Scalability and modifiability ref quality attributes \cite{Bass:2012:SAP:2392670}
 	\end{itemize}
