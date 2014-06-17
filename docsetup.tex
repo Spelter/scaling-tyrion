@@ -1,0 +1,95 @@
+
+\RequirePackage[l2tabu, orthodox]{nag}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{fancyhdr}
+\usepackage{times}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{perpage} % For å få fotnotenummerering til å starte på nytt for hver side
+\usepackage{graphicx}
+\graphicspath{{grafikk/}}
+\usepackage[export]{adjustbox} %In including a figure, add "center" as a flag
+
+\usepackage{slashbox}
+\usepackage{epstopdf}
+\usepackage{varioref}
+\usepackage{listings} % For å vise frem kode på en bra måte
+\usepackage{textgreek}
+%\usepackage{tikz,pgfplots} % For å plotte Matlab figurer på en god måte
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+\usepackage{amsmath} % For å tilpasse ligninger til å vises over flere linjer
+\usepackage{pdfpages} % For å legge til pdf i appendix delen
+\usepackage{rotating}
+\usepackage[Lenny]{fncychap}
+\usepackage[pdftex,bookmarks=true]{hyperref}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black
+}
+
+\usepackage{mathtools}
+\usepackage{color} % Farger i dokumentet
+
+\usepackage{dialogue}
+\usepackage[section]{placeins}
+\usepackage{microtype}
+
+\linespread{1.5}
+
+% \lstset{frame=shadowbox, rulesepcolor=\color{black}}
+\lstset{numbers=left, frame=single, tabsize=2, breaklines=true}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+
+\DeclareMathSymbol{\comma}{\mathpunct}{letters}{"3B} % Legger inn kommandoen \comma som komma i math mode
+
+\hypersetup{%
+    pdfborder = {0 0 0}
+}
+
+%\usepackage{endnotes}
+%\usepackage[portrait, pdftex]{geometry}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\pretolerance = 1414
+\tolerance = 1414
+
+\MakePerPage{footnote} % For å få fotnotenummerering til å starte på nytt for hver side
+\labelformat{equation}{equation~(#1)}
+\labelformat{figure}{figure~{#1}}
+\labelformat{subfigure}{figure~\thefigure #1}
+\labelformat{table}{table~{#1}}
+\labelformat{section}{section~{#1}}
+\labelformat{subsection}{section~{#1}}
+\labelformat{chapter}{chapter~{#1}}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\renewcommand{\headrulewidth}{0.1ex}
+\renewcommand{\footrulewidth}{0.1ex}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[LE,RO]{\thepage}\renewcommand{\headrulewidth}{0ex}}

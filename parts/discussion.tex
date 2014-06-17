@@ -1,3 +1,133 @@
 % !TEX root=../thesis.tex
 \chapter{Discussion}
 \label{chapter:discussion}
+
+\section{Stakeholders and aggregation} % (fold)
+\label{sec:discussion_stakeholders_and_aggregation}
+Since the stakeholders, with their requirements and needs, are an important of
+systems similar to the one presented in this thesis, we found the importance to
+early define the requirements and needs. As part of the research method, we
+defined the requirements by the help of workshops, see \Ref{sec:workshops}. 
+
+By having a system which have a strong connection to the requirements, the 
+system easily ends up with the requirements affecting every part of the 
+system. The strong connection with the requirements can have both advantages 
+and disadvantages. On one side the system are tightly connected to the
+stakeholder, and have great possibility to satisfy the requirements and needs
+of the stakeholders. On the other side, the strong connection means that if 
+there are large changes to the requirements late in the project, the system 
+can be very little flexible to these changes. As the workshops also defined 
+that the stakeholders have the need for the ability to view different kind of 
+information, the system must take these needs into consideration also. Since 
+the system now has more information to process, one could argue that the 
+amount of information to process affects how the system is aware of the 
+requirements since the amount of information increases the complexity of the 
+system. However, since the need for different type of information was defined 
+along side the requirements, by having internal variables for the information 
+type in the same manner as the stakeholders; the system is to use these needs 
+for the benefit of the stakeholder. \\
+
+Since the requirements states the stakeholders are defined in a hierarchy with
+larger and larger responsibility area upwards in the hierarchy, we implemented
+aggregation as a way to processes the data according to the stakeholders. When
+aggregating, there are several different ways to group together the different
+values according to a given criteria. Between the different aggregation method,
+such as average, minimum and maximum, median, and count, one could argue that 
+there is possible to argue which methods fits the stakeholders the best. When 
+deciding for the aggregation method, not only does one have to consider how 
+each information type is structured, but also how this structure fits against 
+the stakeholder hierarchy. Since the data is connected to the stakeholders by 
+the responsibility areas, the decision was made with the help of the workshops 
+that the aggregation method that fitted best with the requirements was to 
+average through the data.
+
+As important as the data processing is, one must not forget the presentation of
+the data. By using the hierarchy based list of areas of responsibility for the
+stakeholders, one has the opportunity to fit the visual display to the current
+stakeholder. In one way, to fit the display to the stakeholder can prove 
+useful since the presentation only displays information relevant for the 
+current stakeholder, in another way to let the user decide what level of 
+visualization the visual display shall present can be more since the display 
+then have the opportunity to present more overall information. By having the 
+opportunity to jump
+back and forth within the hierarchy of stakeholders, we decided to fit the 
+visual presentation of data to the current stakeholder. Since the display was 
+adapted to the user, the display enabled the user to receive more relevant 
+information on the current stakeholder.
+
+Keywords:
+\begin{itemize}
+	\item Stakeholder
+	\begin{itemize}
+		\item The importance of defining requirements early because of the 
+		system dependency.
+		\item How to define the stakeholders and requirements for use with a 
+		system?	e.g. the hierarchy used in this thesis from JBV.
+		\item How can a system use the requirements to process the data? (
+		flowing point to aggregation below)
+	\end{itemize}
+	\item Aggregating
+	\begin{itemize}
+		\item Data aggregation methods
+		\begin{itemize}
+			\item What are good ways to aggregate through the data?
+			\item How to determine what fits the requirements?
+		\end{itemize}
+		\item How to present the data to the users based on the requirements? 
+		(detail level per stakeholder in the hierarchy)
+		\item Time navigation for zooming through the data.
+	\end{itemize}
+\end{itemize}
+
+
+% section stakeholders_and_aggregation (end)
+
+\section{Data storage and data queries} % (fold)
+\label{sec:discussion_data_storage_and_data_queries}
+By having several types of information which have different structure and
+originating from different sources, raises the question of how the data storage
+shall be structured. One way to structure the data storage, is to merge all the
+data sets into one large database. When having one large, merged 
+database, one experiences little maintainability, which is the degree where a
+product or system can be modified by the intended maintainers\cite[p. 195]{Bass:2012:SAP:2392670}.
+By storing the data sets in one large database, one avoids duplicating data in
+the databases.
+
+Another way to structure the data storage is to store the data sets in
+independent storages with a loose coupling between the structures. Since most 
+changes to a system happens after initial release, as described by Bass, 
+Clements, and Kazman \cite[pp. 117-124]{Bass:2012:SAP:2392670},
+means that when the data sets are designed with built-in flexibility, 
+exercising the built-inn flexibility is usually cheaper than to hand-
+code a specific change in hindsight. By having these loosely linked data sets,
+one have achieved a modifiable data storage. This thesis demonstrated this
+principal by having the stations stored in a hierarchy data set based one the 
+stakeholder hierarchy, and the other data sets connected to the stations.\\
+
+Keywords:
+\begin{itemize}
+	\item Data set structure in prototype
+	\begin{itemize}
+		\item How should the data sets be structured when the sets are based on the needs of the stakeholders? (needs = what information, crossings, speed 
+		restrictions, etc) 
+		\item Advantages and disadvantages with one or several sets in storage.
+		Scalability and modifiability ref quality attributes \cite{Bass:2012:SAP:2392670}
+	\end{itemize}
+	\item Data queries
+	\begin{itemize}
+		\item Limit queries for data processing efficiency 
+		and more responsive systems
+		\item Front end vs back end data processing for system efficiency and
+		limiting data traffic
+	\end{itemize}
+\end{itemize}
+% section data_storage_and_queries (end)
+
+\section{Review of own work} % (fold)
+\label{sec:review_of_own_work}
+%Keywords:
+%\begin{itemize}
+%	\item Appropriate method?
+%	\item 
+%\end{itemize}
+% section review_of_own_work (end)
