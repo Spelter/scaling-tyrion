@@ -3,11 +3,11 @@
 \label{chapter:discussion}
 
 \section{Stakeholders and aggregation} % (fold)
-\label{sec:discussion_stakeholders_and_aggregation}
-It is important to define the needs and requirements of the stakeholders early 
+\label{sec:discussion_stakeholders'_and_aggregation}
+It is important to define the needs and requirements of the stakeholders' early 
 in the process, in order to design a system that gives the right scope. By the 
 aid of workshops we defined the requirements, as it is part of the research 
-method (see \Ref{sec:workshops}). We can define the stakeholders in a 
+method (see \Ref{sec:workshops}). We can define the stakeholders' in a 
 hierarchy, based on their organizational structure, and responsibility areas, 
 this helps us to define the requirements to order the structure of the 
 information.
@@ -16,44 +16,43 @@ There is a good synergy between the requirements and the system, when the
 system is designed with the requirements in mind. The synergy between the 
 requirements and the system both have advantages and disadvantages. On one 
 side the system has a great possibility to satisfy the requirements and needs 
-of the stakeholders, since the system is tightly connected to the 
+of the stakeholders', since the system is tightly connected to the 
 requirements. On the other side, the system can be inflexible to large 
 changes, if the requirements change late in the project. In the workshops, we 
-defined that the stakeholders must have the ability to view different kinds of 
+defined that the stakeholders' must have the ability to view different kinds of 
 information; the system must take these needs into consideration. A system 
-aware of the stakeholders needs might end up being more complex, and has to 
+aware of the stakeholders' needs might end up being more complex, and has to 
 process a larger amount of data in order to give the system the required 
 functionality. Processing larger amounts of data leads to a more complex back-
 end system. The system can be more dynamic, although complex, by reusing parts 
 of the data processing for different information types, when designed with the 
 needs as well as the requirements in mind. In order to meet the requirements 
-of the stakeholders needs we have to aggregate the data. There are several 
+of the stakeholders' needs we have to aggregate the data. There are several 
 ways to aggregate the groups of data according to the given criteria. 
 Discussion can be around the method we used for the aggregation of the data, 
-which enables the best view for the stakeholders. For the best view we take 
+which enables the best view for the stakeholders'. For the best view we take 
 into account for example the following alternatives: average, minimum, 
 maximum, median, and count. To decide the aggregation method, we have to 
 consider how each information type is structured, but also how this structure 
-fits in with the stakeholder their hierarchy. During the workshops, we decided 
+fits in with the stakeholders' hierarchy. During the workshops, we decided 
 that the best way to aggregate the data is to take the average, the decision 
-was based on how the data is connected to the stakeholders and their
+was based on how the data is connected to the stakeholders' and their
 hierarchy.
 
 When returning the processed data to the user, the system can use the 
-requirements to aggregate the presentation of the data. Since the stakeholder 
-their hierarchy contains the responsibility area of each stakeholder, the 
+requirements to aggregate the presentation of the data. Since the stakeholders' hierarchy contains the responsibility area of each stakeholder, the 
 system can fit the visual view to the responsibility area of the current 
 stakeholder. The system uses processed data for aggregating the hierarchy to 
 find the stakeholder. Fitting the view to the stakeholder provides detail for 
 a single stakeholder, this is useful for presenting a single stakeholder and 
-their responsibility area. Since the system is aware of the stakeholders,
+their responsibility area. Since the system is aware of the stakeholders',
 aggregating for a stakeholder and fitting the view to a stakeholder, can lead
-to a conflict of interest between stakeholders and occurs due to overlapping 
+to a conflict of interest between stakeholders' and occurs due to overlapping 
 responsibility areas. The conflict is extremely difficult to consider when
 presenting the data and is therefor not taken into consideration. We decided 
 to fit the visual presentation of data to the current stakeholder, and have 
 the opportunity to jump, back and forth, within the hierarchy of the
-stakeholders. By fitting the view to the stakeholder, the view enabled the 
+stakeholders'. By fitting the view to the stakeholder, the view enabled the 
 user to receive more relevant information on the current stakeholder.
 
 As the area director wants to study data from the entire area for a large 
@@ -61,25 +60,26 @@ period of time, and the segment director wants to study almost every detail
 that occurs on the segment, manual navigating in time was decided to use as a 
 way to increase and decrease the level of detail in the data presented.
 
-
+\subsection{Stakeholder and aggreation keywords} % (fold)
+\label{sub:stakeholder_and_aggreation_keywords}
 Keywords:
 
 \begin{itemize}
-	\item Important to define requirements early, in order to make an appropriate system, that is useful for the stakeholders
-	\item How to define the stakeholders and requirements for use with a system?
+	\item Important to define requirements early, in order to make an appropriate system, that is useful for the stakeholders'
+	\item How to define the stakeholders' and requirements for use with a system?
 	\begin{itemize}
-		\item important to define who are the stakeholders
-		\item important to define what the stakeholders needs are
-		\item important to define to which need are connected to which stakeholder, in order to show the correct information in the system connected to each of the stakeholders needs.
+		\item important to define who are the stakeholders'
+		\item important to define what the stakeholders' needs are
+		\item important to define to which need are connected to which stakeholder, in order to show the correct information in the system connected to each of the stakeholders' needs.
 	\end{itemize}
-	\item How can we design a system that used the requirements needed by the stakeholders to process the data and visualize the data in such a way that the stakeholders needs are met?
-	In order to meet the requirements of the stakeholders needs we need to aggregate the data. The following .....
+	\item How can we design a system that used the requirements needed by the stakeholders' to process the data and visualize the data in such a way that the stakeholders' needs are met?
+	In order to meet the requirements of the stakeholders' needs we need to aggregate the data. The following .....
 	\item aggregation of data:
 	\begin{itemize}
 		\item two goals: geographic \& time
 		\item aggregation based on detail level of visualization
 		\begin{itemize}
-			\item based on stakeholders need
+			\item based on stakeholders' need
 			\begin{itemize}
 				\item detail level in map
 				\item which area is shown in the map
@@ -97,41 +97,82 @@ Keywords:
 	\item Time navigation for zooming through the data.
 \end{itemize}
 
+% subsection stakeholder_and_aggreation_keywords (end)
 
-% section stakeholders_and_aggregation (end)
+
+% section stakeholders'_and_aggregation (end)
 
 \section{Data storage and data queries} % (fold)
 \label{sec:discussion_data_storage_and_data_queries}
 By having several types of information which have different structure and
 originating from different sources, the question of how the data storage should
 be structured gets raised. One option for the structure is to merge all the
-data sets into one large database. When the data is stored in one large
-database
- When having one large, merged 
-database, one experiences little maintainability, which is the degree where a
-product or system can be modified by the intended maintainers\cite[p. 195]{Bass:2012:SAP:2392670}. 
-One large database also means that we avoid duplication of data.
-Another way to structure the data storage is to store the data sets in
-independent storages with a loose coupling between the structures. Since most 
-changes to a system happens after initial release, as described by Bass, 
-Clements, and Kazman \cite[pp. 117-124]{Bass:2012:SAP:2392670},
-means that when the data sets are designed with built-in flexibility, 
-exercising the built-inn flexibility is usually cheaper than to hand-
-code a specific change in hindsight. By having these loosely linked data sets,
-one have achieved a modifiable data storage. This thesis demonstrated this
-principal by having the stations stored in a hierarchy data set based one the 
-stakeholder hierarchy, and the other data sets connected to the stations.\\
+data sets into one large database. By merging the data sets in one large
+database, the data is structured in a client-server architecture. Depending on 
+how the connection between the client application and the database is
+organized, either direct communication or through a middle tier, the data
+structure is a two- or three-tier architecture \cite[pp. 294-297]{toftHanseMallaugDatabaser}.
+This structure has the benefits of giving the front-end applications a single
+point of connection, avoiding duplication of data, and giving the database 
+manager both a single structure to maintain and a single point of access with 
+easier access control.
 
+The opposite of the client-server architecture is a distributed
+database \cite[pp. 301-303]{toftHanseMallaugDatabaser}. The distributed database
+architecture is done by splitting the storage of data and the processing of
+data over several servers. Some benefits of the distributed architecture are 
+easier expansion, modular sets with built-inn flexibility, and if one node 
+goes down the others still work. Exercising the built-inn flexibility of each
+module is usually cheaper than to hand-code a specific change in hindsight\cite[pp. 117-130]{Bass:2012:SAP:2392670},
+when performing changes to the data storage structure. The distributed
+architecture is a modifiable data storage, when the modular sets are loosely
+linked sets. 
+%software architecture p. 185 for other quality attributes
+This thesis demonstrated a hybrid of the client-server and distributed
+architecture \cite[pp. 297-299]{toftHanseMallaugDatabaser}. We implemented a 
+three-tier architecture which contained a middle-tier for data processing and 
+client communication, and a lower tier containing several databases, see \Ref{fig:three-tier_architecture}.
 
+By using the three-tier architecture, we implemented a middle-tier which 
+processed the data, and a lower tier containing several databases. For
+structuring the data sets with the stakeholders' requirements in mind, we
+utilized one database which contained the stakeholders' responsibility areas in
+their hierarchy, and each of the other databases for different types of 
+information. The semi-distributed databases mean that it is easy to remove or
+add data sets, since the different types of information are connected to the
+stakeholders' hierarchy. We also have some negative aspects by using
+the semi-distributed databases. The databases can have data redundancy with
+duplication of data, and the data sets can require more processing to achieve 
+the hierarchy. \\
 
+We can have a more responsive system by utilizing the back-end for processing 
+the data. The back-end gives a more responsive system since it usually on the
+same hardware as the databases or same sub-net, which provides quicker calls
+and responses to the databases from the data processing methods. By processing 
+the data on the back-end, the aggregation of data means that there is a lesser
+data size to transfer. We also have no control over what hardware the user
+might use, while the back-end is usually dedicated to one service and we can
+more easily control, and if necessary upgrade, the hardware.
+
+The amount of data to be processed by the system is affected by three 
+variables. The affecting variables are the stakeholders' need to navigate in 
+time, the navigating in the stakeholder hierarchy, and the type of information.
+Navigating in time affects by limiting the time window to search in the
+database. The hierarchy affects as the higher up in the hierarchy one
+navigates, the more data there are to process. The information type affects
+since the amount of data varies from data set to set. The system performance is
+determined by the amount of data to process, as it uses more time on more data.
+
+\subsection{Data storage and data queries keywords} % (fold)
+\label{sub:data_storage_and_data_queries_keywords}
 Keywords:
 \begin{itemize}
 	\item Data set structure in prototype
 	\begin{itemize}
 		\item How should the data sets be structured when the sets are based 
-		on the stakeholders need for different type of information?
+		on the stakeholders' need for different type of information?
 		\begin{itemize}
-			\item Connection to the requirements of the stakeholders.
+			\item Connection to the requirements of the stakeholders'.
 			\begin{itemize}
 				\item Stakeholder responsibility area from the hierarchy
 			\end{itemize}
@@ -168,10 +209,13 @@ Keywords:
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
+
+% subsection data_storage_and_data_queries_keywords (end)
+
 % section data_storage_and_queries (end)
 
-\section{Review of own work} % (fold)
-\label{sec:review_of_own_work}
+%\section{Review of own work} % (fold)
+%\label{sec:review_of_own_work}
 %Keywords:
 %\begin{itemize}
 %	\item Appropriate method?
