@@ -5,54 +5,61 @@
 \section{Stakeholders and aggregation} % (fold)
 \label{sec:discussion_stakeholders_and_aggregation}
 It is important to define the needs and requirements of the stakeholders early 
-in the process, in order to design a system that gives the right scope. 
-By the aid of workshops we defined the requirements, as it is part of the 
-research method (see \Ref{sec:workshops}). We can define the stakeholders in a 
-hierarchy based on their organization structure and responsibility areas, 
-which helps us defining the requirements so the requirements help us define 
-the structure for the information.
+in the process, in order to design a system that gives the right scope. By the 
+aid of workshops we defined the requirements, as it is part of the research 
+method (see \Ref{sec:workshops}). We can define the stakeholders in a 
+hierarchy, based on their organizational structure, and responsibility areas, 
+this helps us to define the requirements to order the structure of the 
+information.
 
 There is a good synergy between the requirements and the system, when the 
-system is designed with the requirements in mind. The synergy between the
-requirements and the requirements can have both advantages and disadvantages. 
-On one side the system has a great possibility to satisfy the requirements and 
-needs of the stakeholders, since the system is tightly connected to the 
+system is designed with the requirements in mind. The synergy between the 
+requirements and the system both have advantages and disadvantages. On one 
+side the system has a great possibility to satisfy the requirements and needs 
+of the stakeholders, since the system is tightly connected to the 
 requirements. On the other side, the system can be inflexible to large 
-changes, if the requirements change late in the project.  In the workshops, we 
+changes, if the requirements change late in the project. In the workshops, we 
 defined that the stakeholders must have the ability to view different kinds of 
 information; the system must take these needs into consideration. A system 
 aware of the stakeholders needs might end up being more complex, and has to 
 process a larger amount of data in order to give the system the required 
-functionality. Processing larger amounts of data leads to a more complex 
-system. The system can be more dynamic, although complex, by reusing parts of 
-the data processing for different information types, when designed with the 
+functionality. Processing larger amounts of data leads to a more complex back-
+end system. The system can be more dynamic, although complex, by reusing parts 
+of the data processing for different information types, when designed with the 
 needs as well as the requirements in mind. In order to meet the requirements 
-of the stakeholders needs we need to aggregate the data. There are several 
-ways to aggregate the groups of data according to the given criteria. One can 
-argue which aggregation method fits the stakeholders' requirements best, 
-taking into account for example the following alternatives: average, minimum, 
-maximum, median, and count. Deciding the aggregation method, we have to 
+of the stakeholders needs we have to aggregate the data. There are several 
+ways to aggregate the groups of data according to the given criteria. 
+Discussion can be around the method we used for the aggregation of the data, 
+which enables the best view for the stakeholders. For the best view we take 
+into account for example the following alternatives: average, minimum, 
+maximum, median, and count. To decide the aggregation method, we have to 
 consider how each information type is structured, but also how this structure 
-fits in with the stakeholders' hierarchy. With the aid of the workshops, it 
-was decided to average the data as the aggregation method, based on how the 
-data is connected to the stakeholders with their hierarchy.
+fits in with the stakeholder their hierarchy. During the workshops, we decided 
+that the best way to aggregate the data is to take the average, the decision 
+was based on how the data is connected to the stakeholders and their
+hierarchy.
 
+When returning the processed data to the user, the system can use the 
+requirements to aggregate the presentation of the data. Since the stakeholder 
+their hierarchy contains the responsibility area of each stakeholder, the 
+system can fit the visual view to the responsibility area of the current 
+stakeholder. The system uses processed data for aggregating the hierarchy to 
+find the stakeholder. Fitting the view to the stakeholder provides detail for 
+a single stakeholder, this is useful for presenting a single stakeholder and 
+their responsibility area. Since the system is aware of the stakeholders,
+aggregating for a stakeholder and fitting the view to a stakeholder, can lead
+to a conflict of interest between stakeholders and occurs due to overlapping 
+responsibility areas. The conflict is extremely difficult to consider when
+presenting the data and is therefor not taken into consideration. We decided 
+to fit the visual presentation of data to the current stakeholder, and have 
+the opportunity to jump, back and forth, within the hierarchy of the
+stakeholders. By fitting the view to the stakeholder, the view enabled the 
+user to receive more relevant information on the current stakeholder.
 
-
-As important as the data processing is, one must not forget the presentation of
-the data. By using the hierarchy based list of areas of responsibility for the
-stakeholders, one has the opportunity to fit the visual display to the current
-stakeholder. In one way, to fit the display to the stakeholder can prove 
-useful since the presentation only displays information relevant for the 
-current stakeholder, in another way to let the user decide what level of 
-visualization the visual display shall present can be more since the display 
-then have the opportunity to present more overall information. By having the 
-opportunity to jump
-back and forth within the hierarchy of stakeholders, we decided to fit the 
-visual presentation of data to the current stakeholder. Since the display was 
-adapted to the user, the display enabled the user to receive more relevant 
-information on the current stakeholder.
-
+As the area director wants to study data from the entire area for a large 
+period of time, and the segment director wants to study almost every detail 
+that occurs on the segment, manual navigating in time was decided to use as a 
+way to increase and decrease the level of detail in the data presented.
 
 
 Keywords:
@@ -95,25 +102,27 @@ Keywords:
 
 \section{Data storage and data queries} % (fold)
 \label{sec:discussion_data_storage_and_data_queries}
-%By having several types of information which have different structure and
-%originating from different sources, raises the question of how the data storage
-%shall be structured. One way to structure the data storage, is to merge all the
-%data sets into one large database. When having one large, merged 
-%database, one experiences little maintainability, which is the degree where a
-%product or system can be modified by the intended maintainers\cite[p. 195]{Bass:2012:SAP:2392670}.
-%By storing the data sets in one large database, one avoids duplicating data in
-%the databases.
+By having several types of information which have different structure and
+originating from different sources, the question of how the data storage should
+be structured gets raised. One option for the structure is to merge all the
+data sets into one large database. When the data is stored in one large
+database
+ When having one large, merged 
+database, one experiences little maintainability, which is the degree where a
+product or system can be modified by the intended maintainers\cite[p. 195]{Bass:2012:SAP:2392670}. 
+One large database also means that we avoid duplication of data.
+Another way to structure the data storage is to store the data sets in
+independent storages with a loose coupling between the structures. Since most 
+changes to a system happens after initial release, as described by Bass, 
+Clements, and Kazman \cite[pp. 117-124]{Bass:2012:SAP:2392670},
+means that when the data sets are designed with built-in flexibility, 
+exercising the built-inn flexibility is usually cheaper than to hand-
+code a specific change in hindsight. By having these loosely linked data sets,
+one have achieved a modifiable data storage. This thesis demonstrated this
+principal by having the stations stored in a hierarchy data set based one the 
+stakeholder hierarchy, and the other data sets connected to the stations.\\
 
-%Another way to structure the data storage is to store the data sets in
-%independent storages with a loose coupling between the structures. Since most 
-%changes to a system happens after initial release, as described by Bass, 
-%Clements, and Kazman \cite[pp. 117-124]{Bass:2012:SAP:2392670},
-%means that when the data sets are designed with built-in flexibility, 
-%exercising the built-inn flexibility is usually cheaper than to hand-
-%code a specific change in hindsight. By having these loosely linked data sets,
-%one have achieved a modifiable data storage. This thesis demonstrated this
-%principal by having the stations stored in a hierarchy data set based one the 
-%stakeholder hierarchy, and the other data sets connected to the stations.\\
+
 
 Keywords:
 \begin{itemize}
