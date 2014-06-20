@@ -46,4 +46,4 @@ Use the included Makefile (On windows? Cygwin then? :P)
  * Fix flow in Workshop 1
  * Conclude
  * Future work
- * Zip code
+ * Zip prototype
