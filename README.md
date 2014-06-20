@@ -30,4 +30,18 @@ Use the included Makefile (On windows? Cygwin then? :P)
  TODOs
  ========
  * Start Project
- * ~~Write contract~~
+ * Language check:
+ 	* Intro
+ 	* Method
+ 	* Background
+ 	* Implementation
+ 	* Results
+ 	* Discussion
+ 	* Conclusion
+ * Fill out railway operations with pdf from Landmark
+ * Examples in railway operations
+ * Architecture in Implementation
+ * Fix flow in Workshop 1
+ * Conclude
+ * Future work
+ * Zip code
