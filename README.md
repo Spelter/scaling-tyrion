@@ -29,7 +29,6 @@ Use the included Makefile (On windows? Cygwin then? :P)
 
  TODOs
  ========
- * Start Project
  * Language check:
  	* Intro
  	* Method
@@ -38,6 +37,8 @@ Use the included Makefile (On windows? Cygwin then? :P)
  	* Results
  	* Discussion
  	* Conclusion
+ * Project research fill out "Examining the state-of-the-art"
+ * Project research fill out demo and eval
  * Fill out railway operations with pdf from Landmark
  * Examples in railway operations
  * Architecture in Implementation
