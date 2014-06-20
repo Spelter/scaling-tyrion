@@ -14,37 +14,38 @@ the information presented.
 
 There is a good synergy between the requirements and the system, when the 
 system is designed with the stakeholders wishes for viewing different type of 
-information. The synergy between the requirements and the system has both 
-advantages and disadvantages. On one side the system has a great possibility 
-to satisfy the requirements and needs of the stakeholders', since the system 
-is tightly connected to the requirements. On the other side, the system can be 
-inflexible to large changes, if the requirements change late in the project. 
-In the workshops, we defined that the stakeholders' must have the ability to 
-view different kinds of information; the system must take these needs into 
-consideration. A system capable of supporting a providing “awareness in 
-presentation” of multiple stakeholders is by the very nature more complex. 
-Such a system would have to process a larger amount of data than a single-
-perspective system in order to provide the required functionality. Processing 
-larger amounts of data leads to a more complex system (back-end) – and in turn 
-a more complex interplay between user and front-end, with effects on the 
-interplay between front-end and back-end. The system can be more dynamic, 
-although complex, by reusing parts of the data processing for different 
-information types, when designed with the needs as well as the requirements in 
-mind. In order to meet the requirements of the different stakeholders needs we 
-have to aggregate data. There are several ways to aggregate the groups of data 
-according to the given criteria. The method used for aggregation of data that 
-enables the best view for the stakeholders is not straightforward. We have 
-chosen to explore the following simple alternatives: average, minimum, 
-maximum, median, and frequency (count). These are by no means an exhaustive 
-list, but represent well established, robust and simple to implement 
-alternatives. To decide the aggregation method, we have to consider how each 
-information type is structured, but also how this structure fits in with the 
-stakeholder their hierarchy. During the workshops, we decided that the best 
-way to aggregate the data is to take the average; the decision was based on 
-how the data is connected to the stakeholders and their hierarchy.
+information in mind. The synergy between the requirements and the system has 
+both advantages and disadvantages. On one side the system has a great 
+possibility to satisfy the requirements and needs of the stakeholders', since 
+the system is tightly connected to the requirements. On the other side, the 
+system can be inflexible to large changes, if the requirements change late in 
+the project. In the workshops, we defined that the stakeholders' must have the 
+ability to view different kinds of information; the system must take these 
+needs into consideration. A system capable of supporting a providing 
+“awareness in presentation” of multiple stakeholders is by the very nature 
+more complex. Such a system would have to process a larger amount of data than 
+a single-perspective system in order to provide the required functionality. 
+Processing larger amounts of data leads to a more complex system (back-end) – 
+and in turn a more complex interplay between user and front-end, with effects 
+on the interplay between front-end and back-end. The system can be more 
+dynamic by reusing parts of the data processing for 
+different information types, when designed with the needs as well as the 
+requirements in mind. In order to meet the requirements of the different 
+stakeholders needs we have to aggregate data. There are several ways to 
+aggregate the groups of data according to the given criteria. The method used 
+for aggregation of data that enables the best view for the stakeholders is not 
+straightforward. We have chosen to explore the following simple alternatives: 
+average, minimum, maximum, median, and frequency (count). These are by no 
+means an exhaustive list, but represent well established, robust and simple to 
+implement alternatives. To decide the aggregation method, we have to consider 
+how each information type is structured, but also how this structure fits in 
+with the stakeholder their hierarchy. During the workshops, we decided that 
+the way to aggregate the data that was best suited to the requirements is to 
+take the average; the decision was based on how the data is connected to the 
+stakeholders and their hierarchy.
 
 When returning the processed data to the user, the system can use the 
-requirements to aggregate the presentation of the data. Since the stakeholder 
+context of the various stakeholders to aggregate the presentation of the data. Since the stakeholder 
 their hierarchy contains the responsibility area of each stakeholder, the 
 system can fit the visual display to the responsibility area of the current 
 stakeholder. The system uses processed data for aggregating the hierarchy to 
@@ -113,8 +114,8 @@ Keywords:
 As the data sets originate from different sources and contain different
 structures, they can be difficult to efficiently query if not structured
 correctly. One option for the structure is to merge all the
-data sets into one large database. By merging the data sets in one large
-database, the data is structured in an client-server architecture. 
+data sets into one large database, by merging the data sets in one large
+database, the data are structured in an client-server architecture. 
 A client can either communicate to the databases directly or through a middle
 tier. Three-tier architecture is a very common solution on the Internet, where 
 the communication between the client and the database goes through a service 
@@ -131,7 +132,7 @@ data over several servers. Some benefits of the distributed architecture are
 easier expansion, modular sets with built-inn flexibility, and if one node 
 goes down the others still work. Exercising the built-inn flexibility of each
 module is usually cheaper than to hand-code a specific change in hindsight\cite[pp. 117-130]{Bass:2012:SAP:2392670}. The distributed architecture is a 
-modifiable data storage, when the modular sets are loosely linked sets. 
+modifiable data storage, where the modular sets are loosely linked sets. 
 %software architecture p. 185 for other quality attributes
 We demonstrated a hybrid of the client-server and distributed
 architecture \cite[pp. 297-299]{toftHanseMallaugDatabaser}. We implemented a 
@@ -145,34 +146,34 @@ utilized one database which contained the stakeholders' areas of responsibility 
 their hierarchy, and each of the other databases for different types of 
 information. The semi-distributed databases mean that it is easy to remove or
 add data sets, since the different types of information are connected to the
-stakeholders' hierarchy. We also have some negative aspects by using
-the semi-distributed databases. In the distributed databases, some data fields
+stakeholders' hierarchy. There are also some negative aspects using
+the semi-distributed databases, for example: some data fields
 will be duplicated. The duplication of data will lead to redundancy and
-increased probability for data corruption and errors. We experienced
-duplication of stations in the databases, due to the stations acting as the
+increased probability for data corruption and errors. In our case the duplication can be found as stations in the databases, due to the stations acting as the
 connection between every data set. In the three-tier, distributed database, 
 and semi-distributed architecture, the data have to be processed from the 
-original source to fit in with the structure.\\
+original source to fit in with the data structure.\\
 
-We can have a more responsive system by utilizing the back-end for processing 
-the data. The back-end gives a more responsive system since it usually on the
-same hardware as the databases or same sub-net, which provides quicker calls
-and responses to the databases from the data processing methods. By processing 
-the data on the back-end, the aggregation of data means that there is a lesser
-data size to transfer. We also have no control over what hardware the user
-might use, while the back-end is usually dedicated to one service and we can
-more easily control, and if necessary upgrade, the hardware.
+We can increase the responsiveness of the system by utilizing the back-end for 
+processing the data, since it usually on the same hardware as the databases or 
+same sub-net, which provides quicker calls and responses to the databases from 
+the data processing methods. By processing the data on the back-end, the 
+aggregation of data means that there is a lesser data size to transfer. We 
+have no control over what hardware the end user has, while the back-end 
+is usually dedicated to one service and we can (more easily) control, and if 
+necessary upgrade, the hardware.
 
 The amount of data to be processed by the system is affected by three 
 variables. The affecting variables are the stakeholders' need to navigate in 
 time, the navigating in the stakeholder hierarchy, and the type of information.
-Navigating in time affects the amount of data by limiting the time window to 
-search in the database. The navigation in the hierarchy affects the amount of
-data, since the areas of responsibility changes. The information type affects the 
-amount of data in a data-set, because each information type have different
-needs for the amount of data to be processed. The system performance is
-determined by the amount of data to process, as it uses more time to process 
-more data. 
+As the level of detail increases by navigating in time, the amount of data to 
+process decreases. Similarly by decreasing the level of detail, the amount of 
+data to process increases. The navigation in the hierarchy affects the amount 
+of data, as the further up in the hierarchy one navigates, the larger the 
+areas of responsibility grows. The information type affects the amount of data 
+in a data-set, because each information type have different needs for the 
+amount of data to be processed. The system performance is determined by the 
+amount of data to process, as it uses more time to process more data. 
 
 \subsection{Data storage and data queries keywords} % (fold)
 \label{sub:data_storage_and_data_queries_keywords}

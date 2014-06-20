@@ -38,7 +38,7 @@ Use the included Makefile (On windows? Cygwin then? :P)
  	* Discussion
  	* Conclusion
  * Project research fill out "Examining the state-of-the-art"
- * Project research fill out demo and eval
+ * ~~Project research fill out demo and eval~~
  * Fill out railway operations with pdf from Landmark
  * Examples in railway operations
  * Examples on system performance based on data amount in Discussion part 2
