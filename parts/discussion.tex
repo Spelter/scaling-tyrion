@@ -4,22 +4,22 @@
 
 \section{Stakeholders and aggregation} % (fold)
 \label{sec:discussion_stakeholders'_and_aggregation}
-It is important to define the needs and requirements of the stakeholders' 
+It is important to define the needs and requirements of the stakeholders 
 early in the process, in order to design a system that gives the right scope. 
 By the aid of workshops we defined the requirements, as it is part of the 
-research method (see \Ref{sec:workshops}). We can define the stakeholders' in 
+research method (see \Ref{sec:workshops}). We can define the stakeholders in 
 a hierarchy, based on their organizational structure, and areas of 
 responsibility, this aids us in defining the requirements on the structure of 
 the information presented.
 
 There is a good synergy between the requirements and the system, when the 
-system is designed with the stakeholders wishes for viewing different type of 
+system is designed with the stakeholders' wishes for viewing different type of 
 information in mind. The synergy between the requirements and the system has 
 both advantages and disadvantages. On one side the system has a great 
-possibility to satisfy the requirements and needs of the stakeholders', since 
+possibility to satisfy the requirements and needs of the stakeholders, since 
 the system is tightly connected to the requirements. On the other side, the 
 system can be inflexible to large changes, if the requirements change late in 
-the project. In the workshops, we defined that the stakeholders' must have the 
+the project. In the workshops, we defined that the stakeholders must have the 
 ability to view different kinds of information; the system must take these 
 needs into consideration. A system capable of supporting a providing 
 “awareness in presentation” of multiple stakeholders is by the very nature 
@@ -39,19 +39,12 @@ average, minimum, maximum, median, and frequency (count). These are by no
 means an exhaustive list, but represent well established, robust and simple to 
 implement alternatives. To decide the aggregation method, we have to consider 
 how each information type is structured, but also how this structure fits in 
-with the stakeholder their hierarchy. During the workshops, we decided that 
-the way to aggregate the data that was best suited to the requirements is to 
-take the average; the decision was based on how the data is connected to the 
-stakeholders and their hierarchy.
+with the stakeholder and their hierarchy. During the workshops, we decided 
+that the way to aggregate the data that was best suited to the requirements is 
+to take the average; the decision was based on how the data is connected to the stakeholders and their hierarchy.
 
 When returning the processed data to the user, the system can use the 
-context of the various stakeholders to aggregate the presentation of the data. Since the stakeholder 
-their hierarchy contains the responsibility area of each stakeholder, the 
-system can fit the visual display to the responsibility area of the current 
-stakeholder. The system uses processed data for aggregating the hierarchy to 
-find the stakeholder. Fitting the view to the stakeholder provides detail for 
-a single stakeholder, this is useful for presenting a single stakeholder and 
-their responsibility area.
+context of the various stakeholders to aggregate the presentation of the data. Since the stakeholder hierarchy contains the area of responsibility of each stakeholder, the system can fit the visual display to the step of the current stakeholder. The system uses processed data for aggregating the hierarchy to find the stakeholder. Fitting the view to the stakeholder provides detail for a single stakeholder; this is useful for presenting a single stakeholder and their step.
 %To let the user decide the detail level of the display can be useful, since the display then has the opportunity to present more overall information. 
 We decided to fit the visual presentation of data 
 to the current stakeholder, and have the opportunity to jump, back and forth, 
@@ -119,7 +112,7 @@ database, the data are structured in an client-server architecture.
 A client can either communicate to the databases directly or through a middle
 tier. Three-tier architecture is a very common solution on the Internet, where 
 the communication between the client and the database goes through a service 
-layer\cite[pp. 294-297]{toftHanseMallaugDatabaser}. The client-server 
+layer \cite[pp. 294-297]{toftHanseMallaugDatabaser}. The client-server 
 architecture has the benefits of giving the front-end applications a single 
 point of connection, avoiding duplication of data, and giving the database 
 manager both a single structure to maintain and a single point of access with 
@@ -135,12 +128,10 @@ module is usually cheaper than to hand-code a specific change in hindsight\cite[
 modifiable data storage, where the modular sets are loosely linked sets. 
 %software architecture p. 185 for other quality attributes
 We demonstrated a hybrid of the client-server and distributed
-architecture \cite[pp. 297-299]{toftHanseMallaugDatabaser}. We implemented a 
-three-tier architecture which contained a middle-tier for data processing and 
-client communication, and a lower tier containing several databases, see \Ref{fig:three-tier_architecture}.
+architecture \cite[pp. 297-299]{toftHanseMallaugDatabaser}.
 
 By using the three-tier architecture, we implemented a middle-tier which 
-processed the data, and a lower tier containing several databases. For
+processed the data, and a lower tier containing several databases, see \Ref{fig:three-tier_architecture}. For
 structuring the data sets with the stakeholders' requirements in mind, we
 utilized one database which contained the stakeholders' areas of responsibility in
 their hierarchy, and each of the other databases for different types of 
@@ -158,7 +149,7 @@ We can increase the responsiveness of the system by utilizing the back-end for
 processing the data, since it usually on the same hardware as the databases or 
 same sub-net, which provides quicker calls and responses to the databases from 
 the data processing methods. By processing the data on the back-end, the 
-aggregation of data means that there is a lesser data size to transfer. We 
+aggregation of data means that there is a smaller data size to transfer. We 
 have no control over what hardware the end user has, while the back-end 
 is usually dedicated to one service and we can (more easily) control, and if 
 necessary upgrade, the hardware.
