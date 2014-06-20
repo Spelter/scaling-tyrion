@@ -52,3 +52,4 @@ Use the included Makefile (On windows? Cygwin then? :P)
  * Conclude
  * Future work
  * Zip prototype
+ * Proper chapter descriptions
