@@ -43,6 +43,7 @@ Use the included Makefile (On windows? Cygwin then? :P)
  * Examples in railway operations
  * Examples on system performance based on data amount in Discussion part 2
  * Architecture in Implementation
+ * Intro needs more meat on the bone
  * Fix flow in Workshop 1
  * Conclude
  * Future work
