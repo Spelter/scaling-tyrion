@@ -79,10 +79,6 @@
 \labelformat{chapter}{chapter~{#1}}
 
 
-%NTNU master mal
-%\input{docsetup}
-
-
 % ########################################## 
 %			Beginning of document
 % ########################################## 
@@ -110,20 +106,29 @@
 
 %\include{front_page}
 
-%\include{preface}
+%\phantomsection
 %\include{summary}
+%\cleardoublepage
+%\phantomsection
 %\include{summary_nor}
-\chapter*{Definitions \& abbreviations}
-\input{abbriv}
+%\cleardoublepage
+%\phantomsection
+%\include{preface}
+%\cleardoublepage
 
 \renewcommand\contentsname{Table of Contents}
 \tableofcontents
-\clearpage
+\cleardoublepage
 \renewcommand\listfigurename{List of Figures}
 \listoffigures
-\clearpage
+\cleardoublepage
 \renewcommand\listtablename{List of Tables}
 \listoftables
+\cleardoublepage
+
+\chapter*{Definitions \& abbreviations}
+\input{abbriv}
+\cleardoublepage
 
 \setcounter{page}{0}
 \pagenumbering{arabic}
@@ -131,13 +136,17 @@
 
 \include{parts/introduction}
 \include{parts/research_and_method}
-\include{parts/background} % and state of the art
+\include{parts/background}
 %\include{parts/concept}
 \include{parts/implementation}
 \include{parts/results}
 \include{parts/discussion}
 \include{parts/conclusion}
 
+\cleardoublepage
+\renewcommand\bibname{References}
+\phantomsection
+\addcontentsline{toc}{chapter}{\bibname}
 \label{bibliography}
 \bibliography{bibliography}
 %\nocite{*} %All

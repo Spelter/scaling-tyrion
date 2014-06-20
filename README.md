@@ -53,3 +53,4 @@ Use the included Makefile (On windows? Cygwin then? :P)
  * Future work
  * Zip prototype
  * Proper chapter descriptions
+ * Rest, json, node osv inn i abb

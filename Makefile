@@ -19,6 +19,7 @@ master:
 	pdflatex ${FIL}
 	
 	mv ${FIL}.pdf output/
+	cp output/${FIL}.pdf ~/Dropbox/Skole/NTNU/Master/latest_build/
 
 #Generates secondary pdf's and moves them to output folder
 sub:
