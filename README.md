@@ -31,7 +31,7 @@ Use the included Makefile (On windows? Cygwin then? :P)
  ========
  * Language check:
  	* Intro
- 	* Method
+ 	* ~~Method~~
  	* Background
  	* Implementation
  	* Results
@@ -40,7 +40,7 @@ Use the included Makefile (On windows? Cygwin then? :P)
  * Project research fill out "Examining the state-of-the-art"
  * ~~Project research fill out demo and eval~~
  * Fill out railway operations with pdf from Landmark
- * Method - Feedback from Landmark
+ * ~~Method - Feedback from Landmark~~
  * Discussion - Feedback from Landmark
  * Examples in railway operations
  * Examples on system performance based on data amount in Discussion part 2
