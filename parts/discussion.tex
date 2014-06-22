@@ -30,7 +30,9 @@ and in turn a more complex interplay between user and front-end, with effects
 on the interplay between front-end and back-end. The system can be more 
 dynamic by reusing parts of the data processing for 
 different information types, when designed with the needs as well as the 
-requirements in mind. Due to differing concerns, the different stakeholders 
+requirements in mind. 
+
+Due to differing concerns, the different stakeholders 
 require different levels of aggregation. There are several ways to 
 aggregate the groups of data according to the given criteria. The method used 
 for aggregation of data that enables the best view for the stakeholders is not 
@@ -41,7 +43,10 @@ implement alternatives. To decide the aggregation method, we have to consider
 how each information type is structured, but also how this structure fits in 
 with the stakeholder and their hierarchy. During the workshops, we decided 
 that the way to aggregate the data that was best suited to the requirements is 
-to take the average; the decision was based on how the data is connected to the stakeholders and their hierarchy.
+to take the average; the decision was based on how the data is connected to 
+the stakeholders and their hierarchy. To pre-cache the results is almost 
+impossible, as the system can aggregate both in time and space while both 
+dimensions have a continuous growth.
 
 When returning the processed data to the user, the system can use the 
 context of the various stakeholders to aggregate the presentation of the data. 
