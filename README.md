@@ -49,7 +49,7 @@ Use the included Makefile (On windows? Cygwin then? :P)
  * Examples in railway operations - 1
  * Examples on system performance based on data amount in Discussion part 2 - 1
  * Architecture in Implementation - 3
- * Prototype functionality in results - 3
+ * ~~Prototype functionality in results - 3~~
  * Double up of text in "fitting the view" in disc - 1
  * Intro needs more meat on the bone - 2
  * Fix flow in Workshop 1 - 2
