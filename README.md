@@ -40,11 +40,11 @@ Use the included Makefile (On windows? Cygwin then? :P)
  	* Results - 2
  	* ~~Discussion - 2~~
  	* Conclusion - 2
- * ~~Project research fill out "Examining the state-of-the-art" -1 ~~
+ * ~~Project research fill out "Examining the state-of-the-art" - 1~~
  * ~~Project research fill out demo and eval - 1~~
  * Fill out railway operations with pdf from Landmark - 1
  * ~~Method - Feedback from Landmark - 2~~
- * ~~Discussion - Feedback from Landmark -2 ~~
+ * ~~Discussion - Feedback from Landmark - 2~~
  * Split discussion to several sub - 1
  * Examples in railway operations - 1
  * Examples on system performance based on data amount in Discussion part 2 - 1
