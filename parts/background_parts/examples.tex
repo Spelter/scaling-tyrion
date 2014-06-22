@@ -7,8 +7,8 @@ systems tries to present.
 \subsection{Zugmonitor}
 \label{sub:subsection_zugmonitor}
 
-In the Zugmonitor (see \Ref{fig:zugmonitor}) each long-distance 
-trains in the German railway network has been plotted as a arrow on a German 
+In the Zugmonitor application (see \Ref{fig:zugmonitor}) each long-distance 
+train in the German railway network has been plotted as a arrow on a German 
 map. To illustrate the punctuality of each train, a colored circle has been 
 added to each arrow if the train is delayed with varying color depending on 
 how big the delay is. A time line is also displayed to see how the trains run 
@@ -61,7 +61,7 @@ The MiseryMap (see \Ref{fig:miserymap}) shows how much different airports and
 the routes between them are delayed. The system also have a playback function 
 to see the delays throughout the day. Since the plot sometimes also shows the 
 weather conditions, the system gives the user the possibility to spot if the 
-delays is to be blamed on uncontrollable conditions. 
+delays can be blamed on uncontrollable conditions. 
 
 \begin{figure}[!htbp]
 	\includegraphics[width=0.8\textwidth,center]{MiseryMap.png}
@@ -75,23 +75,25 @@ delays is to be blamed on uncontrollable conditions.
 Jernbaneverket is the Norwegian governments agency for railway services 
 \cite{jernbaneverketAbout}. As described in \Ref{sec:railway_operations}, 
 Jernbaneverket is responsible for the infrastructure of all the railway 
-network in Norway. Since they have responsibility over the infrastructure, 
-they also collect in data from points that each train passes, as described in 
+network in Norway. Since they have responsibility for the infrastructure, 
+they also collect data from points that each train passes, as described in 
 \Ref{sec:back_data_sets}. Based on the collection of data, they have recently 
 released a map (see \Ref{fig:jernbaneverket-punklighet}) over the punctuality 
-on each trains segment. The released map is a interactive map which shows a pop
--up box containing the punctuality of the train segment clicked on, and the pop
--up also shows which train routes that operates the train segment clicked on. 
-The map, does not however, show more information if the user zooms inn, which 
-is possible within the map itself, and has a static view of Norway and the 
-railway. The map only shows the punctuality for passenger trains, and not 
+on each track segment. The released map is a interactive map which shows a 
+pop-up box containing the punctuality of the train segment clicked on, and the 
+pop-up also shows which train routes that operates the train segment clicked 
+on. The map, does not however, show more information if the user zooms inn, 
+which is possible within the map itself, and has a static view of Norway and 
+the railway. The map only shows the punctuality for passenger trains, and not 
 freight trains and/or both.\\ 
 
 To analyze each stretch, on a detailed level between each station,
 Jernbaneverket has a internal system called TIOS.
-TIOS is a train graph which plots all trains that passes between all stations,
-\Ref{fig:jernbaneverket-tios} presents an example of the train graph between Oslo S and Drammen, where the red lines means planned
-time, black lines is actual time and the red circle indicates a a code for the cause of the delay. 
+TIOS can create a train graph which plots all trains that passes between all 
+stations, \Ref{fig:jernbaneverket-tios} presents an example of the train graph 
+between Oslo S and Drammen, where the red lines means planned time, black 
+lines is actual time and the red circle indicates a a code for the cause of 
+the delay. 
 
 \begin{figure}[!htbp]
 	\includegraphics[height=0.4\textheight]{jernbaneverket-punklighet.png}
@@ -134,10 +136,10 @@ pie chart of the current status.
 \subsection{SINTEF Presis}
 \label{sub:subsection_sintefPresis}
 
-The PRESIS\cite{sintefPresis} project is a project between SINTEF\cite{sintef},
+The PRESIS\cite{sintefPresis} project is a collaboration between SINTEF\cite{sintef},
 Transportøkonomisk Institutt\cite{transportOkonomiskInstitutt},
 NTNU\cite{ntnu}, Jernbaneverket(\Ref{sub:subsection_jernbaneverket}) 
-and the train operators Cargonet (\Ref{sub:subsection_cargonet}), NSB\cite{nsbForside}. The aim is to systematically improve the precision 
+and the train operators Cargonet (\Ref{sub:subsection_cargonet}), NSB\cite{nsbForside}, and Flytoget\cite{flytoget}. The aim is to systematically improve the precision 
 level in the railway system by developing methods, tools, and processes. During
 the PRESIS project several prototypes for analyzing train delays have been 
 developed.
@@ -226,9 +228,9 @@ process.  %Bidragsplot, ikke tatt med.
 \label{sub:subsection_cargonet}
 
 % subsection subsection_sintefPresis (end)
-Cargonet is a Norwegian company which provides inter modal transport on rails. 
+Cargonet is a Norwegian company which provides intermodal transport on rails. 
 To provide an effective tracking service for the customers, Cargonet provides 
-a internal service for the users which tracks all trains belonging to Cargonet.
+an internal service for the users which tracks all trains belonging to Cargonet.
 As can be seen in \Ref{fig:cargonet}, the system only shows a picture of the 
 current status of each train. The system lacks the possibility to analyze 
 every stretch individually and analyze trains and stretches over time.

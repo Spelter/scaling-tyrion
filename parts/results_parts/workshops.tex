@@ -62,7 +62,7 @@ the other users. It was suggested to have the same perspective through the
 levels, but too have selectable views based on roles. \\
 
 In the end it was decided to have a Dashboard along each marker with some data
-relevant to that marker, and some kind of selectable list which enables the
+relevant to that marker, and some kind of interactive list which enables the
 user to select the level to be displayed, all of Norway, each area, a segment,
 or a stretch with each station. 
 
@@ -89,29 +89,29 @@ where 1 is undesirable and 3 is very desirable. The result ended up as \Ref{tabl
 		\hline
 		Functionality & Practicability & Desirable & Priority\\
 		\hline
-		Cause & 3 & 2 & 6\\
+		Outstanding errors & 1 & 1 & 1\\
 		\hline
 		Suspensions & 3 & 1 & 3\\
 		\hline
-		Traffic density & 3 & 3 & 9\\
+		Variation & 1 & 3 & 3\\
 		\hline
-	 	Worst stretch/station/train number & 3 & 2 & 9\\
+		Season effects & 3 & 1 & 3\\
+		\hline
+		Follow delays & 1 & 3 & 3\\
+		\hline
+		Speed limits & 3 & 1 & 3\\
+		\hline
+		Cause & 3 & 2 & 6\\
+		\hline
+	 	Worst stretch/station/train number & 3 & 2 & 6\\
+		\hline
+		Traffic density & 3 & 3 & 9\\
 		\hline
 		Slow driving & 3 & 3 & 9\\
 		\hline
 		Delays & 3 & 3 & 9\\
 		\hline
-		Variation & 1 & 3 & 3\\
-		\hline
-		Outstanding errors & 1 & 1 & 1\\
-		\hline
-		Season effects & 3 & 1 & 3\\
-		\hline
 		Crossings & 3 & 3 & 9\\
-		\hline
-		Follow delays & 1 & 3 & 3\\
-		\hline
-		Speed limits & 3 & 1 & 3\\
 		\hline
 	\end{tabularx}
 \caption{Dashboard functionality brainstorming ideas}
@@ -141,16 +141,10 @@ slow driving, and vice versa.
 
 Several options to display traffic density were discussed, the problem was how
 to correctly show the number of trains based on what kind of data is 
-available. Should you display each train based on the train numbers and 
-calculate for the entire line both ways? Should you display train numbers 
-divided by the segment directors? 
+available. Should the system display each train based on the train numbers and 
+calculate for the entire line both ways? Should the system display train numbers divided by the segment directors? 
 
-In the workshop it was decided to show number of trains that passes each block
-segment, since this is the data that is available. When selecting different 
-levels upwards in the hierarchy, the number of train will be aggregated upon.
-For instance, when on stretch level, the system will display each block 
-between stations; on line level, the system will display an average of the 
-stretches belonging to that line.
+In the workshop it was decided to show the number of trains that passes each block segment, since this is the data that is available. When selecting different levels upwards in the hierarchy, the number of trains will be aggregated upon. For instance, when on stretch level, the system will display each block between stations; on line level, the system will display an average of the stretches belonging to that line.
 
 % subsubsection traffic_density (end)
 
@@ -159,17 +153,19 @@ stretches belonging to that line.
 The second idea was crossings between trains, how could delays and slow 
 driving affect crossings. 
 
-One of the problems discussed here was should you into account the difference
-between actual crossings and planed crossings or not? Is it is hard to
+One of the problems discussed here was should the system take into account the difference
+between actual crossings and planed crossings or not? Since it is hard to
 calculate the difference because one does not know whether one of the trains
 involved in the crossing has been canceled or other hard to document
 occurrences, it was decided to only show a number for both actual crossings 
 and planned crossings. These numbers will aggregate when changing a level 
 upwards, in similar manner as the traffic density. 
+%TODO hard to document
 % subsubsection crossings (end)
 
 \subsubsection{Delays} % (fold)
 \label{ssub:delays}
+%TODO
 Since delays can cover a large area depending on how you define it, this had to
 be properly discussed and defined. Should you follow the Norwegian standard
 \cite{jernbaneverketPunklighetsTall} of only say that a train is delayed at the
@@ -185,11 +181,12 @@ and be aggregated according to the level.
 \subsubsection{Speed restrictions} % (fold)
 \label{ssub:speed_restrictions}
 Visualization of slow driving has been a goal along the way since the beginning
-and was natural to include from here on as well.
+of the project and was natural to include from the time of the workshop as 
+well.
 
 In the dashboard it was decided to show the top 5 upper and lower bounds.
 It was also decided to include a little marker on the map to indicate the
-location of the incident.
+location of the speed restriction.
 
 % subsubsection speed_restrictions (end)
 

@@ -68,13 +68,13 @@ databases". \\
 
 Since most of the of the information is count based, the aggregation performed
 on these sets are a simple average function along with generating dummy 
-markers for each sub-area. Say one was to select a area as the current 
+markers for each sub-area. Say one was to select an area as the current 
 stakeholder with crossings as current data type, the system will then loop 
 through and average all crossings per station within every segments and 
 generate a marker located on the average location of all the stations with the 
 average crossing of all these stations. The system will then do the same for 
-all segments within one stretch. By performing the aggregation method for a 
-area, you end up with a average marker for each stretch, located on the  
+all segments within one stretch. By performing the aggregation method for an 
+area, you end up with an average marker for each stretch, located on the  
 average location of all segments generated from all the stations, with the 
 average crossings of all stations in that area.\\
 
@@ -173,7 +173,7 @@ JavaScript runtime. The Node.js framework enables small, fast, and scalable
 network applications.
 
 When the user wanted to change information type or active stakeholder, the
-request for data was posted to the server through a REST\cite{REST} api. An
+request for data was posted to the server through a REST\cite{REST} API. An
 example of a request for the number of crossings for the Oslo area is
 "/rail/numberOfCrossings/2012-01-01/2012-02-01/oslo". The server then uses the
 Express\cite{express} framework to parse all get request to the server to send
@@ -185,7 +185,7 @@ these request to methods within the Node server which parses these requests.
 \subsection{Data storage} % (fold)
 \label{sub:technology_data_storage}
 When storing the data, several types of databases was used as mentioned in
-\Ref{sub:back_data_storage}. The "station database" was implemented in
+\Ref{sub:back_end_data_storage}. The "station database" was implemented in
 a noSQL document database structure called MongoDB\cite{mongoDB}. The MongoDB
 database have a structure which on a database holds a set off collections. a
 collection holds a set of documents. A documents is a set of key-value pairs.
@@ -207,15 +207,21 @@ the given MySQL interface.
 \subsection{Map} % (fold)
 \label{sub:map}
 Since the map was a important part of the presentation of data, the selection
-of the map library were an important decision. Leaflet\cite{leaflet} was 
-chosen due to the library being a more and more popular library which is open 
-source. The Leaflet JavaScript library is designed with simplicity, 
-performance and usability in mind.
+of the map library were an important decision. Both Google maps\cite{googleMaps}
+and Leaflet\cite{leaflet} was looked at, however in the end Leaflet was 
+chosen. Google Maps is a more known map framework, but one either has to limit 
+the usage of the system or buy a license. Leaflet is a modern open-source 
+JavaScript library which is designed with simplicity, performance and 
+usability in mind\cite{leaflet}. As both Node.js and Leaflet is written in 
+JavaScript\cite{ wiki:Javascript}, means that code are easily transferable and 
+comparable. 
+
+
 
 All functions within the map is an extension of functions that exists in the
 map. Information selection, time selection, stakeholder selection and Top 5 is
 an extension of the L.Control object. The dashboards uses a standard marker,
-and a bit of css to display the marker icon and the information. The map
+and a bit of CSS to display the marker icon and the information. The map
 prototype developed was presented in \Ref{fig:map_prototype}.
 % subsection map (end)
 

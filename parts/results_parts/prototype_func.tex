@@ -6,10 +6,27 @@ As part of answering the research question, a prototype was developed. In this
 section we will describe the functionality in the prototype.\\
 
 The prototype is a map based system that presents the information according to
-the needs of the stakeholders, we present the system in
-\Ref{fig:map_prototype}. The system uses the 
+the needs of the stakeholders, as presented in \Ref{fig:map_prototype}. A
+intractable list was implemented, presented in \Ref{fig:stakeholder_selection_list},
+which gives the functionality to navigate through the stakeholders hierarchy.
+The system aggregates the data according to the current selected stakeholder,
+as presented in \Vref{sub:back_end_aggregation}. The visual presentation will 
+be adapted to the the areas of responsibility of the current stakeholder, 
+which will focus the presentation of the data in the geographical area of the 
+stakeholder.
 
+To let the stakeholder be able to select different types of information
+according to their need, a intractable list was implemented (\Ref{fig:implementation_type_selection}).
+By letting the user select the information type to present, the system is able
+to present the stakeholders need for different information type according to
+their requirements. \Ref{fig:crossings_and_speed_restriction_implementation}
+shows the presentation of two different types of information.\\
 
+A method to navigate in time were implemented, as the stakeholders have 
+different needs for the level of detail in the presentation of data. The time
+navigation were implemented as two input boxes, see \Ref{fig:time_selection_implemented}.
+The system uses the time interval set by the user to limit the data to be
+processed. 
 
 \begin{figure}[!htbp]
 	\includegraphics[width=\textwidth,center]{map_prototype.png}
