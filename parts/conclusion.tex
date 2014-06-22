@@ -6,14 +6,38 @@
 \label{sec:conclusion}
 To have a system that are capable of awareness of stakeholder and their needs
 to aggregate over a rich set of data, it is important to both have a clearly
-defined stakeholder hierarchy, data sets which are adapted to the stakeholders,
-and aggregation methods which fit the stakeholders needs and the data sets. 
+defined stakeholders with their requirements and needs, data sets which are 
+adapted to the stakeholders, and aggregation methods which fit the 
+stakeholders needs and the data sets. 
 
-As everything is based on the stakeholders, to have a properly defined
-hierarchy of stakeholders is crucial. 
-\Tree[.[Infrastructure Director]]
+We have created a prototype to help define important characteristics for a
+system that are aware of the stakeholder and their needs when processing data,
+by the use of the Design Science Research Process. To properly define the 
+stakeholders, their needs, and their areas of responsibility in a hierarchy is 
+crucial, as everything is based on the stakeholders and their needs and 
+requirements. The system is able to fetch data according to the needs of the 
+current stakeholder and processes the data according to their step in the
+hierarchy, by being able to navigate through the hierarchy. \\
 
-% section conclusion (end)
+In order to have the ability to navigate the hierarchy and process the data 
+accordingly, the areas of responsibility should be stored in the hierarchy for 
+enabling the system to find the compatible data with the areas. The different
+data sets should be stored in a structure that enables a dynamic link to the
+hierarchy. We proposed a semi-distributed databases, where the hierarchy is
+stored in a database and the other data sets connected to the stakeholder
+through the hierarchy database. The database structure proposed does demand
+that the data sets are processed to a similar structure, and merged to a
+consistent definition of data fields. 
+
+Use of the hierarchy based areas of responsibility is important, to aggregate 
+the data sets according the stakeholders and their requirements. The 
+aggregation method should be specified in the requirements for each 
+information type, as each data set can be different and/or the stakeholders 
+have a different need for that information.
+
+The system should be able to use the visual presentation of the data to limit
+the visualization to the current stakeholder, by use of the area of
+responsibility of the current stakeholder.
 
 \section{Future work} % (fold)
 \label{sec:future_work}
@@ -24,7 +48,10 @@ Suggestions of things to do:
 	\item difference actual and planned crossings
 	\item Affecting contexts
 	\item Freight volum, passengers, capacity utilization, etc
+	\item Search for station, stakeholder, etc
+	(\url{https://github.com/stefanocudini/leaflet-search})
 \end{itemize}
 % section future_work (end)
 
-\input{parts/conclussion_parts/characteristics}
+%\input{parts/conclussion_parts/characteristics}
+

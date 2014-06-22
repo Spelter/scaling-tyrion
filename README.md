@@ -57,3 +57,7 @@ Use the included Makefile (On windows? Cygwin then? :P)
  * Zip prototype - 2
  * Proper chapter descriptions - 2
  * Rest, json, node osv inn i abb - 1
+ * Abstract - 2
+ * Abstract nor - 2 
+ * Preface - 2
+ * Acknowledgments - 2
