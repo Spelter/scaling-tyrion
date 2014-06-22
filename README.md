@@ -45,6 +45,7 @@ Use the included Makefile (On windows? Cygwin then? :P)
  * Fill out railway operations with pdf from Landmark - 1
  * ~~Method - Feedback from Landmark - 2~~
  * Discussion - Feedback from Landmark -2 
+ * Split discussion to several sub
  * Examples in railway operations - 1
  * Examples on system performance based on data amount in Discussion part 2 - 1
  * Architecture in Implementation - 3
