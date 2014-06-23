@@ -4,6 +4,8 @@
 
 \section{Stakeholders and aggregation} % (fold)
 \label{sec:discussion_stakeholders'_and_aggregation}
+\subsection{Defining stakeholders} % (fold)
+\label{sub:disc_defining_stakeholders}
 It is important to define the needs and requirements of the stakeholders 
 early in the project process, in order to design a system that gives the right scope. 
 By the aid of workshops we defined the requirements, as it is part of the 
@@ -32,6 +34,10 @@ dynamic by reusing parts of the data processing for
 different information types, when designed with the needs as well as the 
 requirements in mind. 
 
+% subsection defining_stakeholders (end)
+
+\subsection{Aggregating to the stakeholder} % (fold)
+\label{sub:disc_aggregating_to_the_stakeholder}
 Due to differing concerns, the different stakeholders 
 require different levels of aggregation. There are several ways to 
 aggregate the groups of data according to the given criteria. The method used 
@@ -53,23 +59,25 @@ context of the various stakeholders to aggregate the presentation of the data.
 Since the stakeholder hierarchy contains the area of responsibility of each 
 stakeholder, the system can fit the visual display to the step of the current 
 stakeholder. The system uses processed data for aggregating the hierarchy to 
-find the stakeholder. Fitting the view to the stakeholder provides detail for 
+find the stakeholder. Adapting the view to the stakeholder provides detail for 
 a single stakeholder; this is useful for presenting a single stakeholder and 
 their step.
 %To let the user decide the detail level of the display can be useful, since the display then has the opportunity to present more overall information. 
 We decided to fit the visual presentation of data 
 to the current stakeholder, and have the opportunity to jump, back and forth, 
-within the hierarchy of the stakeholders. By fitting the view to the 
+within the hierarchy of the stakeholders. By adapting the view to the 
 stakeholder, the display enabled the user to receive more relevant information 
 on the current stakeholder. A conflict of interest occurs between stakeholders 
 due to overlapping areas of responsibility. The conflict is extremely difficult 
 to consider, and is not taken into consideration when aggregating the data or 
-fitting the view.
+adapting the view.
 
 As the area director wants to study data from the entire area for a large 
 period of time, and the segment director wants to study almost every detail 
 that occurs on the segment, manual navigating in time was decided to use as a 
 way to increase and decrease the level of detail in the data presented.
+
+% subsection aggregating_to_the_stakeholder (end)
 
 \subsection{Stakeholder and aggreation keywords, to be removed} % (fold)
 \label{sub:stakeholder_and_aggreation_keywords}
@@ -114,6 +122,8 @@ Keywords:
 % section stakeholders'_and_aggregation (end)
 \section{Consequences for architecture} % (fold)
 \label{sec:consequences_for_architecture}
+\subsection{Data storage} % (fold)
+\label{sub:data_storage}
 As the data sets originate from different sources and contain different
 structures, they can be difficult to query efficiently. One option for the structure is to merge all the
 data sets into one large database, by merging the data sets in one large
@@ -164,8 +174,10 @@ the sets, and different set owners (NSB, Jernbaneverket, etc) have different
 definitions of the same fields. We did not take this problem into consideration
 during the work of this project, due to the data sets been given to us was 
 already processed by SINTEF. 
-\\
 
+% subsection data_storage (end)
+\subsection{System performance} % (fold)
+\label{sub:system_performance}
 We can increase the responsiveness of the system by utilizing the back-end for 
 processing the data, since it is usually on the same hardware as the databases or 
 same sub-net, which provides quicker calls and responses to the databases from 
@@ -188,6 +200,9 @@ areas of responsibility grows. The information type affects the amount of data
 in a data-set, because each information type have different needs for the 
 amount of data to be processed. The system performance is determined by the 
 amount of data to process, as it uses more time to process more data. 
+
+% subsection system_performance (end)
+
 
 \subsection{Data storage and data queries keywords, to be removed} % (fold)
 \label{sub:data_storage_and_data_queries_keywords}

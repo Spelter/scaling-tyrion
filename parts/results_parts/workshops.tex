@@ -1,30 +1,24 @@
 % !TEX root=../../thesis.tex
 
-\section{Workshops} % (fold)
-\label{sec:workshops}
-In order to determine what is relevant content for this thesis, workshops were
-held. These workshops were meant to bring some context and direction for the
-thesis. 
-
-\subsection{Workshop 2014-04-04} % (fold)
-\label{sub:workshop_2014_04_04}
-The first workshop was meant to bring some clarity to what kind of users this
-system will expect to be used by; their responsibility, and their needs.
-It was also meant to bring clarity to how the system will relate to these users and their needs.
+\section{Workshop 2014-04-04} % (fold)
+\label{sec:workshop_2014_04_04}
+The first workshops agenda was to help define the stakeholders of the system,
+their areas of responsibility, and their needs. The workshop was also meant to 
+bring clarity to how the system will relate to these users and their needs.
 Attending this workshop was Andreas Amdal Seim (SINTEF), Andreas Dypvik 
 Landmark (SINTEF), Rimmert van der Kooij (SINTEF), Nils Olsson (NTNU), Per 
 Magnus Hegglund (Jernbaneverket), Magnus Bae (NTNU), and Magnus Krane (NTNU).\\
 
-At first it was discussed that it is 3 sets of "glasses" you can put on when
-viewing the system.
+Perspectives that can be used when viewing the system were discussed
+first.
 \begin{itemize}
 	\item Infrastructur: Segment director, etc.
 	\item Traffic division / passenger / train companies.
 	\item Delay causes: delay demographic.
 \end{itemize}
 
-Based on this, it was discussed what the users might be interested in when
-using the system.
+Interests of users when using the system were then discussed based on the
+perspectives.
 \begin{itemize}
 	\item Uptime, punctuality.
 	\item Deviation.
@@ -40,49 +34,52 @@ using the system.
 
 Causes that might affect the punctuality was also listed: weather, number of
 passengers, capacity utilization, animal accidents, cargo volume.
-It was decided that these causes is difficult to prove and get data on, and
-therefore was not to be included at this project.\\
+The causes was concluded not to be included in this project, as the causes is
+difficult to prove and get data on.\\
 
 The internal project in Jernbaneverket (section
-\Ref{sub:subsection_jernbaneverket}), which is being used to analyse each
-stretch on a detail level, gets it's data from a deviation registry; also the
-uptime uses this registry for it's calculations. The problem here is that the deviation registry has a five minute filter
-in which the trains are being calculated to be on time. (XXX)
+\Ref{sub:subsection_jernbaneverket}) uses a deviation registry for data to
+analyze each stretch on a detail level. To calculate the uptime, presented in
+\Ref{sec:railway_operations}, also uses the deviation registry for the needed
+data. A problem by using the deviation registry for calculating variation or 
+changes, the registry have a five minute filter in which the trains are being 
+calculated to be on time.
 
-It was then agreed that it was two problems that had to be addressed, back end
-and front end of the system. What kind of data is available and what is
-possible to do with this data? It was also pointed on that same data set can 
-show both successful and failure results based on when it compared to, for 
-instance the easter is not on the same week each year. This ended up being 
-addressed in workshop two (\Ref{sub:workshop_2014_04_24}). 
+Two problems were agreed upon that needed to be addressed, the back end and 
+the  front end of the system. What kind of data is available and what is 
+possible to do with this data? A data set can show both positive and negative 
+results, based on what the set are compared too. For instance, easter is not 
+on the same week each year and the passenger volume increase during the 
+holidays. Data sets ended up being addressed in the second workshop (\Ref{sec:workshop_2014_04_24}). 
 
-In the front end it was discussed different levels and what should be shown in
-each level, that different users might have different needs in each level then
-the other users. It was suggested to have the same perspective through the
-levels, but too have selectable views based on roles. \\
+As the different stakeholders might have need for different presentation of the
+data, different levels of stakeholders and what should be shown in each level 
+was discussed. A suggestion was made to have the same perspective through the
+levels, but to have selectable views based on roles. \\
 
-In the end it was decided to have a Dashboard along each marker with some data
-relevant to that marker, and some kind of interactive list which enables the
-user to select the level to be displayed, all of Norway, each area, a segment,
-or a stretch with each station. 
+At the end of the workshop, three conclusions was made. The first conclusion 
+was to have a dashboard next to each marker with relevant data to the current 
+stakeholder. The second conclusion was to a interactive list of the
+stakeholders which adapted the visual presentation to the selected stakeholder,
+presented in \Ref{sec:back_stakeholders}.
+The last conclusion was to have a second workshop where the content of the
+dashboard should be decided. This resulted in \Ref{sec:workshop_2014_04_24}.
 
-It was also concluded on having a second workshop where the content of the
-dashboard should be decided. This resulted in \Ref{sub:workshop_2014_04_24}.
+% section workshop_2014_04_04 (end)
 
-% subsection workshop_2014_04_04 (end)
-
-\clearpage
-\subsection{Workshop 2014-04-24} % (fold)
-\label{sub:workshop_2014_04_24}
-The second workshop was meant to determine what kind of statistical data was 
-to be implemented in the dashboard mentioned in \Ref{sub:workshop_2014_04_04}.
+\section{Workshop 2014-04-24} % (fold)
+\label{sec:workshop_2014_04_24}
+The second workshops agenda was to determine what statistical data was 
+to be implemented in the dashboard, concluded upon in \Ref{sec:workshop_2014_04_04}.
 Attending this workshop was Andreas Amdal Seim (SINTEF), Andreas Dypvik 
 Landmark (SINTEF), Rimmert van der Kooij (SINTEF), and Magnus Krane (NTNU).\\
 
-The workshop started with a brainstorming for different things to implement in
-the map. The ideas were then ranged on how practical it is from 1-3 where 1 is
-unpractical and 3 is very practical; and ranged on how desirable it is from 1-3
-where 1 is undesirable and 3 is very desirable. The result ended up as \Ref{table:dashboard_functionality_wants_vs_needs}.
+The workshop started with a brainstorming for different data to present in
+the map. The different data was ranked on implementation practicality from 1 - 
+3 where 1 is unpractical and 3 is very practical; and ranked on the 
+desirability of the data from 1 - 3 where 1 is undesirable and 3 is very 
+desirable. The brainstorming after ranking is presented in \Ref{table:dashboard_functionality_wants_vs_needs}.
+\\
 
 \begin{table}[!h]\small
 	\begin{tabularx}{\textwidth}{|X|l|l|l|}
@@ -107,7 +104,7 @@ where 1 is undesirable and 3 is very desirable. The result ended up as \Ref{tabl
 		\hline
 		Traffic density & 3 & 3 & 9\\
 		\hline
-		Slow driving & 3 & 3 & 9\\
+		Speed restrictions & 3 & 3 & 9\\
 		\hline
 		Delays & 3 & 3 & 9\\
 		\hline
@@ -118,8 +115,9 @@ where 1 is undesirable and 3 is very desirable. The result ended up as \Ref{tabl
 \label{table:dashboard_functionality_wants_vs_needs}
 \end{table}
 
-Based on this, it was selected to implement only the options which was ranged
-as a 3 both on practicability and desirability:
+Based on the ranking, the decision was made to only implement the data was
+ranked as a 3 both on practicability and desirability, presented in the list
+below.
 
 \begin{itemize}
   \item Delays
@@ -128,68 +126,55 @@ as a 3 both on practicability and desirability:
   \item Traffic density
 \end{itemize}
 
-The second goal of the workshop was to determine how the selected ideas was to
-be implemented in both the map. It was desirable to both display some data in
-the dashboard besides each marker, and display top 5 lists. These lists was
-decided to display for delays and slow drivings. 
+The second part of the agenda, was to determine how the selected data was to be
+presented. The decision was made to split the presentation in two parts. The
+first was to display aggregated data in the dashboards next to the marker based
+on the current stakeholder. The second was to display top 5 lists for delays
+and speed restrictions.
 
-\subsubsection{Traffic density} % (fold)
-\label{ssub:traffic_density}
-The first idea chosen to display was traffic density. The issue to be displayed
-is the effect the volume of trains driven throughout the day has on delays and
-slow driving, and vice versa.
+\subsection{Crossings} % (fold)
+\label{sub:crossings}
+One of the problems discussed with crossing was should the system take into 
+account the difference between actual crossings and planed crossings or not? 
+The difference is hard to calculate as one does not know whether one of the 
+trains involved in the planned crossing, was canceled or just delayed. The 
+decision was made to present the number of crossings occurred at each station, 
+and aggregate the number as one navigates in the stakeholder hierarchy.
+%TODO planned crossings, ask Landmark.
+% subsection crossings (end)
 
-Several options to display traffic density were discussed, the problem was how
-to correctly show the number of trains based on what kind of data is 
-available. Should the system display each train based on the train numbers and 
-calculate for the entire line both ways? Should the system display train numbers divided by the segment directors? 
+\subsection{Traffic density} % (fold)
+\label{sub:traffic_density}
+Several options to present traffic density were discussed, the problem was how
+to correctly show the number of trains based on the data available. 
+Should the system present each train based on the train numbers and 
+calculate for the entire line both ways? Should the system display train 
+numbers divided by the segment directors? 
 
-In the workshop it was decided to show the number of trains that passes each block segment, since this is the data that is available. When selecting different levels upwards in the hierarchy, the number of trains will be aggregated upon. For instance, when on stretch level, the system will display each block between stations; on line level, the system will display an average of the stretches belonging to that line.
+In the workshop it was decided to show the number of trains that passes each 
+block segment, based on the data available. When navigating in the hierarchy,
+the system shall aggregate the number of trains.
 
-% subsubsection traffic_density (end)
+% subsection traffic_density (end)
 
-\subsubsection{Crossings} % (fold)
-\label{ssub:crossings}
-The second idea was crossings between trains, how could delays and slow 
-driving affect crossings. 
+\subsection{Speed restrictions} % (fold)
+\label{sub:speed_restrictions}
+Speed restrictions was decided to be presented a marker per restriction, and be
+shown between the selected time interval. The data for the speed restrictions
+was to be presented in a plot which appeared in the marker for each
+restriction.
 
-One of the problems discussed here was should the system take into account the difference
-between actual crossings and planed crossings or not? Since it is hard to
-calculate the difference because one does not know whether one of the trains
-involved in the crossing has been canceled or other hard to document
-occurrences, it was decided to only show a number for both actual crossings 
-and planned crossings. These numbers will aggregate when changing a level 
-upwards, in similar manner as the traffic density. 
-%TODO hard to document
-% subsubsection crossings (end)
+%In the dashboard it was decided to show the top 5 upper and lower bounds. It was also decided to include a little marker on the map to indicate the location of the speed restriction. 
 
-\subsubsection{Delays} % (fold)
-\label{ssub:delays}
+% subsection speed_restrictions (end)
+
+%\subsection{Delays} % (fold)
+%\label{sub:delays}
 %TODO
-Since delays can cover a large area depending on how you define it, this had to
-be properly discussed and defined. Should you follow the Norwegian standard
-\cite{jernbaneverketPunklighetsTall} of only say that a train is delayed at the
-final destination or use data from the signal post on the stretches compared to
-the schedule? Should you take the variation into account?
+%Since delays can cover a large area depending on how you define it, this had to be properly discussed and defined. Should you follow the Norwegian standard \cite{jernbaneverketPunklighetsTall} of only say that a train is delayed at the final destination or use data from the signal post on the stretches  compared to the schedule? Should you take the variation into account? It was decided to display the sum of the seconds the of delays, and sum of trains arriving to early. These sums would then be displayed in the dashboard and be aggregated according to the level.
 
-It was decided to display the sum of the seconds the of delays, and sum of 
-trains arriving to early. These sums would then be displayed in the dashboard 
-and be aggregated according to the level.
+% subsection delays (end)
 
-% subsubsection delays (end)
-
-\subsubsection{Speed restrictions} % (fold)
-\label{ssub:speed_restrictions}
-Visualization of slow driving has been a goal along the way since the beginning
-of the project and was natural to include from the time of the workshop as 
-well.
-
-In the dashboard it was decided to show the top 5 upper and lower bounds.
-It was also decided to include a little marker on the map to indicate the
-location of the speed restriction.
-
-% subsubsection speed_restrictions (end)
-
-% subsection workshop_2014_04_245 (end)
+% section workshop_2014_04_245 (end)
 
 % section workshops (end)

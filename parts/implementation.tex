@@ -148,10 +148,25 @@ generate the selectable list of stakeholders.
 \section{System architecture} % (fold)
 \label{sec:system_architecture}
 In this section we will describe the architecture of the implemented prototype.
+\\
 
-Keyword:
-We used the architectural pattern called "layered pattern"\cite[pp. 205-210]{Bass:2012:SAP:2392670}, which is a three-tier architecture from the database 
-point of view\cite[pp. 294-297]{toftHanseMallaugDatabaser}.
+The system was designed as a hybrid of the three-tier pattern \cite[pp. 235-237]{Bass:2012:SAP:2392670}
+and a client-server pattern \cite[pp. 217-219]{Bass:2012:SAP:2392670}. The 
+system are built around a request/reply protocol used to invoke services. The
+communication is between clients which initiates all contact with 
+a server, which in turn responds to the initiated client requests. The
+client-server pattern simplifies systems by factoring out common services,
+which are reusable, by separating client application from the services they
+use. Other typical uses for the client-server pattern are Web-based
+application.
+
+In the prototype, the map presentation of the information are the clients which
+communicates to a server that aggregates the data.
+
+
+\cite[pp. 235-237]{Bass:2012:SAP:2392670}	% multi-tier pattern
+\cite[pp. 217-219]{Bass:2012:SAP:2392670}	%client-server pattern
+
 
 \begin{figure}[!htbp]
 	\includegraphics[width=0.5\textwidth,center]{system-communication.png}
