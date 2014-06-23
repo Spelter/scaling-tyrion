@@ -79,45 +79,6 @@ way to increase and decrease the level of detail in the data presented.
 
 % subsection aggregating_to_the_stakeholder (end)
 
-\subsection{Stakeholder and aggreation keywords, to be removed} % (fold)
-\label{sub:stakeholder_and_aggreation_keywords}
-Keywords:
-
-\begin{itemize}
-	\item Important to define requirements early, in order to make an appropriate system, that is useful for the stakeholders'
-	\item How to define the stakeholders' and requirements for use with a system?
-	\begin{itemize}
-		\item important to define who are the stakeholders'
-		\item important to define what the stakeholders' needs are
-		\item important to define to which need are connected to which stakeholder, in order to show the correct information in the system connected to each of the stakeholders' needs.
-	\end{itemize}
-	\item How can we design a system that used the requirements needed by the stakeholders' to process the data and visualize the data in such a way that the stakeholders' needs are met?
-	In order to meet the requirements of the stakeholders' needs we need to aggregate the data. The following .....
-	\item aggregation of data:
-	\begin{itemize}
-		\item two goals: geographic \& time
-		\item aggregation based on detail level of visualization
-		\begin{itemize}
-			\item based on stakeholders' need
-			\begin{itemize}
-				\item detail level in map
-				\item which area is shown in the map
-				\item aggregation based on time
-			\end{itemize}
-		\end{itemize}
-	\end{itemize}
-	\item Data aggregation methods
-	\begin{itemize}
-		\item What are good ways to aggregate the data?
-		\item How to determine what fits the requirements?
-	\end{itemize}
-	\item How to present the data to the users based on the requirements? (detail
-	level per stakeholder in the hierarchy)
-	\item Time navigation for zooming through the data.
-\end{itemize}
-
-% subsection stakeholder_and_aggreation_keywords (end)
-
 
 % section stakeholders'_and_aggregation (end)
 \section{Consequences for architecture} % (fold)
@@ -202,56 +163,6 @@ amount of data to be processed. The system performance is determined by the
 amount of data to process, as it uses more time to process more data. 
 
 % subsection system_performance (end)
-
-
-\subsection{Data storage and data queries keywords, to be removed} % (fold)
-\label{sub:data_storage_and_data_queries_keywords}
-Keywords:
-\begin{itemize}
-	\item Data set structure in prototype
-	\begin{itemize}
-		\item How should the data sets be structured when the sets are based 
-		on the stakeholders' need for different type of information?
-		\begin{itemize}
-			\item Connection to the requirements of the stakeholders'.
-			\begin{itemize}
-				\item Stakeholder responsibility area from the hierarchy
-			\end{itemize}
-			\item Advantages and disadvantages with one or several sets in storage.
-			\begin{itemize}
-				\item Scalability and modifiability ref quality attributes \cite{Bass:2012:SAP:2392670}
-				\item Duplication of data with several sets of data.
-			\end{itemize}
-		\end{itemize}
-	\end{itemize}
-	\item Data queries
-	\begin{itemize}
-		\item Limit queries for data processing efficiency 
-		and more responsive systems
-		\begin{itemize}
-			\item By the aid of time navigation and requirements, limit the 
-			queries for more efficient calls to the data storage.
-			\item The system will be more efficient in the processing of the 
-			data, when limiting the quires.
-		\end{itemize}
-		\item Front end vs back end data processing for system efficiency and
-		limiting data traffic
-		\item Should the data be processed in the front-end or the back-end 
-		of the system?
-		\begin{itemize}
-			\item The data should be aggregated in the back-end of the system, 
-			since it is more efficient.
-			\begin{itemize}
-				\item Quicker calls to the database from the back-end.
-				\item Less data traffic during transfer of.
-				\item Usually quick hardware on server side, while it have a 
-				great span in the front-end.
-			\end{itemize}
-		\end{itemize}
-	\end{itemize}
-\end{itemize}
-
-% subsection data_storage_and_data_queries_keywords (end)
 
 % section consequences_for_architecture (end)
 

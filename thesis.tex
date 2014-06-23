@@ -3,8 +3,8 @@
 %\documentclass[english,10pt, oneside, a4paper]{scrreprt}
 %\usepackage[b5paper, layout=b5paper, textwidth=12cm, twoside,bindingoffset=1cm,outer=2cm,inner=2cm,includefoot,bmargin=3cm]{geometry}
 %\usepackage[a4paper, layout=a4paper, textwidth=12cm, bindingoffset=1cm,outer=2cm,inner=2cm,includefoot,bmargin=3cm]{geometry}
-\documentclass[pdftex,10pt,b5paper,twoside]{book}
-\usepackage[lmargin=20mm,rmargin=20mm,tmargin=25mm,bmargin=25mm,bindingoffset=1cm,includefoot]{geometry}
+\documentclass[english,10pt, twoside, b5paper]{book}
+\usepackage[lmargin=20mm,rmargin=20mm,tmargin=25mm,bmargin=35mm,bindingoffset=1cm,textwidth=12cm,includefoot,includehead]{geometry}
 
 
 \RequirePackage[l2tabu, orthodox]{nag}
@@ -105,17 +105,17 @@
 
 % #### Other stuff from the template
 
-%\include{front_page}
+\include{front_page}
 
-%\phantomsection
-%\include{summary}
-%\cleardoublepage
-%\phantomsection
-%\include{summary_nor}
-%\cleardoublepage
-%\phantomsection
-%\include{preface}
-%\cleardoublepage
+\phantomsection
+\include{summary}
+\cleardoublepage
+\phantomsection
+\include{summary_nor}
+\cleardoublepage
+\phantomsection
+\include{preface}
+\cleardoublepage
 
 \renewcommand\contentsname{Table of Contents}
 \tableofcontents
@@ -127,8 +127,8 @@
 \listoftables
 \cleardoublepage
 
-\chapter*{Definitions \& abbreviations}
-\input{abbriv}
+%\chapter*{Definitions \& abbreviations}
+%\input{abbriv}
 \cleardoublepage
 
 \setcounter{page}{0}
