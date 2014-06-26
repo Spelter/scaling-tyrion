@@ -52,11 +52,11 @@ Use the included Makefile (On windows? Cygwin then? :P)
  * ~~Prototype functionality in results - 3~~
  * Double up of text in "fitting the view" in disc - 1
  * Intro needs more meat on the bone - 2
- * Fix Workshop - 2
+ * ~~Fix Workshop - 2~~
  * Conclude - 3
  * Future work - 3 
  * Zip prototype - 2
- * Proper chapter descriptions - 2
+ * ~~Proper chapter descriptions - 2~~
  * Rest, json, node osv inn i abb - 1
  * Abstract - 2
  * Abstract nor - 2 
