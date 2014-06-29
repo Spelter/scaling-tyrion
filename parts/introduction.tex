@@ -4,29 +4,23 @@
 % chapter Introduction
 \label{chapter:introduction}
 
-This thesis discusses the analysis of train delays and the visualization of 
-these delays. The project involves developing a prototype map visualization of 
-delays based on train routes in Norway. Such features as the ability to scroll 
-through a certain time period (which will be selectable), both backwards and 
-forwards will be implemented. The prototype enables studying of information
-aggregated through a hierarchy of stakeholders, and study the stakeholders need
-for different types of information.
+%This thesis discusses the analysis of train delays and the visualization of these delays. The project involves developing a prototype map visualization of delays based on train routes in Norway. Such features as the ability to scroll through a certain time period (which will be selectable), both backwards and forwards will be implemented. The prototype enables studying of information aggregated through a hierarchy of stakeholders, and study the stakeholders need for different types of information.
 
-%TODO write better.
-%As we discuss in \Vref{chapter:background}, there exists some systems which 
-%enables the user to plot train information, however none of them covers what 
-%this thesis will research.
+In this chapter we will introduce the problem which this thesis discusses.
+%TODO
+We will first present the research question which we will answer with the help
+of the method presented in \Ref{cha:research_questions_and_method} \nameref{cha:research_questions_and_method}.
 
 \section{Research Question and Goals} % (fold)
 \label{sec:intro_research_question}
-In this section we will introduce the research question and goals used in this
-thesis.\\
+In this section we will introduce the research question and goals which we 
+answer in this thesis.\\
 
 A system which allows the user to select between different type of information
 to be presented, and at the same time the is aware of the stakeholders that are
 relevant to the system, can seem complex. By answering the research question
-below, we aimed to produce characteristics which will help defining a
-stakeholder aware system.
+below, we aimed to produce characteristics which helps define a
+stakeholder aware system.\\
 
 \begin{itemize}
 	\item \textbf{What are important characteristics for a stakeholder aware 
@@ -34,13 +28,14 @@ stakeholder aware system.
 \end{itemize}
 
 As part of answering the research question, we developed a prototype. Using the
-research method we produced goals for the prototype.
+research method we produced the following goals for the prototype.
 
 \begin{itemize}
 	\item Develop a map based prototype for train analysis.
 	\item Sub goals:
 	\begin{itemize}
-		\item Display dashboard with relevant information accordingly to current zoom level.
+		\item Display dashboard with relevant information accordingly to 
+		current zoom level.
 		\item Aggregate through statistical data according to current level.
 		\item Limit the data visualization within selectable time scales.
 		\item Select different type of statistical data to display.
@@ -51,40 +46,73 @@ research method we produced goals for the prototype.
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
+
+As part of discussing a method for "awareness in presentation", a presentation
+of the key parts in the research question is needed. 
+
+By presenting a stakeholder aware method, there are some concerns which needs
+to be introduced first. In our problem, we define a stakeholder as a person
+within a organizational structure. 
+
+- introdusere problem
+- forklare stakeholder problematikk
+- rich data set = flere data typer
+- prosessere ifølge stakeholder
 % section research_question (end)
+
 
 \section{Stakeholders} % (fold)  
 \label{sec:intro_stakeholders}  
-For any given project, there exists several stakeholders. Stakeholders are 
-individuals and/or organizations who have an interest or are involved directly 
-in the project, whether the interest is involvement in the execution of the 
-project, or the interest overlaps with the results of the project. 
-For the thesis, stakeholders are either end users, people with a general
-interest in the project, or users which represents the domain the prototype is
-developed for. Having a number of stakeholders to be aware of, means that there
-are many needs to consider. Since the thesis will be aware of the stakeholders,
-the prototype will focus on the stakeholders which represent the domain.
-% section stakeholders (end)
+As with any project, we had several stakeholders to take into consideration
+during the work of this project. A stakeholder is anyone who has a stake in 
+the success of the system, which typically have different specific concerns 
+that they wish the system to guarantee or optimize 
+\cite{Bass:2012:SAP:2392670}.\\
 
-\section{Aggregation} % (fold)
-\label{sec:intro_aggregation}
-When taking into consideration that many different stakeholders demands 
-different levels of information presented, the presentation quickly have the 
-possibility to become very messy and difficult to understand. One solution to 
-avoid too much information being displayed, is to aggregate the data according 
-to some kind of sorting of the stakeholders. When one aggregates data, groups 
-of observations are replaces with summary statistics based on those 
-observations\cite{ wiki:Aggregation}.
-% section aggregation (end)
+%By presenting a stakeholder aware system, we need to define stakeholders withing the operating domain of the system. 
+Stakeholders need to be defined further then just for instance the developers
+or project managers, in order to have awareness in how the data is processed 
+and presented to the different stakeholders. 
+By defining the domain and environment the system will
+operate within, further defining of the stakeholders the system will process 
+is needed within the domain. When the stakeholders have been defined within 
+the domain, their needs and requirements can be defined in a way that the data 
+processing methods can take into consideration. \\
+
+When defined within the domain, the stakeholders needs to be organized on a 
+structure which enables awareness from the system. During the work of this 
+thesis, we present a structure where the stakeholders have been placed in a 
+hierarchy according to their areas of responsibility. By organizing a 
+hierarchy of the stakeholder, we are able to process the data and limit the 
+presentation according to the active stakeholder. 
+% section stakeholders (end)
 
 \section{Data Sets} % (fold)
 \label{sec:intro_data_sets}
-By having many stakeholders to be aware of, along with several types of data,
-one of the problems that arises is that the data sets can grow 
-quite large. Depending on what one might need, these large data sets can be 
-quite problematic to access in a quick and reliable way. This problem grows in 
-complexity quickly when one is supposed to take into consideration several 
-sets of data containing different type of information. 
+Depending on the system and the stakeholders requirements, the amount of data
+to process can quickly grow quite large. As the data required by the
+stakeholders involves different types of data, the sets often originates from
+different sources. In order to allow the system to process the data according
+to the stakeholders, the sets need to be defined in a common structure.
+Different companies can for instance have different definitions of the same
+data field.
 % section data_sets (end)
+
+
+\section{Aggregation} % (fold)
+\label{sec:intro_aggregation}
+When the stakeholders have been organized in a data processing friendly
+structure as presented in \Vref{sec:intro_stakeholders}, we then aggregate the 
+data accordingly. To aggregate data means to replace groups of observations
+with summary statistics based on these observations \cite{ wiki:Aggregation}.
+By aggregating the data according to the stakeholders, we summarize the data
+according to the areas of responsibility. The summarization method used on the 
+data are specified by the requirements of the stakeholders. We also present
+aggregation through time. Each stakeholder are able to limit the data 
+according the level of detail needed, by enabling time aggregation.
+\\
+
+
+% section aggregation (end)
 
 % chapter Introduction (end)

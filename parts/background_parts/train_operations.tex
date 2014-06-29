@@ -17,15 +17,18 @@ margin of 3 minutes and 59 seconds, for long distance and cargo trains the
 margin is 5 minutes and 59 seconds. Punctuality (in \%) is the proportion of 
 trains that arrives at their final destination within this margin.
 
-Jernbaneverket (see \Vref{sub:subsection_jernbaneverket}) defines regularity (in \%) as the proportion of trains operated over the number planned in the schedule. 
+Jernbaneverket (see \Vref{sub:subsection_jernbaneverket}) defines regularity (
+in \%) as the proportion of trains operated over the number planned in the 
+schedule. 
 
 Other derived metrics include uptime, in regards to punctuality, is defined by 
 Jernbaneverket from 
 the hours of delay\footnote{Hours of delay due to infrastructure excluded 
 traffic	management and external conditions} caused by infrastructure relative 
-to sum of planned train hours\footnote{Planned train hours (passenger and freight
-trains)} per year.\cite{jernbaneverketPunklighetsTall}
-\begin{equation} Uptime =
+to sum of planned train hours\footnote{Planned train hours (passenger and 
+freight trains)} per year.\cite{jernbaneverketPunklighetsTall}
+\begin{equation} \label{eq:uptime}
+		Uptime =
 		\frac
 				{
 					\text{Train hours - Hours of delay}
@@ -63,7 +66,8 @@ Since most of the railway structure in Norway is single line, most crossings
 have to be executed at places where sidetracks have been built, mostly this is
 at stations. This means that even though one train may be experiencing delay, 
 this delay may be part of a sequence of problems that can be tracked back to a 
-seemingly unrelated part of the the network and a perhaps a bad decision there\cite{cule2011mining}.
+seemingly unrelated part of the the network and a perhaps a bad decision there 
+\cite{cule2011mining}.
 \\
 
 As Landex\cite{landex2009gis} says, there exist few GIS-approaches concerning
