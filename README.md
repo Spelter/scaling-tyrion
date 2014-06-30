@@ -45,10 +45,10 @@ Use the included Makefile (On windows? Cygwin then? :P)
  * Fill out railway operations with pdf from Landmark - 1
  * ~~Method - Feedback from Landmark - 2~~
  * ~~Discussion - Feedback from Landmark - 2~~
- * Split discussion to several sub - 1
+ * ~~Split discussion to several sub - 1~~
  * Examples in railway operations - 1
  * Examples on system performance based on data amount in Discussion part 2 - 1
- * Architecture in Implementation - 3
+ * ~~Architecture in Implementation - 3~~
  * ~~Prototype functionality in results - 3~~
  * Double up of text in "fitting the view" in disc - 1
  * Intro needs more meat on the bone - 2
@@ -64,3 +64,4 @@ Use the included Makefile (On windows? Cygwin then? :P)
  * Acknowledgments - 2
  * Top 5 list description in implementation - 1
  * Summary of background
+ * Summary of intro
