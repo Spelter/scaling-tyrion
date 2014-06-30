@@ -157,29 +157,38 @@ generate the selectable list of stakeholders.
 In this section we will describe the architecture of the implemented prototype.
 \\
 
-The system was designed as a hybrid of the three-tier pattern \cite[pp. 235-237]{Bass:2012:SAP:2392670}
-and a client-server pattern \cite[pp. 217-219]{Bass:2012:SAP:2392670}. The 
+We designed our prototype around a client-server pattern \cite[pp. 217-219]{Bass:2012:SAP:2392670} with a layered
+pattern \cite[pp. 205-210]{Bass:2012:SAP:2392670} on the server, presented in \Ref{fig:prototype_architecture}. The 
 system are built around a request/reply protocol used to invoke services. The
 communication is between clients which initiates all contact with 
 a server, which in turn responds to the initiated client requests. The
 client-server pattern simplifies systems by factoring out common services,
 which are reusable, by separating client application from the services they
 use. Other typical uses for the client-server pattern are Web-based
-application.
-
-In the prototype, the map presentation of the information are the clients which
-communicates to a server that aggregates the data.
-
-
-\cite[pp. 235-237]{Bass:2012:SAP:2392670}	% multi-tier pattern
-\cite[pp. 217-219]{Bass:2012:SAP:2392670}	%client-server pattern
-
+application. In the prototype, the map presentation of the information are the 
+clients which communicates to a server that aggregates the data. \\
 
 \begin{figure}[!htbp]
-	\includegraphics[width=0.5\textwidth,center]{system-communication.png}
-	\caption[Three-tier architecture]{Three-tier architecture}
-	\label{fig:three-tier_architecture}
+	\includegraphics[width=0.6\textwidth,center]{system-communication.png}
+	\caption[Prototype architecture]{Prototype architecture}
+	\label{fig:prototype_architecture}
 \end{figure}
+
+
+The server has been build using the layered pattern, where the logic is 
+divided into units called layers, where each layer offers a cohesive set of 
+services. There are two layers implemented, \textit{Logic} and \textit{Storage}
+. The \textit{Storage} contains all databases for all data sets used. The 
+\textit{Logic} layers performs all communication with the clients, and 
+processes data fetched from the \textit{Storage} layer. The two layers can be 
+seen in \Ref{fig:prototype_architecture} as the \textit{Logic} and 
+\textit{Storage} boxes within the \textit{Server} box.
+
+
+%\cite[pp. 205-210]{Bass:2012:SAP:2392670}	% layered pattern
+%\cite[pp. 235-237]{Bass:2012:SAP:2392670}	% multi-tier pattern
+%\cite[pp. 217-219]{Bass:2012:SAP:2392670}	%client-server pattern
+
 % section system_architecture (end)
 
 \section{Technology} % (fold)
