@@ -43,15 +43,15 @@ TODOs
 	* ~~Examples of organization structure~~
 	* ~~Dutch guy for railway operations~~
 	* Summary
-* asdasd
+* Implementation
 	* ~~Architecture~~
-	* Top 5 listasdasd
+	* Top 5 list
 * Result
 	* ~~Prototype functionality~~
 * Discussion
-	* Example of system performanceasdasd
+	* Example of system performance
 	* Fitting the view, double up?
-	* Review "architecture" based on layered not multi-tieasdasdr
+	* Review "architecture" based on layered not multi-tier
 * Conclusion
 	* Some not technical conclusion
 	* Future work
@@ -59,4 +59,3 @@ TODOs
 	* Zip
 	* Comment
 * Word check on language
-asdasd
