@@ -38,7 +38,7 @@ TODOs
 * Method
 	* ~~Project research fill out "Examining the state-of-the-art"~~
 	* ~~Project research fill out demo and eval~~
-* Summary
+	* Summary
 * Background
 	* Examples of organization structure
 	* Dutch guy for railway operations
