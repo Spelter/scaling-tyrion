@@ -47,7 +47,7 @@ TODOs
 	* ~~Architecture~~
 	* Top 5 list
 * Result
-	* Prototype functionality
+	* ~~Prototype functionality~~
 * Discussion
 	* Example of system performance
 	* Fitting the view, double up?
