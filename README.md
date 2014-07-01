@@ -40,7 +40,7 @@ TODOs
 	* ~~Project research fill out demo and eval~~
 	* Summary
 * Background
-	* Examples of organization structure
+	* ~~Examples of organization structure~~
 	* ~~Dutch guy for railway operations~~
 	* Summary
 * Implementation
