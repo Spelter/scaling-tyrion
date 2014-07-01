@@ -41,7 +41,7 @@ TODOs
 	* Summary
 * Background
 	* Examples of organization structure
-	* Dutch guy for railway operations
+	* ~~Dutch guy for railway operations~~
 	* Summary
 * Implementation
 	* ~~Architecture~~
