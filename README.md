@@ -54,5 +54,7 @@ TODOs
 * Conclusion
 	* Some not technical conclusion
 	* Future work
-* Zip prototype
+* Prototype
+	* Zip
+	* Comment
 * Word check on language
