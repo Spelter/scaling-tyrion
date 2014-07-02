@@ -52,9 +52,9 @@ TODOs
 	* Example of system performance
 	* Fitting the view, double up?
 	* Review "architecture" based on layered not multi-tier
-* Conclusion
+* ~~Conclusion~~
 	* ~~Some not technical conclusion~~
-	* Future work
+	* ~~Future work~~
 * Prototype
 	* Zip
 	* Comment
