@@ -128,16 +128,18 @@ changes the time interval, the input is validated to be in correct form and
 used in the request for data.\\
 
 %TODO endre formulering på avsnittet her
-It were also meant to implement a top 5 lists for each information, this was
-however not completed. It was meant to display a list of the worst or best of
-the information type within each current stakeholders responsible area. In the
-case of crossings, the information would display the five stations with the 
-most crossings, as demonstrated in \Ref{fig:top_5_list}. The top 5 list was 
-demonstrated with static HTML-list of random stations with a random number.
+A top 5 list for some of the data types, was wanted during the workshops held. 
+The wanted functionality from the top 5 list was to display a list of the 
+worst or best of the current information type within each current stakeholders 
+responsible area. In the case of crossings, the information would display the 
+five stations with the most crossings. We made a proof of concept of a top 5 
+list, demonstrated in \Ref{fig:top_5_list} with the use of number of crossings.
+\\
 
-When a request for information have been sent to the back end, the display will
-then plot the information in markers. The system will then fit the map
-according to a rectangle automatically calculated from the markers.
+The system adapts the view to the current stakeholder in order to further
+consider their requirements. The adaption of the view happens when the back-end
+has returner the processed data, by first displaying the data in markers on the
+map, and then automatically adjust the visible map to the data.
 % subsection data_storage (end)
 
 \subsection{Aggregation} % (fold)

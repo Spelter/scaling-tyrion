@@ -8,8 +8,19 @@ Norwegian railroad consists of 4320 km of lines
 journeys and 27 million tons of cargo in 2012
 \cite[p. 9]{jernbaneverketStatistikk}. For a rail undertaking, there is a 
 constant balance to be struck between capacity, demand, and safe and punctual 
-operations. Safety has the highest priority between these concerns, and as 
-such this thesis will focus more on capacity and punctual operations.\\
+operations. While safety is the highest priority, this thesis will focus on the
+capacity and punctuality concerns of railway operations.\\
+
+On a railway network, the capacity of railway lines is defined as the maximum
+number of trains per unit of time that can be run, as described by
+Goverde\cite{goverde2005punctuality}. One must take into consideration the 
+properties of both the infrastructure and the trains, when determining the 
+capacity. Properties of the infrastructure that needs to considered be can be 
+such as sidings, double- or single-track, speed limits. Properties of the 
+trains that needs to be consider can be such as top speed, acceleration, and
+brake length. Based on the capacity, the traffic will be organized in a
+timetable with some slack for dynamic adjustments. \\
+
 
 Punctuality is usually divided into two central metrics, punctuality and 
 regularity. In the Norwegian railroad, a train is considered punctual or on 
@@ -65,13 +76,13 @@ areas. Example of their individual organization charts is shown in \Ref{fig:jbv_
 
 \begin{figure}[!htbp]
 	\includegraphics[width=\textwidth,center]{jbv_persontog_orgkart.png}
-	\caption[Jernbaneverket undertaking organization]{Jernbaneverket undertaking organization \cite{sintefPresis}}
+	\caption[Rail operator / Railway undertaking]{Rail operator / Railway undertaking \cite{sintefPresis}}
 	\label{fig:jbv_undertaking_org_map}
 \end{figure}
 
 \begin{figure}[!htbp]
 	\includegraphics[width=\textwidth,center]{JBV_orgkart.jpg}
-	\caption[Jernbaneverket infrastructure organization]{Jernbaneverket infrastructure organization \cite{jernbaneverketOrganisasjon}}
+	\caption[Infrastructure owner]{Infrastructure owner \cite{jernbaneverketOrganisasjon}}
 	\label{fig:jbv_infrastructure_org_map}
 \end{figure}
 
@@ -92,17 +103,20 @@ marketing division, and infrastructure division in Jernbaneverket, presented in
 \Ref{fig:jbv_infrastructure_org_map}.\\
 
 Since most of the railway structure in Norway is single line, most crossings
-have to be executed at places where sidetracks have been built, mostly this is
+have to be executed at places where sidings have been built, mostly this is
 at stations. This means that even though one train may be experiencing delay, 
 this delay may be part of a sequence of problems that can be tracked back to a 
-seemingly unrelated part of the the network and a perhaps a bad decision there 
-\cite{cule2011mining}.
+seemingly unrelated part of the the network and a perhaps a sub-optimal 
+decision there \cite{cule2011mining}.
 \\
 
-As Landex\cite{landex2009gis} says, there exist few GIS-approaches concerning
+As Landex\cite{landex2009gis} states, there exist few GIS-approaches concerning
 visualization of railroad capacity. Both the visualizations shown by Landex and
 in \Ref{sect:backgroundExamples} \nameref{sect:backgroundExamples}, 
-only seems to take into consideration whether
-the trains are delayed, and the amount of delay. \\
+only seems to take into consideration whether the trains are delayed, and the 
+amount of delay. 
+
+
+%In order to analyze the delay and reveal the cause, the system must take into consideration... The different users have the need to be presented with more data then just the delay, as there are many factors affecting the railway system.
 
 % section railway_operations (end)

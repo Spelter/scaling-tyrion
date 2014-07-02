@@ -44,9 +44,9 @@ TODOs
 	* ~~Examples of organization structure~~
 	* ~~Dutch guy for railway operations~~
 	* Summary
-* Implementation
+* ~~Implementation~~
 	* ~~Architecture~~
-	* Top 5 list
+	* ~~Top 5 list~~
 * ~~Result~~
 	* ~~Prototype functionality~~
 * Discussion
