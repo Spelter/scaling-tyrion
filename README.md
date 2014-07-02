@@ -56,9 +56,9 @@ TODOs
 * ~~Conclusion~~
 	* ~~Some not technical conclusion~~
 	* ~~Future work~~
-* Prototype
-	* Zip
-	* Comment
+* ~~Prototype~~
+	* ~~Zip~~
+	* ~~Comment~~
 * Word check on language
 * FEEDBACK
 * Figure placements
