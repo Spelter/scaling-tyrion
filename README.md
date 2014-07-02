@@ -46,7 +46,7 @@ TODOs
 * Implementation
 	* ~~Architecture~~
 	* Top 5 list
-* Result
+* ~~Result~~
 	* ~~Prototype functionality~~
 * Discussion
 	* Example of system performance
