@@ -60,3 +60,4 @@ TODOs
 	* Comment
 * Word check on language
 * FEEDBACK
+* Figure placements
