@@ -29,9 +29,9 @@ Use the included Makefile (On windows? Cygwin then? :P)
 
 TODOs
 ========
-* Abstract
+* ~~Abstract~~
 * ~~Abstract nor~~
-* Preface
+* ~~Preface~~
 * Intro
 	* ~~Chapter header~~
 	* ~~Another paragraph at "background and motivation"~~

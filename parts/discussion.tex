@@ -92,9 +92,9 @@ way to increase and decrease the level of detail in the data presented.
 \label{sec:consequences_for_architecture}
 \subsection{Data storage} % (fold)
 \label{sub:data_storage}
-As the datasets originate from different sources and contain different
+As the data sets originate from different sources and contain different
 structures, they can be difficult to query efficiently. One option for the structure is to merge all the
-datasets into one large database, by merging the datasets in one large
+data sets into one large database, by merging the data sets in one large
 database, the data are structured in an client-server architecture. 
 A client can either communicate to the databases directly or through a middle
 tier. Three-tier architecture is a very common solution on the Internet, where 
@@ -121,11 +121,11 @@ communication, and a lower tier containing several databases, see
 
 By using the three-tier architecture, we implemented a middle-tier which 
 processed the data, and a lower tier containing several databases. For
-structuring the datasets with the stakeholders requirements in mind, we
+structuring the data sets with the stakeholders requirements in mind, we
 utilized one database which contained the stakeholders areas of responsibility in
 their hierarchy, and each of the other databases for different types of 
 information. The semi-distributed databases mean that it is easy to remove or
-add datasets, since the different types of information are connected to the
+add data sets, since the different types of information are connected to the
 stakeholders hierarchy. There are also some negative aspects using
 the semi-distributed databases, for example: some data fields
 will be duplicated. The duplication of data will lead to redundancy and
@@ -140,7 +140,7 @@ occurs on the different sets. Use of the source sets have huge compatibility
 issues between, as the sets have different sizes, different update interval
 the sets, and different set owners (NSB, Jernbaneverket, etc) have different
 definitions of the same fields. We did not take this problem into consideration
-during the work of this project, due to the datasets been given to us was 
+during the work of this project, due to the data sets been given to us was 
 already processed by SINTEF. 
 
 % subsection data_storage (end)

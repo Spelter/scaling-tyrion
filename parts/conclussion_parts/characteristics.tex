@@ -37,16 +37,16 @@ time based on the needs of the stakeholder.\\
 
 %XXX visualiser med Venn-diagram\\
 
-Since the methods that shall aggregate over the datasets have to to consider
+Since the methods that shall aggregate over the data sets have to to consider
 both the stakeholder and the data type, the methods should be dynamic so that
 they can be reused throughout every stakeholder and every type of data. To 
 achieve this dynamic, one should have loosely linked data with stakeholders
-such as that the datasets are easily editable in terms of adding or removing
-data, or adding new type of datasets.
+such as that the data sets are easily editable in terms of adding or removing
+data, or adding new type of data sets.
 
 Since most of the statistical data used in this thesis, are sorted on one 
 identifier and that identifier is connected to the stakeholders, there are 
-quite easy to expand the datasets. This means that the aggregation is actually
+quite easy to expand the data sets. This means that the aggregation is actually
 a three step process.
 
 \begin{description}
@@ -63,20 +63,20 @@ a three step process.
 \end{description}
 
 
-By having a loosely linked storage of the different datasets, an important
+By having a loosely linked storage of the different data sets, an important
 thing to take into consideration is optimization of Step 2 listed above. Since
 one is able to navigate through time as described, the system is able to limit
 the amount of data it has to process at each execution. By adding clauses which
 will limit the result, the query time will drop and the performance time of the
 aggregation will improve, both in terms of waiting for returning data from
-queries on the datasets and with processing said data.\\
+queries on the data sets and with processing said data.\\
 
 By having the user selecting the wanted stakeholder and what type of
 information the system shall present, it enables the system dynamically
 determine which data set it shall look in and aggregate through. This is
 demonstrated in \Ref{fig:stakeholder_selection_list} which is the
 selection of stakeholders and in \Ref{fig:implementation_type_selection} is 
-the selection of datasets.
+the selection of data sets.
 
 Since the aggregation methods by this point have received wanted stakeholders,
 the wanted type of information to be display according to the stakeholders

@@ -24,7 +24,7 @@ mediates data between these.
 Since the data was given in different sets and some sets serve a different
 purposes, different sets was stored differently. For the prototype developed, 
 the data was stored in 3 databases although optimally the amount of databases 
-would have been two. The increased amount of databases is due to one of the datasets which was given as a interface to an existing database, while the others were given as sets which had to be put into a database.
+would have been two. The increased amount of databases is due to one of the data sets which was given as a interface to an existing database, while the others were given as sets which had to be put into a database.
 
 The first database (The "station database") that was set up, was the one that 
 contained the stations.
@@ -87,7 +87,7 @@ average crossings of all stations in that area.\\
 
 The database structure presented above is implemented similar on the other 
 sets of data, except in the case of Speed restrictions. The difference in the
-datasets is due to that the workshops determined that the speed restrictions
+data sets is due to that the workshops determined that the speed restrictions
 was to be displayed with a own marker limited by the time selector.
 % subsection back_aggregation (end)
 
@@ -180,7 +180,7 @@ clients which communicates to a server that aggregates the data. \\
 The server has been build using the layered pattern, where the logic is 
 divided into units called layers, where each layer offers a cohesive set of 
 services. There are two layers implemented, \textit{Logic} and \textit{Storage}
-. The \textit{Storage} contains all databases for all datasets used. The 
+. The \textit{Storage} contains all databases for all data sets used. The 
 \textit{Logic} layers performs all communication with the clients, and 
 processes data fetched from the \textit{Storage} layer. The two layers can be 
 seen in \Ref{fig:prototype_architecture} as the \textit{Logic} and 
