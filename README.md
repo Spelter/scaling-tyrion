@@ -30,11 +30,11 @@ Use the included Makefile (On windows? Cygwin then? :P)
 TODOs
 ========
 * Abstract
-* Abstract nor 
+* ~~Abstract nor~~
 * Preface
 * Intro
-	* Chapter header
-	* Another paragraph at "background and motivation"
+	* ~~Chapter header~~
+	* ~~Another paragraph at "background and motivation"~~
 	* Summary
 * Method
 	* ~~Project research fill out "Examining the state-of-the-art"~~
