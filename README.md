@@ -51,7 +51,6 @@ TODOs
 	* ~~Prototype functionality~~
 * Discussion
 	* Example of system performance
-	* Fitting the view, double up?
 	* Review "architecture" based on layered not multi-tier
 * ~~Conclusion~~
 	* ~~Some not technical conclusion~~
@@ -59,6 +58,6 @@ TODOs
 * ~~Prototype~~
 	* ~~Zip~~
 	* ~~Comment~~
-* Word check on language
-* FEEDBACK
-* Figure placements
+* ~~Word check on language~~
+* ~~FEEDBACK~~
+* ~~Figure placements~~
