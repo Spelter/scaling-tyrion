@@ -53,7 +53,7 @@ TODOs
 	* Fitting the view, double up?
 	* Review "architecture" based on layered not multi-tier
 * Conclusion
-	* Some not technical conclusion
+	* ~~Some not technical conclusion~~
 	* Future work
 * Prototype
 	* Zip
